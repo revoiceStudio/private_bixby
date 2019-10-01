@@ -1,0 +1,34 @@
+layout-macro-def (order-list) {
+  params {
+    param (orderList) {
+      type (OrderCheckResultConcept)
+      min (Required) max (Many)
+    }
+  }
+  content{
+    section{
+      content{
+        for-each (orderList) {
+          as(item){
+              cell-card {
+                slot1{
+                  image{
+                    url("#{value(item.productImage)}")
+                    shape (Square)
+                  }
+                }
+                slot2{
+                  content{
+                    primary("#{value(item.index)}. #{value(item.productName)}")
+                    secondary("#{value(item.option)}")
+                  }
+                }                 
+            }
+                 
+          }          
+        }       
+    }    
+  }
+}
+
+}

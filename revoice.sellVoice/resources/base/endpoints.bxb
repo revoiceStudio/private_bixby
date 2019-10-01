@@ -1,0 +1,7 @@
+endpoints {
+  action-endpoints {
+    action-endpoint (OrderCheck) {
+      local-endpoint ("OrderCheck.js")
+    }
+  }
+}

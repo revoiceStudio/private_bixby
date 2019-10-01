@@ -1,0 +1,3 @@
+boolean (AdditionalProductStatusConcept){
+  description ("추가구성삼품 여부")
+}

@@ -1,0 +1,3 @@
+integer (IndexConcept){
+  description ("주문 번호")
+}

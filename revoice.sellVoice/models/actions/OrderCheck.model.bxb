@@ -1,0 +1,5 @@
+action (OrderCheck) {
+  description (신규주문조회)
+  type (Search)
+  output (OrderCheckResultConcept)
+}
