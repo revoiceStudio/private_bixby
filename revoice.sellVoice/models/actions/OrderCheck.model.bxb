@@ -1,5 +1,5 @@
 action (OrderCheck) {
-  description (신규주문조회)
+  description (신규주문 결제완료 건 조회)
   type (Search)
   output (OrderCheckResultConcept)
 }

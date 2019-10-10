@@ -3,5 +3,12 @@ endpoints {
     action-endpoint (OrderCheck) {
       local-endpoint ("OrderCheck.js")
     }
+    action-endpoint (DeliveryCheck) {
+      local-endpoint ("DeliveryCheck.js")
+    }
+    action-endpoint (Detail) {
+      accepted-inputs (orderCheckResult, index)
+      local-endpoint ("Detail.js")
+    }
   }
 }

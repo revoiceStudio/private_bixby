@@ -1,0 +1,7 @@
+dialog (Result) {
+  match: DetailResultConcept(detailResult)
+  choose (Random) {
+      template("세부사항 #{size(detailResult)}건이 있습니다.")
+      template ("세부사항 #{size(detailResult)}건에 대한 검색 결과입니다.")
+  }
+}

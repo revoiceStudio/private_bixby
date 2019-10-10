@@ -1,0 +1,17 @@
+action (Detail) {
+  description (신규주문 세부사항)
+  type (Search)
+  collect {  
+    input (orderCheckResult) {
+      type (OrderCheckResultConcept)
+      min (Required)
+      max (One)
+    }
+    input (index) {
+      type (IndexConcept)
+      min (Required)
+      max (One)
+    }
+  }   
+  output (DetailResultConcept)
+}

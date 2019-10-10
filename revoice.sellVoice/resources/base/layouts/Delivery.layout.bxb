@@ -1,16 +1,15 @@
-layout-macro-def (order-list) {
+layout-macro-def (delivery-list) {
   params {
-    param (orderList) {
-      type (OrderCheckResultConcept)
+    param (deliveryList) {
+      type (DeliveryCheckResultConcept)
       min (Required) max (Many)
     }
   }
   content{
     section{
       content{
-        for-each (orderList) {
+        for-each (deliveryList) {
           as(item){
-              index-var (i)
               cell-card {
                 slot1{
                   image{
@@ -29,19 +28,13 @@ layout-macro-def (order-list) {
                       primary("#{value(item.index)}. #{value(item.productName)}")
                     }
                   }
-                }
-                on-click {
-                    intent {
-                      goal: revoice.sellVoice.DetailResultConcept
-                      value: revoice.sellVoice.OrderCheckResultConcept$expr(item)
-                      value: revoice.sellVoice.IndexConcept( "#{value(i)}" )
-                    }
-                }              
-              }
-                  
-            }          
-          }       
-      }    
-    }
-  } 
+                }                 
+            }
+                 
+          }          
+        }       
+    }    
+  }
+}
+
 }

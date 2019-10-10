@@ -1,6 +1,6 @@
-structure (OrderCheckResultConcept) {
-  description (신규주문 결제완료 건 조회결과)
-  property (productName) {
+structure (DeliveryCheckResultConcept) {
+  description (신규주문 배송준비중 조회결과)
+ property (productName) {
     type (ProductNameConcept)
     min (Required) max (Many)
   }
@@ -36,5 +36,4 @@ structure (OrderCheckResultConcept) {
     type(BundleDeliveryConcept)
     min (Required) max (Many)
   }
-  
 }

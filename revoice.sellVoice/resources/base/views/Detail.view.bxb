@@ -1,0 +1,17 @@
+result-view {
+ match {
+     DetailResultConcept (detailResult)
+   }
+ render {  
+     layout{
+       if(exists(detailResult)){
+         layout-macro (detail-list) {
+          param (detailList) {
+            expression (detailResult)
+          }
+        }
+      }
+      
+    }
+  }  
+}

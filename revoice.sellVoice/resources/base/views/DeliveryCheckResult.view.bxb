@@ -1,0 +1,27 @@
+result-view {
+ match {
+     DeliveryCheckResultConcept (DeliveryCheckResult)
+   }
+ render {
+   if(size(DeliveryCheckResult)>0){
+     layout{
+      layout-macro (delivery-list) {
+        param (deliveryList) {
+          expression (DeliveryCheckResult)
+        }
+      }
+    }
+  }
+  else{
+    layout{      
+      section{
+        title{        
+          template ("조회된 배송준비 상품이 없습니다.")
+        }
+      }      
+    }
+  }
+  
+  }
+  
+}
