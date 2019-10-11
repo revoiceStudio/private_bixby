@@ -1,0 +1,7 @@
+structure (InputAPIkeyResultConcept) {
+  description ("apikey 체크 결과")
+  property (inputAPIkey) {
+    type (APIkeyConcept)
+    min (Required) max (One)
+  }
+}

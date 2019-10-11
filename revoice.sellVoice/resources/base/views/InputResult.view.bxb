@@ -1,0 +1,26 @@
+input-view {
+  match {
+    InputAPIkeyResultConcept (apikey)
+  }
+  message {
+    template ("API key를 입력해주세요.")
+  }
+  render {
+    form {
+      elements {
+        text-input {
+          id (inputAPIkey)
+          label (API key)
+          type (APIkeyConcept)
+          max-length (50)
+          value ("#{raw(apikey.inputAPIkey)}")
+        }
+      }
+      on-submit {
+        goal: CheckAPIkeyResultConcept
+        value: viv.core.FormElement(inputAPIkey)
+      }
+    }
+  }
+
+}

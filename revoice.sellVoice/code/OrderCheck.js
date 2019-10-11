@@ -2,47 +2,64 @@ var console = require('console')
 var http = require('http')
 var config = require('config')
 var paymentURL = config.get('payment')
+var findKey = require('API/FindAPIkey')
 
-module.exports.function = function orderCheck () { 
+module.exports.function = function orderCheck ($vivContext) { 
+  console.log("고유 식별자 : ",$vivContext.userId)
+ 
+  const findResult = findKey.findAPIkey($vivContext)
+  console.log(findResult)
 
-  const options = {     
+  if(findResult == null || findResult ==[] || findResult.length==0){
+    console.log("apikey 없음")
+    return 0
+  }
+
+  options = {     
     'format': 'json',
     'cacheTime': 0,
     'headers': {
       'accept': 'application/json'
+    },
+    'query':{
+      'apikey': findResult[0].apikey
     }
   }  
-  let order = http.getUrl(paymentURL, options)    
+  let order = http.getUrl(paymentURL, options)   
   let orderList = new Array() 
+  
 
-  for(let i=0; i<order.length; i++){ 
-    let tmp = {}
-    tmp['productName'] = order[i].prdNm      
-    tmp['index'] = order[i].ordPrdSeq
-    tmp['bundleDelivery'] = order[i].bndlDlvSeq
-    tmp['consumerName'] = order[i].rcvrNm
-    tmp['address'] = order[i].rcvrBaseAddr + order[i].rcvrDtlsAddr
-    tmp['productPrice'] = order[i].selPrc
-    // 옵션 상품있는 경우
-    if(order[i].slctPrdOptNm != ''){
-      tmp['option'] = order[i].slctPrdOptNm
-    }else{
-      tmp['option'] = "옵션없음"
+  if(order==0 || order==-1 || order==-3103 || order==-3104 || order==-3105 || order==-1000){
+    return orderList
+  }else{   
+    for(let i=0; i<order.length; i++){ 
+      let tmp = {}
+      tmp['productName'] = order[i].prdNm      
+      tmp['index'] = order[i].ordPrdSeq
+      tmp['bundleDelivery'] = order[i].bndlDlvSeq
+      tmp['consumerName'] = order[i].rcvrNm
+      tmp['address'] = order[i].rcvrBaseAddr + order[i].rcvrDtlsAddr
+      tmp['productPrice'] = order[i].selPrc
+      // 옵션 상품있는 경우
+      if(order[i].slctPrdOptNm != ''){
+        tmp['option'] = order[i].slctPrdOptNm
+      }else{
+        tmp['option'] = "(옵션없음)"
+      }
+      // 추가 구성 상품인 경우
+      if(order[i].addPrdNo != '0'){
+        tmp['additionalProductStatus'] = true
+      }else{
+        tmp['additionalProductStatus'] = false
+      }
+      // 이미지 있는 경우
+      if(order[i].image != undefined ){
+        tmp['productImage'] = order[i].image
+      }else{
+        tmp['productImage'] = "images/default/plus.png"
+      }
+      orderList.push(tmp)
     }
-    // 추가 구성 상품인 경우
-    if(order[i].addPrdNo != '0'){
-      tmp['additionalProductStatus'] = true
-    }else{
-      tmp['additionalProductStatus'] = false
-    }
-    // 이미지 있는 경우
-    if(order[i].image != undefined ){
-      tmp['productImage'] = order[i].image
-    }else{
-      tmp['productImage'] = "images/default/plus.png"
-    }
-    orderList.push(tmp)
-  }
-
-  return orderList
+    return orderList
+  }  
 }

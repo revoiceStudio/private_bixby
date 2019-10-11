@@ -34,7 +34,7 @@ layout-macro-def (order-list) {
                     intent {
                       goal: revoice.sellVoice.DetailResultConcept
                       value: revoice.sellVoice.OrderCheckResultConcept$expr(item)
-                      value: revoice.sellVoice.IndexConcept( "#{value(i)}" )
+                      value: revoice.sellVoice.IndexConcept( i )
                     }
                 }              
               }

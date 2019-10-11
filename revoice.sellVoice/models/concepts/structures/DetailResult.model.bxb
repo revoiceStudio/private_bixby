@@ -1,24 +1,24 @@
 structure (DetailResultConcept) {
   description (신규주문 상세조회결과)
- property (productName) {
+property (productName) {
     type (ProductNameConcept)
-    min (Required) max (Many)
+    min (Optional) max (Many)
   }
   property (productPrice) {
     type (ProductPriceConcept)
-    min (Required) max (Many)
+    min (Optional) max (Many)
   }
   property (address) {
     type (AddressConcept)
-    min (Required) max (Many)
+    min (Optional) max (Many)
   }
   property (consumerName) {
     type (ConsumerNameConcept)
-    min (Required) max (Many)
+    min (Optional) max (Many)
   }
   property (productImage) {
     type (ProductImageConcept)
-    min (Required) max (Many)
+    min (Optional) max (Many)
   }
   property (option){
     type(OptionConcept)
@@ -26,14 +26,14 @@ structure (DetailResultConcept) {
   }
   property(additionalProductStatus){
     type(AdditionalProductStatusConcept)
-    min (Required) max (Many)
+    min (Optional) max (Many)
   }
   property (index){
     type(IndexConcept)
-    min (Required) max (Many)
+    min (Optional) max (Many)
   }
   property (bundleDelivery){
     type(BundleDeliveryConcept)
-    min (Required) max (Many)
+    min (Optional) max (Many)
   }
 }

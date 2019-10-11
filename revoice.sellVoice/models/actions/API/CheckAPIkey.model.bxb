@@ -1,0 +1,11 @@
+action (CheckAPIkey) {
+  description ("apikey 일치 확인")
+  type (Search) 
+  collect {
+    input (apikey) {
+      type (APIkeyConcept)
+      min (Required) max (One)
+    }
+  }
+  output (CheckAPIkeyResultConcept)
+}

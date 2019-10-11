@@ -3,7 +3,6 @@ var console = require('console')
 module.exports.function = function detail (orderCheckResult, index) { 
   let detail = new Array()
   let tmp = {}
-  console.log(oauth)
   tmp['additionalProductStatus'] = orderCheckResult['additionalProductStatus'][0]
   tmp['bundleDelivery'] = orderCheckResult['bundleDelivery'][0]
   tmp['index'] = orderCheckResult['index'][0]
