@@ -1,11 +1,11 @@
 result-view {
  match {
-     DetailResultConcept (detailResult)
+     DeliveryDetailResultConcept (detailResult)
    }
  render {  
      layout{
        if(exists(detailResult)){
-         layout-macro (detail-list) {
+         layout-macro (delivery-detail-list) {
           param (detailList) {
             expression (detailResult)
           }

@@ -1,0 +1,13 @@
+dialog (Result) {
+  match: DeliveryConfirmResultConcept(detailResult)
+  choose (Random) {
+    if(size(detailResult)==1){
+      template("#{value(detailResult[0].consumerName)}고객님 배송 #{size(detailResult)}건이 있습니다.")
+      template ("#{value(detailResult[0].consumerName)}고객님 배송 #{size(detailResult)}건에 대한 검색 결과입니다.")
+    }else{
+      template("#{value(detailResult[0].consumerName)}고객님 묶음배송 #{size(detailResult)}건이 있습니다.")
+      template ("#{value(detailResult[0].consumerName)}고객님 묶음배송 #{size(detailResult)}건에 대한 검색 결과입니다.")
+    }
+     
+  }
+}

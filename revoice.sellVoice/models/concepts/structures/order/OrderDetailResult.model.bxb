@@ -1,0 +1,63 @@
+structure (OrderDetailResultConcept) {
+  description (신규주문 상세조회결과)
+property (productName) {
+    type (ProductNameConcept)
+    min (Required) max (One)
+  }
+  property (productPrice) {
+    type (ProductPriceConcept)
+    min (Required) max (One)
+  }
+  property (address) {
+    type (AddressConcept)
+    min (Required) max (One)
+  }
+  property (consumerName) {
+    type (ConsumerNameConcept)
+    min (Required) max (One)
+  }
+  property (productImage) {
+    type (ProductImageConcept)
+    min (Required) max (One)
+  }
+  property (option){
+    type(OptionConcept)
+    min (Required) max (One)
+  }
+  property(additionalProductStatus){
+    type(AdditionalProductStatusConcept)
+    min (Required) max (One)
+  }
+  property (index){
+    type(IndexConcept)
+    min (Required) max (One)
+  }
+  property (rootIndex){
+    type(RootIndexConcept)
+    min (Required) max (One)
+  }
+  property (bundleDelivery){
+    type(BundleDeliveryConcept)
+    min (Required) max (One)
+  }
+  property (totalPrice){
+    type(TotalPriceConcept)
+    min (Optional) max (One)
+  }
+  property (quantity){
+    type(QuantityConcept)
+    min (Required) max (One)
+  }
+  property (optionPrice){
+    type(OptionPriceConcept)
+    min (Required) max (One)
+  }
+  property (payAmount){
+    type(PayAmountConcept)
+    min (Required) max (One)
+  }
+  property (consumerMessage){
+    type(ConsumerMessageConcept)
+    min (Required) max (One)
+  }
+}

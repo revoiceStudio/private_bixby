@@ -1,7 +1,8 @@
 result-view {
  match {
-     DeliveryCheckResultConcept (DeliveryCheckResult)
-   }
+    DeliveryCheckResultConcept (DeliveryCheckResult)
+  }
+  
  render {
    if(size(DeliveryCheckResult)>0){
      layout{

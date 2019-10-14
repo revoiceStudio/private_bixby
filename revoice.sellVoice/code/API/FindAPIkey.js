@@ -18,8 +18,6 @@ findAPIkey = function($vivContext) {
   const findResult = http.getUrl(apikeyFindURL, options)   
 
   console.log("findResult : ", findResult)
-  console.log("고유 식별자 : ",$vivContext.userId)
-
   return findResult
 }
 module.exports.findAPIkey = findAPIkey

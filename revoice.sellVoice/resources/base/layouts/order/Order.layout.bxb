@@ -1,0 +1,124 @@
+layout-macro-def (order-list) {
+  params {
+    param (orderList) {
+      type (OrderCheckResultConcept)
+      min (Required) max (Many)
+    }
+  }
+  content{
+    section{
+      content{
+          hbox {
+            content {
+              vbox{
+                halign (Start)
+                content{
+                  text{value("　") style(Detail_M)}
+                }
+              }          
+              vbox {
+                halign (End)
+                content {                  
+                  single-line{
+                    text { value ("결제완료")   style (Detail_M) }
+                    image {
+                      url("/images/icons/greenCircle.png")
+                      style(Detail_M)
+                    } 
+                  }                  
+                  single-line{
+                    text { value ("배송준비중") style (Detail_M) }
+                    image {
+                      url("/images/icons/redCircle.png")
+                      style(Detail_M)
+                    } 
+                  }
+                }
+              }             
+            }
+          }
+
+          for-each (orderList) {
+            as(item){
+              if(item.index=='1'){
+                divider              
+                single-line {
+                    image {
+                      url("/images/icons/11st.png")
+                      shape (Circle)
+                    } 
+                    spacer
+                    text {
+                        value {
+                            template ("#{value(item.rootIndex)}.")
+                        }
+                        style (Title_XS)
+                    }
+                    text {
+                        value {
+                            template ("#{value(item.consumerName)}")
+                        }
+                        style (Title_XS)
+                        color (Blue)
+                    }
+                    text {
+                      
+                        value {
+                            template ("고객님")
+                        }
+                        style (Title_XS)
+                    }
+                    spacer
+                    image {
+                      url("/images/icons/greenCircle.png")
+                      style(Detail_M)
+                    } 
+                }
+                single-line {                   
+                    text {
+                        value {
+                            template ("(주문일시 : #{value(item.orderDate)})")
+                        }
+                        style (Detail_M)
+                        color (Green)
+                    }                
+                }
+              }
+              cell-card {
+                slot1{
+                  image{
+                    url("#{value(item.productImage)}")
+                    shape (Square)
+                  }
+                }
+                slot2{
+                  if(item.additionalProductStatus){
+                    content{
+                      primary("#{value(item.index)}. #{value(item.productName)}")
+                      secondary("※추가구성상품 #{value(item.option)}")
+                    }
+                  }else{
+                    content{
+                      primary("#{value(item.index)}. #{value(item.productName)}")       
+                      secondary("#{value(item.option)}")               
+                    }
+                  }
+                }
+                on-click {
+                    intent {
+                      goal: revoice.sellVoice.OrderDetailResultConcept
+                      value-set: revoice.sellVoice.OrderCheckResultConcept{
+                        $expr(orderList)
+                      }
+                      value: revoice.sellVoice.RootIndexConcept$expr(item.rootIndex)
+                      value: revoice.sellVoice.BundleDeliveryConcept$expr(item.bundleDelivery)
+                    }
+                }              
+              }                  
+            }          
+          }  
+                   
+      }    
+    }
+  } 
+}

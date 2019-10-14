@@ -1,0 +1,17 @@
+result-view {
+ match {
+     OrderDetailResultConcept (detailResult)
+   }
+ render {  
+     layout{
+       if(exists(detailResult)){
+         layout-macro (order-detail-list) {
+          param (detailList) {
+            expression (detailResult)
+          }
+        }
+      }
+      
+    }
+  }  
+}

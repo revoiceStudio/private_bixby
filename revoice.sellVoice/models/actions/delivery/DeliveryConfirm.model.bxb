@@ -1,0 +1,11 @@
+action (DeliveryConfirm) {
+  description (신규주문 발주확인)
+  type (Search)
+  collect {  
+    input (orderCheckResult) {
+      type (OrderCheckResultConcept)
+      min (Required) max (Many)
+    }
+  }   
+  output (DeliveryConfirmResultConcept)
+}

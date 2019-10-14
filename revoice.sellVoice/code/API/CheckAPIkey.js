@@ -18,12 +18,19 @@ module.exports.function = function checkAPIkey (apikey, $vivContext) {
   }
   
   console.log("API 키 : ", apikey)
-  console.log("고유 식별자 : " , $vivContext.userId)
 
   let apikeyCheck = http.getUrl(apikeyCheckURL, options)   
   if(apikeyCheck==-200){
-    return {checkAPIkey: 'false'}
-  }else{
-    return {checkAPIkey: 'true'}
+    return {
+      checkAPIkey: 'false'
+      }
+  }else if(apikeyCheck==200){
+    return {
+      checkAPIkey: 'true'
+      }
+  }else if(apikeyCheck==-1){
+    return {
+      checkAPIkey: '-1'
+      }
   }
 }

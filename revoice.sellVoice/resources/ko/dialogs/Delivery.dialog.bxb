@@ -1,7 +1,11 @@
 dialog (Result) {
   match: DeliveryCheckResultConcept(deliveryCheckResult)
   choose (Random) {
-      template("배송 준비중인 상품 #{size(deliveryCheckResult)}건이 있습니다.")
-      template ("배송 준비중인 상품 #{size(deliveryCheckResult)}건에 대한 검색 결과입니다.")
+      template("배송 준비중인 상품 #{size(deliveryCheckResult)}건이 있습니다."){
+        speech ("<speak>현재 #{size(deliveryCheckResult)}개의 배송 준비중인 상품이 있네요.  </speak>")
+      }
+      template ("배송 준비중인 상품 #{size(deliveryCheckResult)}건에 대한 검색 결과입니다."){
+        speech ("<speak>현재 #{size(deliveryCheckResult)}개의 배송 준비중인 상품이 있네요.  </speak>")
+      }
   }
 }

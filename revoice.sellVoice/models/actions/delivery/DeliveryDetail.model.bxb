@@ -1,0 +1,19 @@
+action (DeliveryDetail) {
+  description (신규주문 세부사항)
+  type (Search)
+  collect {  
+    input (deliveryCheckResult) {
+      type (DeliveryCheckResultConcept)
+      min (Required) max (Many)
+    }
+    input (rootIndex) {
+      type (RootIndexConcept)
+      min (Required) max (One)
+    }
+    input (bundleDelivery) {
+      type (BundleDeliveryConcept)
+      min (Required) max (One)
+    }
+  }   
+  output (DeliveryDetailResultConcept)
+}

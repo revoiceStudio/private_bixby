@@ -2,15 +2,23 @@ endpoints {
   action-endpoints {
     action-endpoint (OrderCheck) {
       accepted-inputs ($vivContext)
-      local-endpoint ("OrderCheck.js")
+      local-endpoint ("order/OrderCheck.js")
     }
     action-endpoint (DeliveryCheck) {
       accepted-inputs ($vivContext)
-      local-endpoint ("DeliveryCheck.js")
+      local-endpoint ("delivery/DeliveryCheck.js")
     }
-    action-endpoint (Detail) {
-      accepted-inputs (orderCheckResult, index)
-      local-endpoint ("Detail.js")
+    action-endpoint (DeliveryConfirm) {
+      accepted-inputs (orderCheckResult)
+      local-endpoint ("delivery/DeliveryConfirm.js")
+    }
+    action-endpoint (OrderDetail) {
+      accepted-inputs (orderCheckResult,rootIndex,bundleDelivery)
+      local-endpoint ("order/OrderDetail.js")
+    }
+    action-endpoint (DeliveryDetail) {
+      accepted-inputs (deliveryCheckResult,rootIndex,bundleDelivery)
+      local-endpoint ("delivery/DeliveryDetail.js")
     }
     action-endpoint (CheckAPIkey){
       accepted-inputs (apikey, $vivContext)

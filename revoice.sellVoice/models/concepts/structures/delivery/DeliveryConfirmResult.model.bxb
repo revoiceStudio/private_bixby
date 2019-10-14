@@ -1,0 +1,76 @@
+structure (DeliveryConfirmResultConcept) {
+  description (신규주문 발주확인결과)
+  property (productName) {
+    type (ProductNameConcept)
+    min (Optional) max (One)
+  }
+  property (productPrice) {
+    type (ProductPriceConcept)
+    min (Optional) max (One)
+  }
+  property (address) {
+    type (AddressConcept)
+    min (Optional) max (One)
+  }
+  property (consumerName) {
+    type (ConsumerNameConcept)
+    min (Optional) max (One)
+  }
+  property (productImage) {
+    type (ProductImageConcept)
+    min (Optional) max (One)
+  }
+  property (option){
+    type(OptionConcept)
+    min (Optional) max (One)
+  }
+  property(additionalProductStatus){
+    type(AdditionalProductStatusConcept)
+    min (Optional) max (One)
+  }
+  property (index){
+    type(IndexConcept)
+    min (Optional) max (One)
+  }
+  property (rootIndex){
+    type(RootIndexConcept)
+    min (Optional) max (One)
+  }
+  property (bundleDelivery){
+    type(BundleDeliveryConcept)
+    min (Optional) max (One)
+  }
+  property (quantity){
+    type(QuantityConcept)
+    min (Optional) max (One)
+  }
+  property (optionPrice){
+    type(OptionPriceConcept)
+    min (Optional) max (One)
+  }
+  property (payAmount){
+    type(PayAmountConcept)
+    min (Optional) max (One)
+  }
+  property (consumerMessage){
+    type(ConsumerMessageConcept)
+    min (Optional) max (One)
+  }
+  property (orderDate){
+    type(OrderDateConcept)
+    min (Optional) max (One)
+  }
+  property (orderNumber){
+    type(OrderNumberConcept)
+    min (Optional) max (One)
+  }
+  property (deliveryNumber){
+    type(DeliveryNumberConcept)
+    min (Optional) max (One)
+  }
+  property (additionalProduct){
+    type(AdditionalProductConcept)
+    min (Optional) max (One)
+  }
+
+}

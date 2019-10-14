@@ -1,0 +1,3 @@
+name(PayAmountConcept){
+  description ("결제금액")
+}
