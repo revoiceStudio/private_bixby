@@ -32,9 +32,14 @@ endpoints {
       accepted-inputs (apikey, $vivContext)
       local-endpoint ("API/CheckAPIkey.js")
     }
+    // 택배사 선택
+    action-endpoint (InputCourier){
+      accepted-inputs (deliveryCheckResult, rootIndex)
+      local-endpoint ("waybill/InputCourier.js")
+    }
     // 운송장 등록
     action-endpoint (InputWaybill){
-      accepted-inputs (deliveryDetailResult, waybillNumber, hanjin)
+      accepted-inputs (deliveryDetailResult, courier)
       local-endpoint ("waybill/InputWaybill.js")
     }
   }

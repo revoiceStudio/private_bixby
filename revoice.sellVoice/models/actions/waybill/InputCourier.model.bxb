@@ -1,0 +1,15 @@
+action (InputCourier) {
+  description ("택배사 선택")
+  type (Search) 
+  collect {
+    input (deliveryCheckResult) {
+      type (DeliveryCheckResultConcept)
+      min (Required) max (Many)
+    }
+    input (rootIndex) {
+      type (RootIndexConcept)
+      min (Required) max (One)
+    }
+  }
+  output (InputCourierResultConcept)
+}

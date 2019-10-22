@@ -1,0 +1,10 @@
+train (t-o00xe5jmqvoob22q6t02ze41z) {
+  utterance ("[g:CourierConcept] (합동택배)[v:CourierConcept:합동택배]")
+  plan (Y2BiUChKLcvPTE7VK07NyQkDs5zzS4syU4uc8/OSUwtKiFDBCIQMDDxAzATEQDYA)
+  last-modified (1571733688133)
+}
+train (t-obz2ezpimatmenpe2rs16issi) {
+  utterance ("[g:CourierConcept] (경동택배)[v:CourierConcept:경동택배]")
+  plan (Y2BiUChKLcvPTE7VK07NyQkDs5zzS4syU4uc8/OSUwtKiFDBCIQMDDxAzATEQDYA)
+  last-modified (1571733435458)
+}

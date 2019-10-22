@@ -1,25 +1,17 @@
-input-view {
+result-view {
   match {
-    HanJinConcept
+    InputCourierResultConcept(result)
   }
   message {
     template ("택배사를 선택해주세요.")
   }
   render {
-    form {
-      elements {
-        text-input {
-          id (Courier)
-          label (한진택배)
-          type (HanJinConcept)
-          max-length (50)
-        }
+    layout-macro (courier-list) {
+      param (detailList) {
+        expression (result.deliveryDetailResult)
       }
-      on-submit {
-        goal: InputWaybill
-        value: viv.core.FormElement(Courier)
-      }
-    }
+    }      
+     
   }
 
 }

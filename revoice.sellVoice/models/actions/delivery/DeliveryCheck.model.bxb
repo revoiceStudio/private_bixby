@@ -13,14 +13,14 @@ action (DeliveryCheck) {
         }
       }
       error (deliveryResultCode){   
-        property (dial) {
+        property (dialog) {
           type (ResultCodeDialog)
           min (Required) max (One)
         }   
         on-catch {
           halt {
             dialog { 
-              template ("#{value(dial)}")
+              template ("#{value(dialog)}")
             } 
           }
         }

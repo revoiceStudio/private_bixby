@@ -1,11 +1,9 @@
 input-view {
-  match {
-    InputWaybill(deliveryDetailResult){
-      from-input: DeliveryDetailResultConcept
-    }
+  match : InputWaybillResultConcept(result){
+    to-output : InputCourier
   }
   message {
-    template ("묶음배송 size(deliveryDetailResult)건에 대한 운송장 등록 페이지 입니다.")
+    template ("#{value(result.courier)}로 묶음배송 #{size(result.deliveryDetailResult)}건에 대한 운송장 등록 페이지 입니다.")
   }
   render {
     form {

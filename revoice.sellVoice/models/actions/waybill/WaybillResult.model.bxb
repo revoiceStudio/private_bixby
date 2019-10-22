@@ -1,15 +1,19 @@
-action (InputWaybill) {
-  description ("운송장 등록")
+action (WaybillResult) {
+  description ("운송장 등록 결과")
   type (Search) 
   collect {
     input (deliveryDetailResult) {
       type (DeliveryDetailResultConcept)
       min (Required) max (Many)
-    }
+    }    
     input(courier){
       type (CourierConcept)
       min (Required) max (One)
     }
+    input(waybillNumber){
+      type (WaybillNumberConcept)
+      min (Required) max (One)
+    }
   }
-  output (InputWaybillResultConcept)
+  output (WaybillResultConcept)
 }

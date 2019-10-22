@@ -1,0 +1,7 @@
+structure (InputCourierResultConcept) {
+  description ("택배사 등록 후 운송장번호 등록 페이지")
+  property (deliveryDetailResult){
+    type(DeliveryDetailResultConcept)
+    min (Required) max (Many)
+  }
+}

@@ -1,9 +1,8 @@
 var console = require('console')
-module.exports.function = function inputWaybill (deliveryDetailResult, waybillNumber, hanjin) {
-  console.log(deliveryDetailResult,waybillNumber,hanjin)
+module.exports.function = function inputWaybill (deliveryDetailResult,courier) {
+  console.log(deliveryDetailResult,courier)
   return {
     deliveryDetailResult:deliveryDetailResult,
-    waybillNumber:waybillNumber,
-    hanjin:hanjin
+    courier:courier
   }
 }

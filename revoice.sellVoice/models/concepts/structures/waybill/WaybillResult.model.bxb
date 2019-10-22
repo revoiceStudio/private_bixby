@@ -1,0 +1,15 @@
+structure (WaybillResultConcept) {
+  description ("운송장번호 등록 결과 스트럭쳐")
+  property (deliveryDetailResult){
+    type(DeliveryDetailResultConcept)
+    min (Required) max (Many)
+  }  
+  property (courier){
+    type(CourierConcept)
+    min (Required) max (One)
+  }
+  property (waybillNumber){
+    type(WaybillNumberConcept)
+    min (Required) max (One)
+  }
+}

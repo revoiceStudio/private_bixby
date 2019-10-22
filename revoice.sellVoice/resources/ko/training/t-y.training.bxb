@@ -1,0 +1,10 @@
+train (t-ynhn924hwxte523p330np0np7) {
+  utterance ("[g:CourierConcept] (롯데택배)[v:CourierConcept:'롯데(현대)택배']")
+  plan (Y2BiUChKLcvPTE7VK07NyQkDs5zzS4syU4uc8/OSUwtKiFDBCIQMDDxAzATEQDYA)
+  last-modified (1571732501183)
+}
+train (t-yva530j4g3l495f4nc9219jxn) {
+  utterance ("[g:CourierConcept] (한진택배)[v:CourierConcept:한진택배]")
+  plan (Y2BiUChKLcvPTE7VK07NyQkDs5zzS4syU4uc8/OSUwtKiFDBCIQMDDxAzATEQDYA)
+  last-modified (1571729867205)
+}
