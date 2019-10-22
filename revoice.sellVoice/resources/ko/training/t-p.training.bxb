@@ -1,0 +1,5 @@
+train (t-p1wegjckgedw91a4nflpv6p15) {
+  utterance ("[g:HanJinConcept:prompt] (한진택배)[v:HanJinConcept]")
+  plan (Y2BikC9KLcvPTE7VK07NyQkDszwS87wy85zz85JTC0oIK2AEQgYGHiBmAmIgGwA=)
+  last-modified (1571377113535)
+}

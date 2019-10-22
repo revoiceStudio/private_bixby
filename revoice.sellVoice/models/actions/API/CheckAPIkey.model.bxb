@@ -7,5 +7,17 @@ action (CheckAPIkey) {
       min (Required) max (One)
     }
   }
-  output (CheckAPIkeyResultConcept)
+  output (CheckAPIkeyResultConcept){
+    throws {
+      error (userIdAccessPermissonDenied) {      
+        on-catch {
+          halt { 
+            dialog { 
+              template-macro (userIdPermisson)
+            } 
+          }
+        }
+      }
+    }
+  }
 }

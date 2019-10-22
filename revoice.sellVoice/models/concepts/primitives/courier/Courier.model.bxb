@@ -1,0 +1,13 @@
+enum (CourierConcept){
+  description ("택배사")
+  symbol ("CJ대한통운")
+  symbol ("한진택배")
+  symbol ("롯데(현대)택배")
+  symbol ("KGB택배")
+  symbol ("우체국택배")
+  symbol ("로젠택배")
+  symbol ("대신택배")
+  symbol ("경동택배")
+  symbol ("합동택배")
+
+}

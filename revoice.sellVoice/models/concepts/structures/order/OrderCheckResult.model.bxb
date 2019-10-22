@@ -72,5 +72,8 @@ structure (OrderCheckResultConcept) {
     type(AdditionalProductConcept)
     min (Optional) max (One)
   }
-
+  property (orderRootIndex){
+    type(OrderRootIndexConcept)
+    min (Optional) max (One)
+  }
 }

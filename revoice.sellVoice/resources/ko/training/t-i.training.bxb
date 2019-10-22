@@ -1,0 +1,5 @@
+train (t-itskrosgzp9g12nb9q8t3e20s) {
+  utterance ([g:DeliveryCheck] 배송 준비 목록)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)
+  last-modified (1571374717272)
+}

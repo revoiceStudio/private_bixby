@@ -1,0 +1,25 @@
+input-view {
+  match {
+    WaybillNumberConcept
+  }
+  message {
+    template ("운송장 번호를 입력해주세요.")
+  }
+  render {
+    form {
+      elements {
+        number-input {
+          id (waybillNumber)
+          label (운송장 번호)
+          type (WaybillNumberConcept)
+          integer-limit(20)
+        }
+      }
+      on-submit {
+        goal: InputWaybill
+        value: viv.core.FormElement(waybillNumber)
+      }
+    }
+  }
+
+}

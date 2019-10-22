@@ -7,5 +7,30 @@ action (DeliveryConfirm) {
       min (Required) max (Many)
     }
   }   
-  output (DeliveryConfirmResultConcept)
+  output (DeliveryConfirmResultConcept){
+    throws {
+      error (userIdAccessPermissonDenied) {      
+        on-catch {
+          halt { 
+            dialog { 
+              template-macro (userIdPermisson)
+            } 
+          }
+        }
+      }
+      error (deliveryResultCode){   
+        property (dial) {
+          type (ResultCodeDialog)
+          min (Required) max (One)
+        }   
+        on-catch {
+          halt {
+            dialog { 
+              template ("#{value(dial)}")
+            } 
+          }
+        }
+      }
+    }
+  }
 }

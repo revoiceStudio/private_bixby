@@ -1,0 +1,3 @@
+template-macro-def (notRegisteredAPIkey){
+  content: template("API key를 먼저 등록해주세요.")
+}

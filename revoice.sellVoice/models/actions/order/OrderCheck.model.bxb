@@ -1,5 +1,30 @@
 action (OrderCheck) {
   description (신규주문 결제완료 건 조회)
   type (Search) 
-  output (OrderCheckResultConcept)
+  output (OrderCheckResultConcept){
+    throws {
+      error (userIdAccessPermissonDenied) {      
+        on-catch {
+          halt { 
+            dialog { 
+              template-macro (userIdPermisson)
+            } 
+          }
+        }
+      }
+      error (orderResultCode){   
+        property (dial) {
+          type (ResultCodeDialog)
+          min (Required) max (One)
+        }   
+        on-catch {
+          halt {
+            dialog { 
+              template ("#{value(dial)}")
+            } 
+          }
+        }
+      }
+    }
+  }
 }

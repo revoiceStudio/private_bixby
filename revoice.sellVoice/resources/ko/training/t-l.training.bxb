@@ -1,5 +1,5 @@
 train (t-l44299vzydtcfj09gmmffofeh) {
-  utterance ([g:DeliveryCheckResultConcept] 배송 준비중 조회)
-  plan (Y2Bk0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGECAEUQAAA==)
-  last-modified (1569992772689)
+  utterance ([g:DeliveryCheck] 배송 준비중 조회)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)
+  last-modified (1571374725572)
 }

@@ -3,23 +3,27 @@ result-view {
      OrderCheckResultConcept (orderCheckResult)
   }
   followup {
-    prompt {
-      dialog (전체 발주 처리를 하시겠어요?)
-      on-confirm {
-        intent {
-          goal: revoice.sellVoice.DeliveryConfirmResultConcept
-          value: revoice.sellVoice.OrderCheckResultConcept$expr(orderCheckResult)
+    if(size(orderCheckResult)>0){
+      prompt {
+        dialog (전체 발주 처리를 하시겠어요?)
+        on-confirm {
+          intent {
+            goal: revoice.sellVoice.DeliveryConfirmResultConcept
+            value: revoice.sellVoice.OrderCheckResultConcept$expr(orderCheckResult)
+          }
+        }
+        on-deny {
+          message (Okay.)
         }
       }
-      on-deny {
-        message (Okay.)
-      }
-    }
+    }    
   }
   conversation-drivers {   
+    if(size(orderCheckResult)>0){
       conversation-driver {
         template ("응") 
-      }    
+      }   
+    } 
   }
  render {
    if(size(orderCheckResult)>0){

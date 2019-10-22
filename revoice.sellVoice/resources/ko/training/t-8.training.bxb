@@ -1,0 +1,5 @@
+train (t-8o9qc1jo55sdahkwcm16qdxog) {
+  utterance ([g:InputWaybillResultConcept:continue:DeliveryDetailResultConcept] 운송장 등록)
+  plan (Y2Bk0C5KLcvPTE7VK07NyQkDszzzCkpLwhMrkzJzcoJSi0tzSpzz85JTC0oYQIARRAAA)
+  last-modified (1571404755537)
+}

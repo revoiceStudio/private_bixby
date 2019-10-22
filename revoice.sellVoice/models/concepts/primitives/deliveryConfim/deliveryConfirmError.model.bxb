@@ -1,0 +1,3 @@
+name(DeliveryConfirmErrorConcept){
+  description ("발주확인 시 에러내용")
+}

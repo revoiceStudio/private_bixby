@@ -1,0 +1,150 @@
+layout-macro-def (delivery-confirm-list) {
+  params {
+    param (deliveryConfirmList) {
+      type (DeliveryConfirmResultConcept)
+      min (Required) max (Many)
+    }
+  }
+  content{
+    section{
+      content{        
+          hbox {
+            content {
+              vbox{
+                halign (Start)
+                content{
+                  text{value("　") style(Detail_M)}
+                }
+              }          
+              vbox {
+                halign (End)
+                content {                  
+                  single-line{
+                    text { value ("결제완료")   style (Detail_M) }
+                    image {
+                      url("/images/icons/greenCircle.png")
+                      style(Detail_M)
+                    } 
+                  }                  
+                  single-line{
+                    text { value ("배송준비중") style (Detail_M) }
+                    image {
+                      url("/images/icons/redCircle.png")
+                      style(Detail_M)
+                    } 
+                  }
+                }
+              }             
+            }
+          }
+          
+          for-each (deliveryConfirmList) {
+            as(item){
+            //'0'     성공
+            //'-1'    ex)ERROR : OpenAPI Key 에 해당하는 유저가 없습니다. 비지니스 Error. 예외적으로 발생되는 모든 에러. 메시지는 일정하지 않습니다.
+            //'-3206' 이미 발주 처리 되었거나 , 발주 처리할 건이 없습니다. 설명 - 발주처리를 요청한 상품 1건과 같이 추가 구매한 상품 1건을 함께 발주처리 된 경우, 추가 구성상품은 본상품과 같이 배송준비중 처리가 됩니다. 본상품만 배송준비중으로 처리 하여도 추가구성상품은 본상품과 같이 배송준비중으로 처리가 됩니다.
+            //'-3207' 주문상품 상태 수정 오류 (추가상품 포함) 설명 - 시스템 장애 입니다. 우선 결제목록을 한번 더 조회해 보시고 해당 주문건이 노출되는지 확인 하신 후 한번 더 배송준비중 으로 처리 하신 후 같은 에러가 발생하면 관리자에게 문의 주세요.
+            //'-3210' 전세계배송 주문건인 경우, SellerOffice에서 바코드를 출력한후, 발주확인이 가능합니다. 설명 - 발주확인시 "바코드출력 횟수가 1이상이어야만 발주확인 가능" 함.
+            //'-3211' 주문취소된 주문건입니다.
+            //'-3214' 취소처리중인 주문건입니다.
+            //'-1000' 서버 점검중입니다. 설명 - 매주 금요일 새벽은 정기점검일입니다. 서버 차단이 있을수 있습니다.
+              if(item.deliveryConfirmErrorCode=='-1'||  item.deliveryConfirmErrorCode=='-3206'|| item.deliveryConfirmErrorCode=='-3207'|| item.deliveryConfirmErrorCode=='-3210'||  item.deliveryConfirmErrorCode=='-3211'|| item.deliveryConfirmErrorCode=='-3214'||  item.deliveryConfirmErrorCode=='-1000'){
+                cell-card {
+                  slot1{
+                    image{
+                      url("#{value(item.productImage)}")
+                      shape (Square)
+                    }
+                  }
+                  slot2{
+                    content{
+                      primary("#{value(item.index)}. #{value(item.productName)}")
+                      secondary("#{value(item.deliveryConfirmError)}")
+                    }                    
+                  }
+                }
+              }
+              if(item.deliveryConfirmErrorCode=='0'){
+                        if(item.orderRootIndex==item.rootIndex){
+                          divider              
+                          single-line {
+                              image {
+                                url("/images/icons/11st.png")
+                                shape (Circle)
+                              } 
+                              spacer
+                              text {
+                                  value {
+                                      template ("#{value(item.rootIndex)}.")
+                                  }
+                                  style (Title_XS)
+                              }
+                              text {
+                                  value {
+                                      template ("#{value(item.consumerName)}")
+                                  }
+                                  style (Title_XS)
+                                  color (Blue)
+                              }
+                              text {
+                                
+                                  value {
+                                      template ("고객님")
+                                  }
+                                  style (Title_XS)
+                              }
+                              spacer
+                              image {
+                                url("/images/icons/redCircle.png")
+                                style(Detail_M)
+                              } 
+                          }
+                          single-line {                   
+                              text {
+                                  value {
+                                      template ("(주문일시 : #{value(item.orderDate)})")
+                                  }
+                                  style (Detail_M)
+                                  color (Green)
+                              }                
+                          }
+                        }
+                        cell-card {
+                          slot1{
+                            image{
+                              url("#{value(item.productImage)}")
+                              shape (Square)
+                            }
+                          }
+                          slot2{
+                            if(item.additionalProduct!='0'){
+                              content{
+                                primary("#{value(item.index)}. #{value(item.productName)}")
+                                secondary("※추가구성상품 #{value(item.option)}")
+                              }
+                            }else{
+                              content{
+                                primary("#{value(item.index)}. #{value(item.productName)}")       
+                                secondary("#{value(item.option)}")               
+                              }
+                            }
+                          }
+                          on-click {
+                              intent {
+                                goal: revoice.sellVoice.DeliveryDetailResultConcept
+                                value-set: revoice.sellVoice.DeliveryConfirmResultConcept{
+                                  $expr(deliveryConfirmList)
+                                }
+                                value: revoice.sellVoice.RootIndexConcept$expr(item.rootIndex)
+                                value: revoice.sellVoice.BundleDeliveryConcept$expr(item.bundleDelivery)
+                              }
+                          }              
+                        }                  
+                      }        
+            }  
+          }  
+                   
+      }    
+    }
+  } 
+}

@@ -40,7 +40,7 @@ layout-macro-def (order-list) {
 
           for-each (orderList) {
             as(item){
-              if(item.index=='1'){
+              if(item.orderRootIndex==item.rootIndex){
                 divider              
                 single-line {
                     image {
@@ -92,7 +92,7 @@ layout-macro-def (order-list) {
                   }
                 }
                 slot2{
-                  if(item.additionalProductStatus){
+                  if(item.additionalProduct!='0'){
                     content{
                       primary("#{value(item.index)}. #{value(item.productName)}")
                       secondary("※추가구성상품 #{value(item.option)}")

@@ -1,5 +1,30 @@
 action (DeliveryCheck) {
   description (신규주문 배송준비중 조회)
   type (Search)
-  output (DeliveryCheckResultConcept)
+  output (DeliveryCheckResultConcept){
+    throws {
+      error (userIdAccessPermissonDenied) {      
+        on-catch {
+          halt {
+            dialog { 
+              template-macro (userIdPermisson)
+            } 
+          }
+        }
+      }
+      error (deliveryResultCode){   
+        property (dial) {
+          type (ResultCodeDialog)
+          min (Required) max (One)
+        }   
+        on-catch {
+          halt {
+            dialog { 
+              template ("#{value(dial)}")
+            } 
+          }
+        }
+      }
+    }
+  }
 }

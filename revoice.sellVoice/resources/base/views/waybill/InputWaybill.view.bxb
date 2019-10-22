@@ -1,0 +1,27 @@
+input-view {
+  match {
+    InputWaybill(deliveryDetailResult){
+      from-input: DeliveryDetailResultConcept
+    }
+  }
+  message {
+    template ("묶음배송 size(deliveryDetailResult)건에 대한 운송장 등록 페이지 입니다.")
+  }
+  render {
+    form {
+      elements {
+        number-input {
+          id (waybillNumber)
+          label (운송장 번호)
+          type (WaybillNumberConcept)
+          integer-limit(20)
+        }
+      }
+      on-submit {
+        goal: CheckAPIkeyResultConcept
+        value: viv.core.FormElement(waybillNumber)
+      }
+    }
+  }
+
+}

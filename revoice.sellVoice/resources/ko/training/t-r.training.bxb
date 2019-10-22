@@ -1,0 +1,5 @@
+train (t-r7pimol3v8ht3uqwnfvyrriwd) {
+  utterance ("[g:DeliveryDetailResultConcept:continue] (1)[v:RootIndexConcept]번 주문")
+  plan (Y2Bl0C1KLcvPTE7VK07NyQkDs1xSczLLUosqXVJLEjNzglKLS3NKnPPzklMLShgUCClnUMdU4VSal5KTClMHM0oHt1HOGanJ2agWK2GqDsrPL/HMS0mtgKlhYWBkYGJgBtIMQBYEwgATEAPFAQ==)
+  last-modified (1571291647472)
+}

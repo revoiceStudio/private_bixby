@@ -2,9 +2,18 @@ var console = require('console')
 var http = require('http')
 var config = require('config')
 var apikeyFindURL = config.get('apikey.find')
+var fail = require('fail');
 
-findAPIkey = function($vivContext) { 
-
+findAPIkey = function($vivContext) {
+  let findResult = {}
+  var permissions = $vivContext.grantedPermissions;
+  /*if ('bixby-user-id-access' in permissions) {
+    console.log("PERMISSION GRANTED");    
+  } else {
+    console.log("PERMISSION DENIED");
+    throw fail.checkedError("아이디 권한 없음", "userIdAccessPermissonDenied");
+  }*/
+  console.log("유저 아이디 :",$vivContext.bixbyUserId)
   let options = {
     'format': 'json',
     'cacheTime': 0,
@@ -12,12 +21,14 @@ findAPIkey = function($vivContext) {
       'accept': 'application/json'
     },
     'query':{
-      'id': $vivContext.userId
+      'id': $vivContext.bixbyUserId
     }
   }
-  const findResult = http.getUrl(apikeyFindURL, options)   
-
-  console.log("findResult : ", findResult)
+  findResult = http.getUrl(apikeyFindURL, options)   
+  if(findResult == null || findResult ==[] || findResult.length==0){
+    throw fail.checkedError("API key 없음", "notRegisteredAPIkey");
+  }
+  console.log("find API key : ", findResult)
   return findResult
 }
 module.exports.findAPIkey = findAPIkey

@@ -1,14 +1,14 @@
 var http = require('http')
 
-detailResult = function(checkResult, rootIndex, bundleDelivery) { 
+detailResult = function(checkResult, rootIndex) { 
   let detail = new Array()
   let totalPrice = 0
 
   for(var i=0; i<checkResult.length; i++){
-    if(checkResult[i]['rootIndex'] == rootIndex.trim() ){      
-      if(checkResult[i]['bundleDelivery'] == bundleDelivery.trim()){
+    if(checkResult[i]['rootIndex'] == rootIndex){      
         let tmp = {}
         tmp['additionalProductStatus'] = checkResult[i]['additionalProductStatus']
+        tmp['additionalProduct'] = checkResult[i]['additionalProduct']
         tmp['bundleDelivery'] = checkResult[i]['bundleDelivery']
         tmp['option'] = checkResult[i]['option']
         tmp['productImage'] = checkResult[i]['productImage']
@@ -22,13 +22,18 @@ detailResult = function(checkResult, rootIndex, bundleDelivery) {
         tmp['optionPrice'] = checkResult[i]['optionPrice']
         tmp['payAmount'] = checkResult[i]['payAmount']
         tmp['consumerMessage'] = checkResult[i]['consumerMessage']
-
+        tmp['previousRootIndex'] = parseInt(checkResult[i]['rootIndex']) -1     
+        
         totalPrice += parseInt(checkResult[i]['payAmount'])
-        detail.push(tmp)
-      }     
+        detail.push(tmp)           
     }
     if(i == checkResult.length-1){
       detail[0]['totalPrice'] = totalPrice
+      if(checkResult[i]['rootIndex'] == parseInt(rootIndex)){
+        detail[0]['nextRootIndex'] == 0
+      }else{
+        detail[0]['nextRootIndex'] = parseInt(rootIndex) +1
+      }    
     }
   }    
   

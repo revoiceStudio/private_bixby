@@ -14,16 +14,16 @@ getCheckList = function(URL, apikey) {
       'apikey': apikey
     }
   }    
-  const checkResult = http.getUrl(URL, options)   
+  const checkResult = http.getUrl(URL, options) 
+  console.log(checkResult)
+
   let checkResultList = new Array() 
-  let cnt = 0
-  
-  if(checkResult==0 || checkResult==-1 || checkResult==-3103 || checkResult==-3104 || checkResult==-3105 || checkResult==-1000){
+  let orderNumberObj = {}
+  if(checkResult=='0' || checkResult=='-1' || checkResult=='-3103' || checkResult=='-3104' || checkResult=='-3105' || checkResult=='-1000'){
     return checkResultList
-  }else{
-    for(let i=0; i<checkResult.length; i++){ 
-      console.log(i)
-      console.log(checkResult[i])      
+  }
+  else{
+    for(let i=0; i<checkResult.length; i++){
       let tmp = {}
       tmp['productName'] = checkResult[i].prdNm[0]
       tmp['index'] = checkResult[i].ordPrdSeq[0]
@@ -38,11 +38,7 @@ getCheckList = function(URL, apikey) {
       tmp['orderNumber'] = checkResult[i].ordNo[0]
       tmp['deliveryNumber'] = checkResult[i].dlvNo[0]
       tmp['additionalProduct'] = checkResult[i].addPrdNo[0]
-      // 루트 인덱스
-      if(tmp['index']=="1"){
-        cnt++
-      }
-      tmp['rootIndex'] = cnt
+      tmp['additionalProductStatus'] = checkResult[i].addPrdYn[0]
 
       // 고객 메시지 있는 경우
       if(checkResult[i].ordDlvReqCont[0]!=''){        
@@ -57,20 +53,39 @@ getCheckList = function(URL, apikey) {
       }else{
         tmp['option'] = "(옵션없음)"
       }
-      // 추가 구성 상품인 경우
-      if(checkResult[i].addPrdNo != '0'){
-        tmp['additionalProductStatus'] = true
-      }else{
-        tmp['additionalProductStatus'] = false
-      }
+      
       // 이미지 있는 경우
       if(checkResult[i].image != undefined ){
         tmp['productImage'] = checkResult[i].image[0]
       }else{
         tmp['productImage'] = "images/default/plus.png"
       }
-      checkResultList.push(tmp)
+
+      // 주문 변호 별 배열 추가
+      if(orderNumberObj[tmp['orderNumber'] ]== undefined){
+        let arr = new Array()
+        arr.push(tmp)
+        orderNumberObj[tmp['orderNumber'] ] = arr
+      }else{
+        let arr = orderNumberObj[tmp['orderNumber'] ]
+        arr.push(tmp)
+      }      
+      
     }
+
+    let cnt = 0  // 루트 인덱스
+    for(var key in orderNumberObj){      
+      cnt++
+      console.log(key)
+      for(var i=0; i<orderNumberObj[key].length; i++){
+        orderNumberObj[key][i]['rootIndex'] = cnt
+        if(i==0){
+          orderNumberObj[key][i]['orderRootIndex'] = cnt
+        }
+        checkResultList.push(orderNumberObj[key][i])
+      }
+    }
+    console.log(checkResultList)
     return checkResultList
   }
 }

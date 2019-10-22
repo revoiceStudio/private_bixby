@@ -1,7 +1,22 @@
 result-view {
- match {
+  match {
      DeliveryDetailResultConcept (detailResult)
-   }
+  }
+  conversation-drivers {   
+    conversation-driver {
+      if(detailResult[0].previousRootIndex!=0){
+        template ("#{value(detailResult[0].previousRootIndex)}번 주문") 
+      }
+    } 
+    conversation-driver {
+      if(detailResult[0].nextRootIndex!=0){
+         template ("#{value(detailResult[0].nextRootIndex)}번 주문")
+      }     
+    }  
+    conversation-driver {
+      template ("운송장 등록")
+    }
+  }
  render {  
      layout{
        if(exists(detailResult)){

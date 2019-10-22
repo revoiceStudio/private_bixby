@@ -28,6 +28,10 @@ property (productName) {
     type(AdditionalProductStatusConcept)
     min (Required) max (One)
   }
+  property (additionalProduct){
+    type(AdditionalProductConcept)
+    min (Optional) max (One)
+  }
   property (index){
     type(IndexConcept)
     min (Required) max (One)
@@ -59,5 +63,17 @@ property (productName) {
   property (consumerMessage){
     type(ConsumerMessageConcept)
     min (Required) max (One)
+  }
+  property (orderRootIndex){
+    type(OrderRootIndexConcept)
+    min (Optional) max (One)
+  }
+  property (previousRootIndex){
+    type(PreviousRootIndexConcept)
+    min (Optional) max (One)
+  }
+  property (nextRootIndex){
+    type(NextRootIndexConcept)
+    min (Optional) max (One)
   }
 }

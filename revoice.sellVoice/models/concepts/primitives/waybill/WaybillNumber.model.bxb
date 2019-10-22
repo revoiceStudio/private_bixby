@@ -1,0 +1,3 @@
+integer (WaybillNumberConcept){
+  description ("운송장 번호")
+}

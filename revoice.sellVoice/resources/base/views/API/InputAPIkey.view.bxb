@@ -1,23 +1,22 @@
 input-view {
   match {
-    InputAPIkeyResultConcept (apikey)
+    InputAPIkeyResultConcept
   }
   message {
-    template ("API key를 입력해주세요.")
+    template ("운영중인 쇼핑몰의 API key를 입력해주세요. (현재는 11번가만 가능합니다.)")
   }
   render {
     form {
       elements {
         text-input {
           id (inputAPIkey)
-          label (API key)
+          label (11번가 API key)
           type (APIkeyConcept)
           max-length (50)
-          value ("#{raw(apikey.inputAPIkey)}")
         }
       }
       on-submit {
-        goal: CheckAPIkeyResultConcept
+        goal: CheckAPIkey
         value: viv.core.FormElement(inputAPIkey)
       }
     }

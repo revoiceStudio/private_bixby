@@ -72,5 +72,16 @@ structure (DeliveryConfirmResultConcept) {
     type(AdditionalProductConcept)
     min (Optional) max (One)
   }
-
+  property (orderRootIndex){
+    type(OrderRootIndexConcept)
+    min (Optional) max (One)
+  }
+  property (deliveryConfirmError){
+    type(DeliveryConfirmErrorConcept)
+    min (Optional) max(One)
+  }
+  property (deliveryConfirmErrorCode){
+    type(DeliveryConfirmErrorCodeConcept)
+    min (Optional) max(One)
+  }
 }

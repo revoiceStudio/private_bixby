@@ -2,19 +2,22 @@ result-view {
  match {
     DeliveryConfirmResultConcept (DeliveryConfirmResult)
   }
-  
+  conversation-drivers {   
+      conversation-driver {
+        template ("배송 준비 목록") 
+      }   
+  }
  render {
 
-     layout{
-          
+     layout{          
       section{
         title{        
           template ("전체 주문 #{size(DeliveryConfirmResult)}건 발주 처리")
         }
       }      
       if(size(DeliveryConfirmResult)>0){
-        layout-macro (delivery-list) {
-          param (deliveryList) {
+        layout-macro (delivery-confirm-list) {
+          param (deliveryConfirmList) {
             expression (DeliveryConfirmResult)
           }
         }

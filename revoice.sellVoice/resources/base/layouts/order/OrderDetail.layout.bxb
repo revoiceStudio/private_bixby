@@ -46,7 +46,7 @@ layout-macro-def (order-detail-list) {
               as(item){
                   compound-card {
                     content {
-                      if(item.additionalProductStatus){
+                      if(item.additionalProduct!='0'){
                         image-card {
                             aspect-ratio (21:9)
                             image-url ("#{value(item.productImage)}")
@@ -76,7 +76,7 @@ layout-macro-def (order-detail-list) {
                         }
                       }
                       // 추가 구성삼품인 경우
-                      if(item.additionalProductStatus){                  
+                      if(item.additionalProduct!='0'){                  
                         paragraph {
                           value {
                             template ("※추가구성상품 - #{value(item.productName)}") 

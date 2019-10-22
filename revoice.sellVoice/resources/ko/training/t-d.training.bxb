@@ -1,5 +1,5 @@
 train (t-dvykhaqdvycteja8f6qqn03sb) {
-  utterance ([g:OrderCheckResultConcept] 신규 주문 조회)
-  plan (Y2Bk0CxKLcvPTE7VK07NyQkDs/yLUlKLnDNSk7ODUotLc0qc8/OSUwtKGECAEUQAAA==)
-  last-modified (1570692628809)
+  utterance ([g:OrderCheck] 신규 주문 조회)
+  plan (Y2Bi0CxKLcvPTE7VK07NyQkDs/yLUlKLnDNSk7ODUotLc0qc8/OSUwtKGGTwKWVgBEIGKAaSAA==)
+  last-modified (1571374737122)
 }

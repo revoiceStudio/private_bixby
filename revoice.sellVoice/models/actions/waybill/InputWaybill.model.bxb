@@ -1,0 +1,19 @@
+action (InputWaybill) {
+  description ("운송장 등록")
+  type (Search) 
+  collect {
+    input (deliveryDetailResult) {
+      type (DeliveryDetailResultConcept)
+      min (Optional) max (Many)
+    }
+    input(waybillNumber){
+      type (WaybillNumberConcept)
+      min (Required) max (One)
+    }
+    input(hanjin){
+      type (HanJinConcept)
+      min (Required) max (One)
+    }
+  }
+  output (InputWaybillResultConcept)
+}
