@@ -1,0 +1,23 @@
+structure (StockConcept) {
+  description (재고)
+  property (addPrice) {
+    type (AddPriceConcept)
+    min (Required) max (Many)
+  }
+  property (detailOptionName) {
+    type (DetailOptionNameConcept)
+    min (Optional) max (Many)
+  }
+  property (stockNumber) {
+    type (StockNumberConcept)
+    min (Required) max (Many)
+  }
+  property (stockQuantity) {
+    type (StockQuantityConcept)
+    min (Required) max (Many)
+  }
+  property (stockState) {
+    type (StockStateConcept)
+    min (Required) max (Many)
+  }
+}

@@ -1,0 +1,42 @@
+layout-macro-def (product-list) {
+  params {
+    param (productList) {
+      type (SearchProductResultConcept)
+      min (Required) max (Many)
+    }
+  }
+  content{
+    section{
+      content{         
+          for-each (productList) {
+            as(item){    
+              index-var (i)        
+              cell-card {
+                slot1{
+                  image{
+                    url("#{value(item.productImage)}")
+                    shape (Square)
+                  }
+                }
+                slot2{
+                  content{
+                    primary("#{i+1}. #{value(item.productName)}")       
+                    secondary("상품가격 : #{value(item.productPrice)}")               
+                  }
+                }
+                on-click {
+                    intent {
+                      goal: revoice.sellVoice.SearchProductDetail
+                      value: revoice.sellVoice.ProductNumberConcept$expr(item.productNumber)
+                      value: revoice.sellVoice.ProductImageConcept$expr(item.productImage)
+                      value: revoice.sellVoice.ProductPriceConcept$expr(item.productPrice)
+                    }
+                }              
+              }                  
+            }          
+          }  
+                   
+      }    
+    }
+  } 
+}

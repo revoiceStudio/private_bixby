@@ -1,0 +1,21 @@
+result-view{
+ match {
+     SearchProductDetailResultConcept (searchDetailResult)
+   }
+render {
+      layout{
+        layout-macro (product-detail-list) {
+          param (productList) {
+            expression (searchDetailResult.searchProductResult)
+          }
+          param (stockList){
+            expression (searchDetailResult.stock)
+          }
+          param (componentList){
+            expression (searchDetailResult.component)
+          }
+        }
+      }     
+   
+  }  
+}

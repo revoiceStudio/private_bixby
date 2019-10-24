@@ -19,17 +19,15 @@ layout-macro-def (order-list) {
               vbox {
                 halign (End)
                 content {                  
-                  single-line{
-                    text { value ("결제완료")   style (Detail_M) }
+                  single-line{                    
                     image {
-                      url("/images/icons/greenCircle.png")
+                      url("/images/icons/order/payment_complete.jpg")
                       style(Detail_M)
                     } 
                   }                  
                   single-line{
-                    text { value ("배송준비중") style (Detail_M) }
                     image {
-                      url("/images/icons/redCircle.png")
+                      url("/images/icons/delivery/delivery.jpg")
                       style(Detail_M)
                     } 
                   }
@@ -70,7 +68,7 @@ layout-macro-def (order-list) {
                     }
                     spacer
                     image {
-                      url("/images/icons/greenCircle.png")
+                      url("/images/icons/order/payment_complete.jpg")
                       style(Detail_M)
                     } 
                 }

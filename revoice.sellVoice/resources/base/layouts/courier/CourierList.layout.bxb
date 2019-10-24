@@ -16,6 +16,12 @@ layout-macro-def (courier-list) {
           }
           paragraph {
             value {
+              template ("연락처 : #{value(detailList[0].consumerPhoneNumber)}") 
+            }
+            style (Detail_M)
+          }
+          paragraph {
+            value {
               template ("배송지 : #{value(detailList[0].address)}") 
             }
             style (Detail_M)
@@ -25,108 +31,17 @@ layout-macro-def (courier-list) {
               template ("요청사항 : #{value(detailList[0].consumerMessage)}") 
             }
             style (Detail_M)
-          } 
-          paragraph {
-            value {
-              template ("총 주문 금액 : #{value(detailList[0].totalPrice)}") 
-            }
-            style (Detail_M)
-          }
-          for-each (detailList) {
-              as(item){
-                  compound-card {
-                    content {
-                      if(item.additionalProduct!='0'){
-                        image-card {
-                            aspect-ratio (21:9)
-                            image-url ("#{value(item.productImage)}")
-                            title-area {
-                                halign (Start)
-                                slot1 {
-                                    text {
-                                      value ("#{value(item.index)}. #{value(item.productName)}")
-                                      style (Title_M)
-                                    }
-                                }
-                            }
-                        }
-                      }else{
-                        image-card {
-                            aspect-ratio (4:3)
-                            image-url ("#{value(item.productImage)}")
-                            title-area {
-                                halign (Start)
-                                slot1 {
-                                  text {
-                                    value ("#{value(item.index)}. #{value(item.productName)}")
-                                    style (Title_M)
-                                  }
-                                }
-                            }
-                        }
-                      }
-                      // 추가 구성삼품인 경우
-                      if(item.additionalProduct!='0'){                  
-                        paragraph {
-                          value {
-                            template ("※추가구성상품 - #{value(item.productName)}") 
-                          }
-                          style (Detail_M)
-                        }
-                      }else{
-                         paragraph {
-                          value {
-                            template ("#{value(item.productName)}") 
-                          }
-                          style (Detail_M)
-                        }
-                      }
-                      paragraph {
-                        value {
-                          template ("#{value(item.option)}") // Same Day Delivery
-                        }
-                        style (Detail_M_Soft)
-                      }          
-                      if(item.optionPrice!=0){
-                        single-line {
-                          text {
-                              value {
-                                  template ("옵션가격 : #{value(item.optionPrice)}") 
-                              }
-                              style (Detail_M_Soft)
-                          }
-                        }
-                      }                                           
-                      single-line {
-                        text {
-                            value {
-                                template ("상품단가 : #{value(item.productPrice)}") 
-                            }
-                            style (Detail_M_Soft)
-                        }
-                      }
-                      single-line {
-                        text {
-                            value {
-                                template ("수량 : #{value(item.quantity)}개") 
-                            }
-                            style (Detail_M_Soft)
-                        }
-                      }
-                      single-line {
-                        text {
-                            value {
-                                template ("상품 총금액 : #{value(item.payAmount)}") 
-                            }
-                            style (Detail_M_Soft)
-                        }
-                      }
+          }          
 
-                    }
-                  }
+          divider
+          
+          cell-card {
+            slot1{
+              image{
+                shape (Circle)
+                url("/images/icons/package.png")
               }
-          }
-          cell-card {               
+            }               
             slot2{                
                 content{
                   primary("한진택배")
@@ -135,7 +50,7 @@ layout-macro-def (courier-list) {
             }
             on-click {
                 intent {
-                  goal: revoice.sellVoice.InputWaybill
+                  goal: revoice.sellVoice.WaybillResult
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
@@ -143,7 +58,13 @@ layout-macro-def (courier-list) {
                 }
             }              
           }
-          cell-card {               
+          cell-card {
+            slot1{
+              image{
+                shape (Circle)
+                url("/images/icons/package.png")
+              }
+            }                   
             slot2{                
                 content{
                   primary("CJ대한통운")
@@ -152,11 +73,172 @@ layout-macro-def (courier-list) {
             }
             on-click {
                 intent {
-                  goal: revoice.sellVoice.InputWaybill
+                  goal: revoice.sellVoice.WaybillResult
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("CJ대한통운")
+                }
+            }              
+          }
+          cell-card { 
+            slot1{
+              image{
+                shape (Circle)
+                url("/images/icons/package.png")
+              }
+            }                  
+            slot2{                
+                content{
+                  primary("롯데(현대)택배")
+                }
+              
+            }
+            on-click {
+                intent {
+                  goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryDetailResultConcept{
+                    $expr(detailList)
+                  }
+                  value: revoice.sellVoice.CourierConcept("롯데(현대)택배")
+                }
+            }              
+          }
+          cell-card { 
+            slot1{
+              image{
+                shape (Circle)
+                url("/images/icons/package.png")
+              }
+            }                  
+            slot2{                
+                content{
+                  primary("KGB택배")
+                }
+              
+            }
+            on-click {
+                intent {
+                  goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryDetailResultConcept{
+                    $expr(detailList)
+                  }
+                  value: revoice.sellVoice.CourierConcept("KGB택배")
+                }
+            }              
+          }
+          cell-card { 
+            slot1{
+              image{
+                shape (Circle)
+                url("/images/icons/package.png")
+              }
+            }                  
+            slot2{                
+                content{
+                  primary("우체국택배")
+                }
+              
+            }
+            on-click {
+                intent {
+                  goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryDetailResultConcept{
+                    $expr(detailList)
+                  }
+                  value: revoice.sellVoice.CourierConcept("우체국택배")
+                }
+            }              
+          }
+          cell-card { 
+            slot1{
+              image{
+                shape (Circle)
+                url("/images/icons/package.png")
+              }
+            }                  
+            slot2{                
+                content{
+                  primary("로젠택배")
+                }
+              
+            }
+            on-click {
+                intent {
+                  goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryDetailResultConcept{
+                    $expr(detailList)
+                  }
+                  value: revoice.sellVoice.CourierConcept("로젠택배")
+                }
+            }              
+          }
+          cell-card { 
+            slot1{
+              image{
+                shape (Circle)
+                url("/images/icons/package.png")
+              }
+            }                  
+            slot2{                
+                content{
+                  primary("대신택배")
+                }
+              
+            }
+            on-click {
+                intent {
+                  goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryDetailResultConcept{
+                    $expr(detailList)
+                  }
+                  value: revoice.sellVoice.CourierConcept("대신택배")
+                }
+            }              
+          }
+          cell-card { 
+            slot1{
+              image{
+                shape (Circle)
+                url("/images/icons/package.png")
+              }
+            }                  
+            slot2{                
+                content{
+                  primary("경동택배")
+                }
+              
+            }
+            on-click {
+                intent {
+                  goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryDetailResultConcept{
+                    $expr(detailList)
+                  }
+                  value: revoice.sellVoice.CourierConcept("경동택배")
+                }
+            }              
+          }
+          cell-card { 
+            slot1{
+              image{
+                shape (Circle)
+                url("/images/icons/package.png")
+              }
+            }                  
+            slot2{                
+                content{
+                  primary("합동택배")
+                }
+              
+            }
+            on-click {
+                intent {
+                  goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryDetailResultConcept{
+                    $expr(detailList)
+                  }
+                  value: revoice.sellVoice.CourierConcept("합동택배")
                 }
             }              
           }

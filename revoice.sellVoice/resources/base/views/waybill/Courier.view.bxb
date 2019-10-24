@@ -2,6 +2,17 @@ result-view {
   match {
     InputCourierResultConcept(result)
   }
+  conversation-drivers {   
+      conversation-driver {
+        template ("한진택배") 
+      } 
+      conversation-driver {
+        template ("로젠택배") 
+      }
+      conversation-driver {
+        template ("합동택배") 
+      }
+  }
   message {
     template ("택배사를 선택해주세요.")
   }

@@ -39,12 +39,12 @@ getCheckList = function(URL, apikey) {
       tmp['deliveryNumber'] = checkResult[i].dlvNo[0]
       tmp['additionalProduct'] = checkResult[i].addPrdNo[0]
       tmp['additionalProductStatus'] = checkResult[i].addPrdYn[0]
-
+      tmp['consumerPhoneNumber'] = checkResult[i].ordPrtblTel[0]
       // 고객 메시지 있는 경우
       if(checkResult[i].ordDlvReqCont[0]!=''){        
         tmp['consumerMessage'] = checkResult[i].ordDlvReqCont[0]
       }else{
-        tmp['consumerMessage'] = '(문의없음)'
+        tmp['consumerMessage'] = '(배송메세지 없음)'
       }
 
       // 옵션 상품있는 경우

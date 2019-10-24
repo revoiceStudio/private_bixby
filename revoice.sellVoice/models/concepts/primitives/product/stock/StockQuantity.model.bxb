@@ -1,0 +1,3 @@
+name (StockQuantityConcept) {
+  description ("재고수량")
+}

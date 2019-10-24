@@ -36,11 +36,21 @@ endpoints {
     action-endpoint (InputCourier){
       accepted-inputs (deliveryCheckResult, rootIndex)
       local-endpoint ("waybill/InputCourier.js")
+    } 
+   // 운송장 등록 결과
+    action-endpoint (WaybillResult){
+      accepted-inputs (deliveryDetailResult,courier,waybillNumber,$vivContext)
+      local-endpoint ("waybill/WaybillResult.js")
     }
-    // 운송장 등록
-    action-endpoint (InputWaybill){
-      accepted-inputs (deliveryDetailResult, courier)
-      local-endpoint ("waybill/InputWaybill.js")
+    // 상품 조회
+    action-endpoint (SearchProduct){
+      accepted-inputs ($vivContext)
+      local-endpoint ("product/SearchProduct.js")
+    }
+    // 상품 세부사항 조회
+    action-endpoint (SearchProductDetail){
+      accepted-inputs (productNumber, productImage,productPrice, $vivContext)
+      local-endpoint ("product/SearchProductDetail.js")
     }
   }
 }

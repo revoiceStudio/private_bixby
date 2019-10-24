@@ -15,5 +15,30 @@ action (WaybillResult) {
       min (Required) max (One)
     }
   }
-  output (WaybillResultConcept)
+  output (WaybillResultConcept){
+    throws {
+      error (userIdAccessPermissonDenied) {      
+        on-catch {
+          halt {
+            dialog { 
+              template-macro (userIdPermisson)
+            } 
+          }
+        }
+      }
+      error (waybillResultCode){   
+        property (dialog) {
+          type (ResultCodeDialog)
+          min (Required) max (One)
+        }   
+        on-catch {
+          halt {
+            dialog { 
+              template ("#{value(dialog)}")
+            } 
+          }          
+        }
+      }
+    }
+  }
 }

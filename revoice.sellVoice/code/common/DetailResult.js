@@ -22,8 +22,10 @@ detailResult = function(checkResult, rootIndex) {
         tmp['optionPrice'] = checkResult[i]['optionPrice']
         tmp['payAmount'] = checkResult[i]['payAmount']
         tmp['consumerMessage'] = checkResult[i]['consumerMessage']
+        tmp['deliveryNumber'] = checkResult[i]['deliveryNumber']
         tmp['previousRootIndex'] = parseInt(checkResult[i]['rootIndex']) -1     
-        
+        tmp['consumerPhoneNumber'] = checkResult[i]['consumerPhoneNumber']
+
         totalPrice += parseInt(checkResult[i]['payAmount'])
         detail.push(tmp)           
     }

@@ -1,0 +1,35 @@
+input-view {
+ match {
+     SearchProductResultConcept (searchResult)
+   }
+  render {
+    
+    auto-complete{
+      type(SearchProductResultConcept)
+      no-result-text { template ("검색 결과가 없습니다.") }
+      placeholder { template ("상품명") }
+      source {
+        collect-with (productName) {
+          // this will call your "FindThings" action, passing the text entered by the user in the search field of the autocomplete component into the query field
+          intent {
+            goal: FindProduct
+            value: revoice.sellVoice.ProductNameConcept(productName)
+          }
+        }
+        label { template ("what I found") }
+        where-each (searchResult) {
+          display {
+            primary-text { template ("#{value(searchResult.productName)}") }
+            secondary-text { template ("#{value(searchResult.productPrice)}") }
+          }
+          on-select {
+            intent {
+              goal: OrderCheck
+            }
+          }
+        }
+      }
+      
+    }
+  }  
+}

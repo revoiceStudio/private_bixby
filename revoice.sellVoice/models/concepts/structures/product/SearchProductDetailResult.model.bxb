@@ -1,0 +1,15 @@
+structure (SearchProductDetailResultConcept) {
+  description (상품 세부사항 결과)
+  property (searchProductResult){
+    type(SearchProductResultConcept)
+    min (Required) max (One)
+  }
+  property (stock){
+    type(StockConcept)
+    min (Required) max (Many)
+  }
+  property (component){
+    type(ComponentConcept)
+    min (Optional) max (Many)
+  }
+}

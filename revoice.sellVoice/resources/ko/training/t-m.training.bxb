@@ -1,5 +1,0 @@
-train (t-m53g6eztl433fwrtpjjg5ewkg) {
-  utterance ("[g:CourierConcept] (현대택배)[v:CourierConcept:롯데(현대)택배]")
-  plan (Y2BiUChKLcvPTE7VK07NyQkDs5zzS4syU4uc8/OSUwtKiFDBCIQMDDxAzATEQDYA)
-  last-modified (1571732779574)
-}

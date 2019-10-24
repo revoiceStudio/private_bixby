@@ -13,6 +13,7 @@ findAPIkey = function($vivContext) {
     console.log("PERMISSION DENIED");
     throw fail.checkedError("아이디 권한 없음", "userIdAccessPermissonDenied");
   }*/
+  console.log("빅스비 콘텍스트", $vivContext)
   console.log("유저 아이디 :",$vivContext.bixbyUserId)
   let options = {
     'format': 'json',

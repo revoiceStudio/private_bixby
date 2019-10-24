@@ -1,0 +1,5 @@
+train (t-qqdvwgz12zztjqqkjfzp0z4kp) {
+  utterance ([g:SearchProduct] 상품 조회)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)
+  last-modified (1571813846399)
+}

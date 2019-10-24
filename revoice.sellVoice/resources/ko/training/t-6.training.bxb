@@ -1,5 +1,5 @@
 train (t-6v6pqzry2ginx064844vqaq5y) {
-  utterance ("[g:CourierConcept] (CJ대한통운)[v:CourierConcept:CJ대한통운]")
-  plan (Y2BiUChKLcvPTE7VK07NyQkDs5zzS4syU4uc8/OSUwtKiFDBCIQMDDxAzATEQDYA)
-  last-modified (1571732499552)
+  utterance ("[g:WaybillResult:continue:InputCourierResultConcept] (CJ대한통운)[v:CourierConcept:CJ대한통운]")
+  plan (Y2BlUCtKLcvPTE7VK07NyQkDs8ITK5Myc3KCUotLc0qc8/OSUwtKGOQJqGNQwFTgnF9alJlaBDNCF1OFS2pOZllqUaVLakliJpqNuF3mV5qbhDCWhYGRgYmBGUgzAFkQCANMYDkGAA==)
+  last-modified (1571908190945)
 }

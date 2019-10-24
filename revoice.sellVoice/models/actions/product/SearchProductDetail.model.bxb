@@ -1,0 +1,19 @@
+action (SearchProductDetail) {
+  description (상품 세부사항 조회)
+  type (Search) 
+  collect {  
+    input (productNumber) {
+      type (ProductNumberConcept)
+      min (Required) max (One)
+    }
+    input(productImage){
+      type(ProductImageConcept)
+      min (Required) max (One)
+    }
+    input(productPrice){
+      type(ProductPriceConcept)
+      min (Required) max (One)
+    }
+  }
+  output (SearchProductDetailResultConcept)
+}

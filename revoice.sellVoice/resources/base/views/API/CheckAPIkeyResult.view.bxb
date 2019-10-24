@@ -55,6 +55,25 @@ result-view {
                         goal: revoice.sellVoice.DeliveryCheck
                     }
                 }
+            }
+            cell-card {
+                slot1 {
+                    image {
+                        url ("/images/register/register-icon.png")
+                        shape (Circle)
+                    }
+                }
+                slot2 {
+                    content {
+                        order (PrimarySecondary)
+                        primary ("상품 조회") // Fields of America for Fall
+                    }
+                }
+                on-click{
+                  intent {
+                        goal: revoice.sellVoice.SearchProduct
+                    }
+                }
             }            
           }
         }

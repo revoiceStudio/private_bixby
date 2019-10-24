@@ -1,0 +1,19 @@
+structure (SearchProductResultConcept) {
+  description (상품 조회 결과)
+  property (productName){
+    type(ProductNameConcept)
+    min (Optional) max (Many)
+  }
+  property (productPrice){
+    type(ProductPriceConcept)
+    min (Optional) max (Many)
+  }
+  property (productImage){
+    type(ProductImageConcept)
+    min (Optional) max (Many)
+  }
+  property (productNumber){
+    type(ProductNumberConcept)
+    min (Optional) max (Many)
+  }
+}

@@ -1,0 +1,3 @@
+name (StockNumberConcept) {
+  description ("재고번호")
+}

@@ -1,0 +1,172 @@
+layout-macro-def (product-detail-list) {
+  params {
+    param (productList) {
+      type (SearchProductResultConcept)
+      min (Required) max (One)
+    }
+    param (stockList) {
+      type (StockConcept)
+      min (Required) max (Many)
+    }
+    param(componentList){
+      type(ComponentConcept)
+      min(Optional) max (Many)
+    }
+  }
+  content{
+    section{
+      content{
+        hbox {
+          content {
+            vbox{
+              halign (Start)
+              content{
+                text{value("　") style(Detail_M)}
+              }
+            }          
+            vbox {
+              halign (End)
+              content {                  
+                single-line{
+                  image {
+                    url("/images/icons/product/restart_display.jpg")
+                    style(Detail_M)
+                  } 
+                }
+                single-line{
+                  image {
+                    url("/images/icons/product/stop_display.jpg")
+                    style(Detail_M)
+                  } 
+                }                
+                single-line{
+                  image {
+                    url("/images/icons/product/sold_out.jpg")
+                    style(Detail_M)
+                  } 
+                }
+              }
+            }             
+          }
+        }
+        image-card {
+            aspect-ratio (21:9)
+            image-url ("#{value(productList.productImage)}")
+            title-area {
+                halign (Start)
+                slot1 {
+                    text {
+                      value ("#{value(productList.productName)}")
+                      style (Title_M)
+                    }
+                }
+                slot2{
+                  single-line{
+                    text{
+                      value("상품가격 : #{value(productList.productPrice)}원")
+                      style(Detail_M)
+                    }
+                  }
+                }
+            }
+        }
+        for-each (stockList) {
+          as (item){
+              compound-card {
+                content{
+                  if(item.detailOptionName!='null'){
+                     single-line {
+                      text {
+                        value ("상세옵션명 : #{value(item.detailOptionName)}")
+                        style (Detail_L)
+                      }
+                      if(item.stockState == '01'){
+                          image{
+                            url("/images/icons/product/restart_display.jpg")
+                            style(Detail_M)
+                          }
+                      }else{
+                        image{
+                          url("/images/icons/product/sold_out.jpg")
+                          style(Detail_M)
+                        }
+                      }
+                      
+                    }  
+                    single-line {
+                        text {
+                            value {
+                                template ("추가가격 : #{value(item.addPrice)}원") 
+                            }
+                            style (Detail_L)
+                        }
+                    }
+                  }else{
+                    single-line {
+                        text {
+                            value {
+                                template ("(옵션없음)") 
+                            }
+                            style (Detail_L)
+                        }
+                    }
+                  }             
+                   single-line {
+                      text {
+                          value {
+                              template ("재고 : #{value(item.stockQuantity)}개") 
+                          }
+                          style (Detail_L)
+                      }                      
+                  }
+                }                 
+              } 
+          }            
+        }
+        divider
+        single-line{
+          text{
+            color (Amber)
+            value("추가구성상품")
+            style(Title_S)
+          }
+        }
+        for-each (componentList){
+          as (item){
+            compound-card{
+              content{
+                single-line {
+                   if(item.componentState == 'Y'){
+                      image{
+                        url("/images/icons/product/restart_display.jpg")
+                        style(Detail_M)
+                      }
+                    }else{
+                      image{
+                        url("/images/icons/product/sold_out.jpg")
+                        style(Detail_M)
+                      }
+                    }
+                    text {
+                        value {
+                            template ("#{value(item.componentGroupName)}-#{value(item.componentName)}") 
+                        }
+                        style (Detail_M)
+                    }                    
+                }
+                single-line{
+                  text{
+                    value("(가격:#{value(item.componentPrice)},재고:#{value(item.componentQuantity)})")
+                    style (Detail_M)
+                  }
+                }
+              
+              }
+            }
+          }
+        }
+                           
+      }    
+    }
+  } 
+}

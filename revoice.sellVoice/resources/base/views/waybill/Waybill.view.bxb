@@ -1,7 +1,5 @@
 input-view {
-  match {
-    WaybillNumberConcept
-  }
+  match : WaybillNumberConcept
   message {
     template ("운송장 번호를 입력해주세요.")
   }
@@ -16,7 +14,7 @@ input-view {
         }
       }
       on-submit {
-        goal: InputWaybill
+        goal: WaybillNumberConcept
         value: viv.core.FormElement(waybillNumber)
       }
     }

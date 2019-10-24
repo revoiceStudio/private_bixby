@@ -42,7 +42,10 @@ module.exports.function = function deliveryConfirm (orderCheckResult,$vivContext
   for(var key in orderNumberObj){
     for(var i=0; i<orderNumberObj[key].length; i++){
       // 추가구성삼품이고 추가구성상품번호가 0인경우(메인 상품)  또는 추가구성상품이 아닌 경우의 상품에 대해 각각 발주확인 요청을 보낸다.
-      if( (orderNumberObj[key][i]['additionalProduct']=='0' && orderNumberObj[key][i]['additionalProductStatus']=='Y')|| orderNumberObj[key][i]['additionalProductStatus']=='N'){        
+      //if( (orderNumberObj[key][i]['additionalProduct']=='0' && orderNumberObj[key][i]['additionalProductStatus']=='Y')|| orderNumberObj[key][i]['additionalProductStatus']=='N'){
+
+      // N인 경우만 발송요청으로 변경
+      if(orderNumberObj[key][i]['additionalProductStatus']=='N'){          
         options.query.ordNo = orderNumberObj[key][i]['orderNumber']
         options.query.ordPrdSeq = orderNumberObj[key][i]['index']
         options.query.addPrdYn = orderNumberObj[key][i]['additionalProductStatus']

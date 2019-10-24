@@ -1,0 +1,26 @@
+result-view{
+ match {
+     SearchProductResultConcept (searchResult)
+   }
+  render {
+     if(size(searchResult)>0){
+        layout{
+          layout-macro (product-list) {
+            param (productList) {
+              expression (searchResult)
+            }
+          }
+        }
+      }
+      else{
+        layout{      
+          section{
+            title{        
+              template ("조회된 상품이 없습니다.")
+            }
+          }      
+        }
+      }
+   
+  }  
+}

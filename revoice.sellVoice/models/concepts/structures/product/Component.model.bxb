@@ -1,0 +1,23 @@
+structure (ComponentConcept) {
+  description ("추가구성상품")
+  property (componentPrice) {
+    type (ComponentPriceConcept)
+    min (Required) max (Many)
+  }
+  property (componentGroupName) {
+    type (ComponentGroupNameConcept)
+    min (Optional) max (Many)
+  }
+  property (componentName) {
+    type (ComponentNameConcept)
+    min (Required) max (Many)
+  }
+  property (componentQuantity) {
+    type (ComponentQuantityConcept)
+    min (Required) max (Many)
+  }
+  property (componentState) {
+    type (ComponentStateConcept)
+    min (Required) max (Many)
+  }
+}

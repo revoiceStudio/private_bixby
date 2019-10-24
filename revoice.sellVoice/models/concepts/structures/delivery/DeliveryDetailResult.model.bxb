@@ -76,4 +76,12 @@ property (productName) {
     type(NextRootIndexConcept)
     min (Optional) max (One)
   }
+   property (deliveryNumber){
+    type(DeliveryNumberConcept)
+    min (Required) max (One)
+  }
+  property (consumerPhoneNumber){
+    type(ConsumerPhoneNumberConcept)
+    min (Required) max(One)
+  }
 }

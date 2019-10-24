@@ -76,4 +76,8 @@ structure (DeliveryCheckResultConcept) {
     type(OrderRootIndexConcept)
     min (Optional) max (One)
   }
+  property (consumerPhoneNumber){
+    type(ConsumerPhoneNumberConcept)
+    min (Optional) max(One)
+  }
 }
