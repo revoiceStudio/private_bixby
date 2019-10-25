@@ -1,5 +1,11 @@
 action (FindProduct) {
   description (상품 검색)
   type (Search) 
-  output (SearchProductResultConcept)
+  collect{
+    input(query){
+      type(Query)
+      min (Required) max (One)
+    }
+  }
+  output (FindProductConcept)
 }
