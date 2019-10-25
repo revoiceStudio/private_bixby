@@ -1,0 +1,27 @@
+result-view{
+   match {
+     UpdatePriceResultConcept(this)
+   }
+   message{
+     template ("상품 가격이 변경되었습니다.")
+   }
+    render{
+     layout{
+       section{
+         content{
+           paragraph{
+             value{
+               template("변경 상품명 : #{value(this.searchProductResult.productName)}")
+             }
+             style(Detail_M)
+           }
+           single-line{
+             text{
+               value("이전 가격 : #{value(this.searchProductResult.productPrice)} ->  변경 가격 : #{value(this.updatePrice)}")
+             }
+           }
+         }
+       }
+     }
+   }
+}

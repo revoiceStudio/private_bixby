@@ -1,5 +1,5 @@
 train (t-4am3rggnzmuino780xqrseo7v) {
-  utterance ([g:StopProduct] 판매 중지)
-  plan (Y2Bm0CpKLcvPTE7VK07NyQkDs4JL8gsCivJTSpNLglKLS3NKnPPzklMLShhk8aplUMOUhkr5leYmpRbBjGFiYARiBiDJyMAAowE=)
-  last-modified (1571942792057)
+  utterance ([g:StopProduct:continue:SearchProductDetailResultConcept] 판매 중지)
+  plan (Y2Bm0CpKLcvPTE7VK07NyQkDs4JL8gsCivJTSpNLglKLS3NKnPPzklMLShhk8apl0MEinZpYlJyB1TAmBkYgZgCSjAwMMBoA)
+  last-modified (1571978746231)
 }

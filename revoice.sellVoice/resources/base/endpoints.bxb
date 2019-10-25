@@ -72,5 +72,10 @@ endpoints {
       accepted-inputs (searchProductResult, $vivContext)
       local-endpoint ("product/RestartProduct.js")
     }
+    // 상품 가격 변경
+    action-endpoint (UpdatePrice){
+      accepted-inputs (searchProductResult,updatePrice, $vivContext)
+      local-endpoint ("product/UpdatePrice.js")
+    }
   }
 }

@@ -1,8 +1,3 @@
-train (t-inn5hdcqwpknzw7e3j0gi99gb) {
-  utterance ("[g:WaybillResult:continue:InputCourierResultConcept] (우체국택배)[v:CourierConcept:우체국택배]")
-  plan (Y2BlUCtKLcvPTE7VK07NyQkDs8ITK5Myc3KCUotLc0qc8/OSUwtKGOQJqGNQwFTgnF9alJlaBDNCF1OFS2pOZllqUaVLakliJpqNuF3mV5qbhDCWhYGRgYmBGUgzAFkQCANMYDkGAA==)
-  last-modified (1571908200594)
-}
 train (t-itskrosgzp9g12nb9q8t3e20s) {
   utterance ([g:DeliveryCheck] 배송 준비 목록)
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)

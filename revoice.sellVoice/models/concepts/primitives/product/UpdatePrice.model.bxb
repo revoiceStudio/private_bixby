@@ -1,0 +1,3 @@
+integer (UpdatePriceConcept) {
+  description ("업데이트 가격")
+}

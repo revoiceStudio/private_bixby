@@ -1,0 +1,23 @@
+input-view {
+  match : UpdatePriceConcept(this)
+  message {
+    template ("변경할 가격을 입력해주세요.")
+  }
+  render {
+    form {
+      elements {
+        number-input {
+          id (updatePrice)
+          label (변경할 가격)
+          type (UpdatePriceConcept)
+          integer-limit(20)
+        }
+      }
+      on-submit {
+        goal: UpdatePriceConcept
+        value: viv.core.FormElement(updatePrice)
+      }
+    }
+  }
+
+}

@@ -1,0 +1,16 @@
+action (UpdatePrice) {  
+  description ("가격 변경")
+  type(Search)
+  collect {
+    input (searchProductResult) {
+      type (SearchProductResultConcept)
+      min (Required) max (One)
+    }
+    input (updatePrice) {
+      type (UpdatePriceConcept)
+      min (Required) max (One)
+    }
+  }
+  
+  output (UpdatePriceResultConcept)
+}

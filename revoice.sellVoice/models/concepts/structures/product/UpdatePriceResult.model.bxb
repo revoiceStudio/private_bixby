@@ -1,0 +1,11 @@
+structure (UpdatePriceResultConcept) {
+  description ("가격 변경 결과")
+  property (searchProductResult){
+    type(SearchProductResultConcept)
+    min (Required) max (One)
+  }
+  property (updatePrice){
+    type(UpdatePriceConcept)
+    min (Required) max (One)
+  }
+}
