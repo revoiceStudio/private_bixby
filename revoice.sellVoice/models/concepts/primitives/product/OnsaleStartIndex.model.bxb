@@ -1,0 +1,3 @@
+integer (OnsaleStartIndexConcept){
+  description ("판매중 상품 시작 인덱스")
+}

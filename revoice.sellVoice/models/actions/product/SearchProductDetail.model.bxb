@@ -14,6 +14,10 @@ action (SearchProductDetail) {
       type(ProductPriceConcept)
       min (Required) max (One)
     }
+    input(sellState){
+      type(SellStateConcept)
+      min (Required) max (One)
+    }
   }
   output (SearchProductDetailResultConcept)
 }

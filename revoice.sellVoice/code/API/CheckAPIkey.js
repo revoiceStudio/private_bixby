@@ -3,14 +3,15 @@ var http = require('http')
 var config = require('config')
 var apikeyCheckURL = config.get('apikey.check')
 var fail = require('fail')
-module.exports.function = function checkAPIkey (apikey, $vivContext) { 
+module.exports.function = function checkAPIkey (apikey, $vivContext) {
+  console.log($vivContext) 
   var permissions = $vivContext.grantedPermissions; 
-  /*if ('bixby-user-id-access' in permissions) {
+  if ('user-profile-access' in permissions) {
     console.log("PERMISSION GRANTED");    
   } else {
     console.log("PERMISSION DENIED");
-    throw fail.checkedError("아이디 권한 없음", "userIdAccessPermissonDenied");
-  }*/
+    throw fail.checkedError("개인 정보 활용에 동의를 해주세요.", "userIdAccessPermissonDenied");
+  }
   let options = {
     'format': 'json',
     'cacheTime': 0,

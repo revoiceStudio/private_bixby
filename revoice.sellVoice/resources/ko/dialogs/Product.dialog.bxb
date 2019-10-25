@@ -1,0 +1,10 @@
+dialog (Result) {
+  match: SearchProductResultConcept(searchResult)
+  choose (Random) {
+      if(size(searchResult)==50){
+        template("상품 목록입니다.")
+      }else{
+        template("마지막 상품 목록입니다.")
+      }      
+  }
+}

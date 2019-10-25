@@ -1,0 +1,5 @@
+train (t-3nxj6d3uip7n3a2r1vz7c8ch3) {
+  utterance ("[g:OnsaleProduct] (50)[v:OnsaleStartIndexConcept]번 상품 조회")
+  plan (Y2Bm0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGOQxVfvnFSfmpEJVM2jiUhBcklhU4pmXkloBM4uJgRGIGYAkIwMIQPkA)
+  last-modified (1571972525845)
+}

@@ -7,12 +7,12 @@ var fail = require('fail');
 findAPIkey = function($vivContext) {
   let findResult = {}
   var permissions = $vivContext.grantedPermissions;
-  /*if ('bixby-user-id-access' in permissions) {
+  if ('user-profile-access' in permissions) {
     console.log("PERMISSION GRANTED");    
   } else {
     console.log("PERMISSION DENIED");
-    throw fail.checkedError("아이디 권한 없음", "userIdAccessPermissonDenied");
-  }*/
+    throw fail.checkedError("개인 정보 활용에 동의를 해주세요.", "userIdAccessPermissonDenied");
+  }
   console.log("빅스비 콘텍스트", $vivContext)
   console.log("유저 아이디 :",$vivContext.bixbyUserId)
   let options = {

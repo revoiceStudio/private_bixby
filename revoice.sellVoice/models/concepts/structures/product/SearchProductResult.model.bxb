@@ -16,4 +16,20 @@ structure (SearchProductResultConcept) {
     type(ProductNumberConcept)
     min (Optional) max (Many)
   }
+  property (sellState){
+    type(SellStateConcept)
+    min (Optional) max(One)
+  }
+  property (onSaleStartIndex){
+    type(OnsaleStartIndexConcept)
+    min (Optional) max (Many)
+  }
+  property (soldOutStartIndex){
+    type(SoldOutStartIndexConcept)
+    min (Optional) max (Many)
+  }
+  property (stopDisplayStartIndex){
+    type(StopDisplayStartIndexConcept)
+    min (Optional) max (Many)
+  }
 }

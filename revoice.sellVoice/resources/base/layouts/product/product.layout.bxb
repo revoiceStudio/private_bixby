@@ -9,8 +9,7 @@ layout-macro-def (product-list) {
     section{
       content{         
           for-each (productList) {
-            as(item){    
-              index-var (i)        
+            as(item){          
               cell-card {
                 slot1{
                   image{
@@ -19,10 +18,25 @@ layout-macro-def (product-list) {
                   }
                 }
                 slot2{
-                  content{
-                    primary("#{i+1}. #{value(item.productName)}")       
-                    secondary("상품가격 : #{value(item.productPrice)}")               
+                  if(item.sellState == '103'){
+                    content{
+                      primary("#{value(item.onSaleStartIndex)}. #{value(item.productName)}")       
+                      secondary("상품가격 : #{value(item.productPrice)}")               
+                    }
                   }
+                  if(item.sellState == '104'){
+                    content{
+                      primary("#{value(item.soldOutStartIndex)}. #{value(item.productName)}")       
+                      secondary("상품가격 : #{value(item.productPrice)}")               
+                    }
+                  }
+                  if(item.sellState == '105'){
+                    content{
+                      primary("#{value(item.stopDisplayStartIndex)}. #{value(item.productName)}")       
+                      secondary("상품가격 : #{value(item.productPrice)}")               
+                    }
+                  }
+                  
                 }
                 on-click {
                     intent {
@@ -30,6 +44,7 @@ layout-macro-def (product-list) {
                       value: revoice.sellVoice.ProductNumberConcept$expr(item.productNumber)
                       value: revoice.sellVoice.ProductImageConcept$expr(item.productImage)
                       value: revoice.sellVoice.ProductPriceConcept$expr(item.productPrice)
+                      value: revoice.sellVoice.SellStateConcept$expr(item.sellState)
                     }
                 }              
               }                  

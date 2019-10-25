@@ -71,7 +71,7 @@ result-view {
                 }
                 on-click{
                   intent {
-                        goal: revoice.sellVoice.SearchProduct
+                        goal: revoice.sellVoice.OnsaleProduct
                     }
                 }
             }            

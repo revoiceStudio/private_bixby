@@ -4,7 +4,7 @@ var config = require('config')
 var searchProductDetailURL = config.get('search.product.detail')
 var findKey = require('API/FindAPIkey')
 
-module.exports.function = function searchProductDetail (productNumber,productImage,productPrice, $vivContext) {
+module.exports.function = function searchProductDetail (productNumber,productImage,productPrice, sellState, $vivContext) {
   const findResult = findKey.findAPIkey($vivContext)
   const options = {     
     'format': 'json',
@@ -29,7 +29,7 @@ module.exports.function = function searchProductDetail (productNumber,productIma
   product['productPrice'] = productPrice
   product['productNumber'] = productNumber
   product['productImage'] = productImage
-  
+  product['sellState'] = sellState
   // 재고
   for(let i=0; i<detailResult['ns2:ProductStock'].length; i++){
     let stock = {}

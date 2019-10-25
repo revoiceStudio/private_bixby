@@ -1,0 +1,7 @@
+structure (StopProductResultConcept) {
+  description ("판매 중지 결과")
+  property (searchProductResult){
+    type(SearchProductResultConcept)
+    min (Required) max (One)
+  }
+}

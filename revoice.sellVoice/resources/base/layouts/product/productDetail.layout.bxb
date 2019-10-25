@@ -15,40 +15,7 @@ layout-macro-def (product-detail-list) {
   }
   content{
     section{
-      content{
-        hbox {
-          content {
-            vbox{
-              halign (Start)
-              content{
-                text{value("　") style(Detail_M)}
-              }
-            }          
-            vbox {
-              halign (End)
-              content {                  
-                single-line{
-                  image {
-                    url("/images/icons/product/restart_display.jpg")
-                    style(Detail_M)
-                  } 
-                }
-                single-line{
-                  image {
-                    url("/images/icons/product/stop_display.jpg")
-                    style(Detail_M)
-                  } 
-                }                
-                single-line{
-                  image {
-                    url("/images/icons/product/sold_out.jpg")
-                    style(Detail_M)
-                  } 
-                }
-              }
-            }             
-          }
-        }
+      content{        
         image-card {
             aspect-ratio (21:9)
             image-url ("#{value(productList.productImage)}")
@@ -79,19 +46,7 @@ layout-macro-def (product-detail-list) {
                       text {
                         value ("상세옵션명 : #{value(item.detailOptionName)}")
                         style (Detail_L)
-                      }
-                      if(item.stockState == '01'){
-                          image{
-                            url("/images/icons/product/restart_display.jpg")
-                            style(Detail_M)
-                          }
-                      }else{
-                        image{
-                          url("/images/icons/product/sold_out.jpg")
-                          style(Detail_M)
-                        }
-                      }
-                      
+                      }                      
                     }  
                     single-line {
                         text {
@@ -136,17 +91,6 @@ layout-macro-def (product-detail-list) {
             compound-card{
               content{
                 single-line {
-                   if(item.componentState == 'Y'){
-                      image{
-                        url("/images/icons/product/restart_display.jpg")
-                        style(Detail_M)
-                      }
-                    }else{
-                      image{
-                        url("/images/icons/product/sold_out.jpg")
-                        style(Detail_M)
-                      }
-                    }
                     text {
                         value {
                             template ("#{value(item.componentGroupName)}-#{value(item.componentName)}") 

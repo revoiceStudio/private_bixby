@@ -1,0 +1,118 @@
+result-view{
+   match {
+     SearchProductResultConcept (searchResult)
+   }
+   conversation-drivers {
+     if(searchResult[0].sellState == '103')  {
+        conversation-driver {
+          if(size(searchResult)<=50 && searchResult[0].onSaleStartIndex>50){
+            template ("#{searchResult[0].onSaleStartIndex-50}번부터 상품 조회")       
+          }else if(size(searchResult)>0 && searchResult[0].onSaleStartIndex!=1){
+            template ("1번부터 상품 조회")
+          }          
+        }
+        conversation-driver {
+          if(size(searchResult)==50){
+            template ("#{searchResult[0].onSaleStartIndex+50}번부터 상품 조회")       
+          }           
+        }   
+     }
+     if(searchResult[0].sellState == '104')  {
+        conversation-driver {
+          if(size(searchResult)<=50 && searchResult[0].soldOutStartIndex>50){
+            template ("#{searchResult[0].soldOutStartIndex-50}번부터 상품 조회")       
+          }else if(size(searchResult)>0 && searchResult[0].soldOutStartIndex!=1){
+            template ("1번부터 상품 조회")
+          }          
+        }
+        conversation-driver {
+          if(size(searchResult)==50){
+            template ("#{searchResult[0].soldOutStartIndex+50}번부터 상품 조회")       
+          }           
+        }   
+     }
+     if(searchResult[0].sellState == '105')  {
+        conversation-driver {
+          if(size(searchResult)<=50 && searchResult[0].stopDisplayStartIndex>50){
+            template ("#{searchResult[0].stopDisplayStartIndex-50}번부터 상품 조회")       
+          }else if(size(searchResult)>0 && searchResult[0].stopDisplayStartIndex!=1){
+            template ("1번부터 상품 조회")
+          }          
+        }
+        conversation-driver {
+          if(size(searchResult)==50){
+            template ("#{searchResult[0].stopDisplayStartIndex+50}번부터 상품 조회")       
+          }           
+        }   
+     }
+    }
+  render {
+     if(size(searchResult)>0){
+        layout{
+            section{
+            content{
+              hbox {
+                content {                  
+                  vbox {
+                    halign (Start)
+                    content {                  
+                      single-line{
+                        if(searchResult[0].sellState == '103'){ //판매중
+                          image {
+                            url("/images/icons/product/restart_display.jpg")
+                            style(Detail_L)
+                          } 
+                        }
+                        if(searchResult[0].sellState == '104'){ //품절
+                          image {
+                            url("/images/icons/product/sold_out.jpg")
+                            style(Detail_L)
+                          } 
+                        }
+                        if(searchResult[0].sellState == '105'){ //전시중지
+                          image {
+                            url("/images/icons/product/stop_display.jpg")
+                            style(Detail_L)
+                          } 
+                        }
+                      }
+                    }
+                  }
+                  vbox{
+                    halign (End)
+                    content{
+                      if(searchResult[0].sellState == '103')  {
+                        text{value("(#{value(searchResult[0].onSaleStartIndex)}번 ~ #{searchResult[0].onSaleStartIndex+size(searchResult)-1}번)") style(Detail_M)}
+                      }
+                      if(searchResult[0].sellState == '104')  {
+                        text{value("(#{value(searchResult[0].soldOutStartIndex)}번 ~ #{searchResult[0].soldOutStartIndex+size(searchResult)-1}번)") style(Detail_M)}
+                      }
+                      if(searchResult[0].sellState == '105')  {
+                        text{value("(#{value(searchResult[0].stopDisplayStartIndex)}번 ~ #{searchResult[0].stopDisplayStartIndex+size(searchResult)-1}번)") style(Detail_M)}
+                      }
+                    }
+                  }            
+                }
+              }
+          }        
+        }
+
+          layout-macro (product-list) {
+            param (productList) {
+              expression (searchResult)
+            }
+          }
+        }
+      }
+      else{
+        layout{      
+          section{
+            title{        
+              template ("조회된 상품이 없습니다.")
+            }
+          }      
+        }
+      }
+   
+  }  
+}

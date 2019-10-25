@@ -1,0 +1,12 @@
+action (StopProduct) {  
+  description ("판매 중지")
+  type(Search)
+  collect {
+    input (searchProductResult) {
+      type (SearchProductResultConcept)
+      min (Required) max (One)
+    }
+  }
+  
+  output (StopProductResultConcept)
+}

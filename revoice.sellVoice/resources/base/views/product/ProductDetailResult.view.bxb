@@ -1,0 +1,75 @@
+result-view{
+  match {
+     SearchProductDetailResultConcept (searchDetailResult)
+   }
+  conversation-drivers {   
+    conversation-driver {
+      template ("가격 변경")       
+    }
+    if(searchDetailResult.searchProductResult.sellState == '103'){ //판매중
+      conversation-driver {
+        template ("판매 중지")       
+      }
+    }   
+    if(searchDetailResult.searchProductResult.sellState == '105'){ //전시중지
+      conversation-driver {
+        template ("판매 중지 해제")       
+      } 
+    }   
+  }
+  render {
+      layout{
+        section{
+          content{
+              hbox {
+                content {
+                  vbox{
+                    halign (Start)
+                    content{
+                      text{value("　") style(Detail_M)}
+                    }
+                  }          
+                  vbox {
+                    halign (End)
+                    content {                  
+                      single-line{
+                        if(searchDetailResult.searchProductResult.sellState == '103'){ //판매중
+                          image {
+                            url("/images/icons/product/restart_display.jpg")
+                            style(Detail_M)
+                          } 
+                        }
+                        if(searchDetailResult.searchProductResult.sellState == '104'){ //품절
+                          image {
+                            url("/images/icons/product/sold_out.jpg")
+                            style(Detail_M)
+                          } 
+                        }
+                        if(searchDetailResult.searchProductResult.sellState == '105'){ //전시중지
+                          image {
+                            url("/images/icons/product/stop_display.jpg")
+                            style(Detail_M)
+                          } 
+                        }
+                      }
+                    }
+                  }             
+                }
+              }
+          }        
+        }        
+        layout-macro (product-detail-list) {
+          param (productList) {
+            expression (searchDetailResult.searchProductResult)
+          }
+          param (stockList){
+            expression (searchDetailResult.stock)
+          }
+          param (componentList){
+            expression (searchDetailResult.component)
+          }
+        }
+      }     
+   
+  }  
+}

@@ -1,0 +1,36 @@
+action (OnsaleProduct) {
+  description (상품 조회)
+  type (Search) 
+  collect{
+    input(startIndex){
+      type(OnsaleStartIndexConcept)
+      min (Optional) max(One)
+    }
+  }
+  output (SearchProductResultConcept){
+    throws {
+      error (userIdAccessPermissonDenied) {      
+        on-catch {
+          halt {
+            dialog { 
+              template-macro (userIdPermisson)
+            } 
+          }
+        }
+      }
+      error (productResultCode){   
+        property (dialog) {
+          type (ResultCodeDialog)
+          min (Required) max (One)
+        }   
+        on-catch {
+          halt {
+            dialog { 
+              template ("#{value(dialog)}")
+            } 
+          }          
+        }
+      }
+    }
+  }
+}

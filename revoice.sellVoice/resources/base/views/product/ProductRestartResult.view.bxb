@@ -1,0 +1,39 @@
+result-view{
+   match {
+     RestartProductResultConcept(this)
+   }
+   conversation-drivers {   
+      conversation-driver {
+        template ("판매중 상품 조회")       
+      }
+      conversation-driver {
+        template ("품절 상품 조회")       
+      }
+      conversation-driver {
+        template ("판매 중지 상품 조회")       
+      }
+   }
+   message{
+     template ("상품 판매 중지가 해제되어, 판매중으로 변경됐습니다.")
+   }
+   render{
+     layout{
+       section{
+         content{
+           paragraph{
+             value{
+               template("변경 상품명 : #{value(this.searchProductResult.productName)}")
+             }
+             style(Detail_M)
+           }
+           single-line{
+             text{
+               value("(판매중지 -> 판매중)")
+             }
+           }
+         }
+       }
+     }
+   }
+
+}

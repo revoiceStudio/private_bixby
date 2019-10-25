@@ -1,15 +1,15 @@
 capsule-info {
-  display-name (셀보이스)
-  dispatch-name (셀보이스)
+  display-name (셀퍼)
+  dispatch-name (셀퍼)
   developer-name (리보이스)  
   icon-asset (images/icons/sellVoice.png)
   description ("쇼핑몰 통합관리 서비스 셀보이스 입니다.")
-  website-url (http://revoice.kr/sellVoice)
-  terms-url (http://revoice.kr/sellVoice/terms-of-use)
+  website-url (http://revoice.kr/sellper)
+  terms-url (http://revoice.kr/sellper/terms-of-use)
   search-keywords {
     keyword (쇼핑몰)
     keyword (판매자)
     keyword (온라인샵)
-    keyword (셀보이스)
+    keyword (셀퍼)
   }  
 }
