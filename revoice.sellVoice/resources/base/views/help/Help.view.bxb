@@ -2,12 +2,73 @@ result-view{
   match {
      HelpResultConcept
   }
+  conversation-drivers {
+    conversation-driver {
+        template ("API 설정")
+    }
+  }
   render{
     layout{
       section{
-        content{
+
+        content {
             image{
-              url("/images/courier/CJ.png")
+              url("/images/help/11st.png")
+            }
+
+            attribution-link {
+              label {
+                template ("11번가 OPNE API CENTER")
+              }
+              url ("https://openapi.11st.co.kr/")
+              }
+            single-line {
+              text {
+                value {
+                  template ("1. 우선 11번가 OPEN API센터에 로그인 합니다.")
+                }
+                style (Detail_L_Soft)
+              }
+            }
+            single-line {
+              text {
+                value {
+                  template ("2. '서비스 등록 확인' 에서 API Key를 확인")
+                }
+                style (Detail_L_Soft)
+              }
+            }
+            single-line {
+              text {
+                value {
+                  template ("3. 'Seller API 정보' 에서 '수정'을 클릭.")
+                }
+                style (Detail_L_Soft)
+              }
+            }
+            single-line {
+              text {
+                value {
+                  template ("4. '개발서버 IP', '개발자 PC', '상용서버 IP' 확인")
+                }
+                style (Detail_L_Soft)
+              }
+            }
+            single-line {
+              text {
+                value {
+                  template ("5. 15.164.93.96(셀퍼 서버)로 설정해주세요.")
+                }
+                style (Detail_L_Soft)
+              }
+            }
+            single-line {
+              text {
+                value {
+                  template ("6. 'API 설정'이라고 말씀해보세요.")
+                }
+                style (Detail_L_Soft)
+              }
             }
         }
       }
