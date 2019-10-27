@@ -39,7 +39,7 @@ layout-macro-def (courier-list) {
             slot1{
               image{
                 shape (Circle)
-                url("/images/icons/package.png")
+                url("/images/courier/HANJIN.png")
               }
             }               
             slot2{                
@@ -62,7 +62,7 @@ layout-macro-def (courier-list) {
             slot1{
               image{
                 shape (Circle)
-                url("/images/icons/package.png")
+                url("/images/courier/CJ.png")
               }
             }                   
             slot2{                
@@ -85,7 +85,7 @@ layout-macro-def (courier-list) {
             slot1{
               image{
                 shape (Circle)
-                url("/images/icons/package.png")
+                url("/images/courier/LOTTE.png")
               }
             }                  
             slot2{                
@@ -108,7 +108,7 @@ layout-macro-def (courier-list) {
             slot1{
               image{
                 shape (Circle)
-                url("/images/icons/package.png")
+                url("/images/courier/KGB.png")
               }
             }                  
             slot2{                
@@ -131,7 +131,7 @@ layout-macro-def (courier-list) {
             slot1{
               image{
                 shape (Circle)
-                url("/images/icons/package.png")
+                url("/images/courier/POST.png")
               }
             }                  
             slot2{                
@@ -154,7 +154,30 @@ layout-macro-def (courier-list) {
             slot1{
               image{
                 shape (Circle)
-                url("/images/icons/package.png")
+                url("/images/courier/CU.png")
+              }
+            }                  
+            slot2{                
+                content{
+                  primary("CU편의점택배")
+                }
+              
+            }
+            on-click {
+                intent {
+                  goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryDetailResultConcept{
+                    $expr(detailList)
+                  }
+                  value: revoice.sellVoice.CourierConcept("CU편의점택배")
+                }
+            }              
+          }
+          cell-card { 
+            slot1{
+              image{
+                shape (Circle)
+                url("/images/courier/LOGEN.png")
               }
             }                  
             slot2{                
@@ -177,7 +200,7 @@ layout-macro-def (courier-list) {
             slot1{
               image{
                 shape (Circle)
-                url("/images/icons/package.png")
+                url("/images/courier/DS.png")
               }
             }                  
             slot2{                
@@ -200,7 +223,7 @@ layout-macro-def (courier-list) {
             slot1{
               image{
                 shape (Circle)
-                url("/images/icons/package.png")
+                url("/images/courier/KD.png")
               }
             }                  
             slot2{                
@@ -223,7 +246,7 @@ layout-macro-def (courier-list) {
             slot1{
               image{
                 shape (Circle)
-                url("/images/icons/package.png")
+                url("/images/courier/HD.png")
               }
             }                  
             slot2{                
@@ -242,6 +265,122 @@ layout-macro-def (courier-list) {
                 }
             }              
           }
+          cell-card { 
+            slot1{
+              image{
+                shape (Circle)
+                url("/images/courier/DHL.png")
+              }
+            }                  
+            slot2{                
+                content{
+                  primary("DHL")
+                }
+              
+            }
+            on-click {
+                intent {
+                  goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryDetailResultConcept{
+                    $expr(detailList)
+                  }
+                  value: revoice.sellVoice.CourierConcept("DHL")
+                }
+            }              
+          }
+          cell-card { 
+            slot1{
+              image{
+                shape (Circle)
+                url("/images/courier/LY.png")
+              }
+            }                  
+            slot2{                
+                content{
+                  primary("일양로지스")
+                }
+              
+            }
+            on-click {
+                intent {
+                  goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryDetailResultConcept{
+                    $expr(detailList)
+                  }
+                  value: revoice.sellVoice.CourierConcept("일양로지스")
+                }
+            }              
+          }
+          cell-card { 
+            slot1{
+              image{
+                shape (Circle)
+                url("/images/courier/SLX.png")
+              }
+            }                  
+            slot2{                
+                content{
+                  primary("SLX택배")
+                }
+              
+            }
+            on-click {
+                intent {
+                  goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryDetailResultConcept{
+                    $expr(detailList)
+                  }
+                  value: revoice.sellVoice.CourierConcept("SLX택배")
+                }
+            }              
+          }
+          cell-card { 
+            slot1{
+              image{
+                shape (Circle)
+                url("/images/courier/YONGMA.png")
+              }
+            }                  
+            slot2{                
+                content{
+                  primary("용마로지스")
+                }
+              
+            }
+            on-click {
+                intent {
+                  goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryDetailResultConcept{
+                    $expr(detailList)
+                  }
+                  value: revoice.sellVoice.CourierConcept("용마로지스")
+                }
+            }              
+          }
+          cell-card { 
+            slot1{
+              image{
+                shape (Circle)
+                url("/images/courier/gitar.png")
+              }
+            }                  
+            slot2{                
+                content{
+                  primary("기타")
+                }
+              
+            }
+            on-click {
+                intent {
+                  goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryDetailResultConcept{
+                    $expr(detailList)
+                  }
+                  value: revoice.sellVoice.CourierConcept("기타")
+                }
+            }              
+          }
+          
       }
     }
   }

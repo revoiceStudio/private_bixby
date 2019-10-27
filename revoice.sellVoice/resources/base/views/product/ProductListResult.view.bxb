@@ -91,7 +91,7 @@ result-view{
                         text{value("(#{value(searchResult[0].stopDisplayStartIndex)}번 ~ #{searchResult[0].stopDisplayStartIndex+size(searchResult)-1}번)") style(Detail_M)}
                       }
                     }
-                  }            
+                  }
                 }
               }
           }        

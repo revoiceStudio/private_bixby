@@ -6,8 +6,13 @@ enum (CourierConcept){
   symbol ("KGB택배")
   symbol ("우체국택배")
   symbol ("로젠택배")
+  symbol ("CU편의점택배")
   symbol ("대신택배")
   symbol ("경동택배")
   symbol ("합동택배")
-
+  symbol ("DHL")
+  symbol ("일양로지스")
+  symbol ("SLX택배")
+  symbol ("용마로지스")
+  symbol ("기타")
 }
