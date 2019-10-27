@@ -90,7 +90,7 @@ result-view {
                 }
                 on-click{
                   intent {
-                        goal: revoice.sellVoice.OnsaleProduct
+                        goal: revoice.sellVoice.InputAPIkeyResultConcept
                     }
                 }
             }
@@ -109,7 +109,7 @@ result-view {
                 }
                 on-click{
                   intent {
-                        goal: revoice.sellVoice.OnsaleProduct
+                        goal: revoice.sellVoice.Help
                     }
                 }
             }            

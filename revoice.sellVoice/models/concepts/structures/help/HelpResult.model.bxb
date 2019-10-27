@@ -1,0 +1,7 @@
+structure (HelpResultConcept) {
+  description ("도움말 결과")
+  property (helpConcept){
+    type(HelpConcept)
+    min (Optional)max(One)
+  }
+}

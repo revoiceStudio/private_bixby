@@ -1,0 +1,5 @@
+train (t-nka5kxdahagxzvqypazofxo4m) {
+  utterance ([g:Help] 도움말)
+  plan (Y2BikC1KLcvPTE7VK07NyQkDszxScwqc8/OSUwtKGMSwSzMwAiEDFANJAA==)
+  last-modified (1572158652904)
+}

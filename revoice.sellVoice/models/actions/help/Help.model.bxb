@@ -1,0 +1,5 @@
+action (Help) {
+  description ("도움말") 
+  type(Search) 
+  output (HelpResultConcept)
+}

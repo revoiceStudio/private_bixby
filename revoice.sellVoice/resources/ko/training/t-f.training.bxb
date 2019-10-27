@@ -1,10 +1,10 @@
 train (t-f6nidy88nu7hai4z04s30zxf9) {
   utterance ([g:SoldOutProduct] 품절 상품 조회)
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGBSwqM7PSfEvLYEqZ2AEQgYoBpIA)
-  last-modified (1571913325081)
+  last-modified (1572156612344)
 }
 train (t-fewpta3lqflhmxzcuyr8i68ph) {
-  utterance ([g:InputAPIkeyResultConcept] 실행해줘)
+  utterance ([g:InputAPIkeyResultConcept] API 등록)
   plan (Y2Bk0CpKLcvPTE7VK07NyQkDszzzCkpLHAM8s1Mrg1KLS3NKnPPzklMLShhAgBFEAAA=)
-  last-modified (1571401434344)
+  last-modified (1572156620366)
 }

@@ -1,0 +1,4 @@
+dialog (Result) {
+  match: HelpResultConcept
+  template("셀퍼를 이용해주셔서 감사합니다. 아래의 도움말을 확인해보세요.")
+}

@@ -1,0 +1,16 @@
+result-view{
+  match {
+     HelpResultConcept
+  }
+  render{
+    layout{
+      section{
+        content{
+            image{
+              url("/images/courier/CJ.png")
+            }
+        }
+      }
+    }
+  }
+}

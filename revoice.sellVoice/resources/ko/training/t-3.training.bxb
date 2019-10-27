@@ -3,3 +3,8 @@ train (t-3nxj6d3uip7n3a2r1vz7c8ch3) {
   plan (Y2Bm0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGOQxVfvnFSfmpEJVM2jiUhBcklhU4pmXkloBM4uJgRGIGYAkIwMIQPkA)
   last-modified (1571972525845)
 }
+train (t-3rk00it9g41llv08iyg3498gn) {
+  utterance ([g:InputAPIkeyResultConcept] API 설정)
+  plan (Y2Bk0CpKLcvPTE7VK07NyQkDszzzCkpLHAM8s1Mrg1KLS3NKnPPzklMLShhAgBFEAAA=)
+  last-modified (1572156774963)
+}
