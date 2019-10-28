@@ -3,3 +3,13 @@ train (t-ekw3bh13f7aye39mx40nk3bkl) {
   plan (Y2Bm0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGFSwqC7JL3DJLC7ISayEamHQw6squCSxqMQzLyW1AmYqEwMjEDMASUYGEIDyAQ==)
   last-modified (1571972548207)
 }
+train (t-eqzrvedmqfsd19pl70g20rmlw) {
+  utterance ([g:DeliveryCheck] 배송 준비 중)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)
+  last-modified (1572244944886)
+}
+train (t-ezhifnofzj7p41sujap3o2y85) {
+  utterance ([g:OrderCheck] 신규주문 조회해줘)
+  plan (Y2Bi0CxKLcvPTE7VK07NyQkDs/yLUlKLnDNSk7ODUotLc0qc8/OSUwtKGGTwKWVgBEIGKAaSAA==)
+  last-modified (1572244773041)
+}

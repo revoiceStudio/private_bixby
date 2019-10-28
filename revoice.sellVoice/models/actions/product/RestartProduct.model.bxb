@@ -1,18 +1,13 @@
-action (UpdatePrice) {  
-  description ("가격 변경")
+action (RestartProduct) {
+  description ("판매 중지 해제")
   type(Search)
   collect {
     input (searchProductResult) {
       type (SearchProductResultConcept)
       min (Required) max (One)
     }
-    input (updatePrice) {
-      type (UpdatePriceConcept)
-      min (Required) max (One)
-    }
   }
-  
-  output (UpdatePriceResultConcept){
+  output (RestartProductResultConcept){
     throws {
       error (notRegisteredAPIkey) {      
         on-catch {
@@ -32,7 +27,7 @@ action (UpdatePrice) {
           }
         }
       }
-      error (updateProductResultCode){   
+      error (restartProductResultCode){   
         property (dialog) {
           type (ResultCodeDialog)
           min (Required) max (One)

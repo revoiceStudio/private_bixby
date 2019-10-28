@@ -1,10 +1,10 @@
 dialog (Result) {
   match: DeliveryCheckResultConcept(deliveryCheckResult)
   choose (Random) {
-      template("배송준비중인 주문 #{size(deliveryCheckResult)}건이 있습니다."){
+      template("배송준비중 주문 #{size(deliveryCheckResult)}건이 있습니다."){
         speech ("<speak>배송 해야하는 주문 #{size(deliveryCheckResult)}건이 있어요. 주문을 선택해, 자세하게 확인해보세요.</speak>")
       }
-      template ("배송준비중인 주문 #{size(deliveryCheckResult)}건에 대한 검색결과입니다."){
+      template ("배송준비중 주문 #{size(deliveryCheckResult)}건에 대한 검색결과입니다."){
         speech ("<speak>배송 해야하는 주문 #{size(deliveryCheckResult)}건이 있어요. 주문을 선택해, 자세하게 확인해보세요.</speak>")
       }
   }

@@ -9,17 +9,27 @@ result-view{
      layout{
        section{
          content{
-           paragraph{
-             value{
-               template("상품명 : #{value(this.searchProductResult.productName)}")
-             }
-             style(Detail_M)
+           image{
+             aspect-ratio(1:1)
+             url("#{value(this.searchProductResult.productImage)}")
            }
-           single-line{
-             text{
-               value("판매금액 : #{value(this.searchProductResult.productPrice)}원 ->  #{value(this.updatePrice)}원")
-             }
-           }
+           title-area {
+              halign (Start)
+              slot1 {
+                  text {
+                    value ("#{value(this.searchProductResult.productName)}")
+                    style (Title_M)
+                  }
+              }
+              slot2{
+                single-line{
+                  text{
+                    value("판매금액 : #{value(this.searchProductResult.productPrice)}원 ->  #{value(this.updatePrice)}원")
+                    style(Detail_L)
+                  }
+                }
+              }
+          }       
          }
        }
      }

@@ -1,10 +1,10 @@
 train (t-y2d1jkj3edbv9ye7dcwhmp30k) {
   utterance ([g:UpdatePrice:continue:SearchProductDetailResultConcept] 가격변경)
   plan (Y2Bh0CpKLcvPTE7VK07NyQkDs0ILUhJLUgOKgOyg1OLSnBLn/Lzk1IISBlm8ahl0MKWDUxOLkjMCivJTSpNLUA1TwWsYTBUzAyMDE5BkANIgCAFgFgA=)
-  last-modified (1572237429751)
+  last-modified (1572245060329)
 }
 train (t-yb86bvmcq7tkshw3829cpz13j) {
-  utterance ([g:revoice.sellVoice.OrderCheck] 신규 주문 알려줘)
+  utterance ([g:OrderCheck] 신규 주문 알려줘)
   plan (Y2Bi0CxKLcvPTE7VK07NyQkDs/yLUlKLnDNSk7ODUotLc0qc8/OSUwtKGGTwKWVgBEIGKAaSAA==)
-  last-modified (1572235246038)
+  last-modified (1572245089431)
 }

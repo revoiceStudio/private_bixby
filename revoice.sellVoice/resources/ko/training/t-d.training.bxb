@@ -1,3 +1,8 @@
+train (t-dke1s8cjngkrzzwerg0q93q1r) {
+  utterance ([g:OnsaleProduct] 상품 목록 보여줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGOQxVfvnFSfmpEJVMzACIQMUA0kA)
+  last-modified (1572244852682)
+}
 train (t-dvykhaqdvycteja8f6qqn03sb) {
   utterance ([g:OrderCheck] 신규 주문 조회)
   plan (Y2Bi0CxKLcvPTE7VK07NyQkDs/yLUlKLnDNSk7ODUotLc0qc8/OSUwtKGGTwKWVgBEIGKAaSAA==)

@@ -1,9 +1,13 @@
 capsule {
   id (revoice.sellVoice)
-  version (0.1.6)
+  version (1.0.0)
   format (3)
   targets {
     target (bixby-mobile-ko-KR)
+  }
+  default-action (Main)
+  store-sections {
+    section (Productivity)
   }
   runtime-flags {
     modern-default-view-behavior

@@ -3,3 +3,8 @@ train (t-l44299vzydtcfj09gmmffofeh) {
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)
   last-modified (1571374725572)
 }
+train (t-lgsrsu6ylqu2snkgx93r4pdzo) {
+  utterance ([g:Main] 사용방법)
+  plan (Y2BiUC5KLcvPTE7VK07NyQkDs3wTM/OCUotLc0qc8/OSUwtKGMSwK2JgBEIGKAaSAA==)
+  last-modified (1572248052829)
+}

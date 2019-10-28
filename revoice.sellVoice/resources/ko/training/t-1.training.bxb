@@ -1,0 +1,10 @@
+train (t-1v8ix40t7rc6iojepm8mtcogj) {
+  utterance ([g:Inquiry] 고객 문의)
+  plan (Y2BiUCtKLcvPTE7VK07NyQkDszzzCksziyqDUotLc0qc8/OSUwtKGCRxqmNgBEIGKAaSAA==)
+  last-modified (1572244662117)
+}
+train (t-1y2r0434lyfv33yc2qwv9hjko) {
+  utterance ([g:OnsaleProduct] 상품 조회)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGOQxVfvnFSfmpEJVMzACIQMUA0kA)
+  last-modified (1572244850679)
+}

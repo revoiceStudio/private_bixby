@@ -2,12 +2,42 @@ result-view {
   match {
      InquiryAnswerResultConcept (inquiryAnswerResult)
   }
+  message{
+    template("#{value(inquiryAnswerResult.inquiryResult.inquiryConsumerName)} 고객님의 문의에 대한 답변을 등록했어요.")
+  }
   render{
     layout{      
         section{
-          title{        
-            template ("#{value(inquiryAnswerResult.inquiryAnswerMessage)}")
-          }
+          content{            
+            paragraph {
+              value{
+                template ("카테고리 : #{value(inquiryAnswerResult.inquiryResult.inquiryCategory)}") 
+              } 
+              style (Detail_M)
+            }
+            paragraph{
+              value {
+                template ("상품 : #{value(inquiryAnswerResult.inquiryResult.inquiryProductName)}") 
+              }
+              style (Detail_M)
+            }  
+            paragraph{
+                value {
+                template ("문의제목 : #{value(inquiryAnswerResult.inquiryResult.inquirySubject)}") 
+              }
+              style (Detail_M)
+            }            
+            paragraph{
+                value{
+                template ("문의내용 : #{value(inquiryAnswerResult.inquiryResult.inquiryContent)}") 
+              }
+              style (Detail_M)
+            }               
+            divider
+            paragraph{
+              value("답변내용 : #{value(inquiryAnswerResult.inquiryAnswer)}")
+            }
+          }          
         }      
       }
   }

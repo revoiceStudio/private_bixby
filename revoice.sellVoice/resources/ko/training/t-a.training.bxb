@@ -1,0 +1,5 @@
+train (t-afa0vtfmwd7qbrxigeliggfi5) {
+  utterance ([g:SoldOutProduct] 품절 상품 알려줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGBSwqM7PSfEvLYEqZ2AEQgYoBpIA)
+  last-modified (1572244424548)
+}

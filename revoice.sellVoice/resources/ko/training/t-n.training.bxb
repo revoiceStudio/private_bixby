@@ -1,5 +1,20 @@
+train (t-nc6g6ivstyocbeiwr5o8q0568) {
+  utterance ([g:DeliveryCheck] 배송목록 조회해줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)
+  last-modified (1572244946820)
+}
 train (t-nka5kxdahagxzvqypazofxo4m) {
-  utterance ([g:Help] 도움말)
-  plan (Y2BiUC5KLcvPTE7VK07NyQkDszxScwqCUotLc0qc8/OSUwtKGMSwK2JgBEIGKAaSAA==)
-  last-modified (1572162118985)
+  utterance ([g:Main] 도움말)
+  plan (Y2BiUC5KLcvPTE7VK07NyQkDs3wTM/OCUotLc0qc8/OSUwtKGMSwK2JgBEIGKAaSAA==)
+  last-modified (1572248045326)
+}
+train (t-nl0w4u8m52ofqe8cef9ibx55m) {
+  utterance ([g:InputCourierResultConcept:continue:DeliveryDetailResultConcept] 운송장등록)
+  plan (Y2Bk0C5KLcvPTE7VK07NyQkDszzzCkpLnPNLizJTi4JSi0tzgJy85NSCEgYQYAQRAA==)
+  last-modified (1572245029292)
+}
+train (t-nt00ctzqyxtbtka0m4owv99wz) {
+  utterance ([g:DeliveryCheck] 배송 목록 보여줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)
+  last-modified (1572244947941)
 }

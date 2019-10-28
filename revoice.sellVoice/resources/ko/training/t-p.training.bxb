@@ -1,0 +1,10 @@
+train (t-p9pbt1hc0xlbs1xsfyati1doe) {
+  utterance ([g:OrderCheck] 신규주문 보여줘)
+  plan (Y2Bi0CxKLcvPTE7VK07NyQkDs/yLUlKLnDNSk7ODUotLc0qc8/OSUwtKGGTwKWVgBEIGKAaSAA==)
+  last-modified (1572244773584)
+}
+train (t-phyq474j3bwowz47pg4ck2p9q) {
+  utterance ([g:Main] 사용법)
+  plan (Y2BiUC5KLcvPTE7VK07NyQkDs3wTM/OCUotLc0qc8/OSUwtKGMSwK2JgBEIGKAaSAA==)
+  last-modified (1572248035307)
+}

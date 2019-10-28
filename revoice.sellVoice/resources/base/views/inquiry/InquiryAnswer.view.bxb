@@ -1,7 +1,7 @@
 input-view {
   match : InquiryAnswerConcept
   message {
-    template ("문의 답변 내용을 입력해주세요.")
+    template ("답변 내용을 입력해주세요.")
   }
   render {
     form {

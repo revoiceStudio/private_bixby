@@ -15,7 +15,7 @@ result-view {
       layout{      
         section{
           title{        
-            template ("신규 고객 문의가 없습니다.")
+            template ("새로운 고객문의가 없습니다.")
           }
         }      
       }

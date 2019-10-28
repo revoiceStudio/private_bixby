@@ -1,0 +1,15 @@
+train (t-w5ub6yy0exruf7034eobnkgbm) {
+  utterance ([g:Main] 어떻게 사용하는지 알려줘)
+  plan (Y2BiUC5KLcvPTE7VK07NyQkDs3wTM/OCUotLc0qc8/OSUwtKGMSwK2JgBEIGKAaSAA==)
+  last-modified (1572248012940)
+}
+train (t-whi6kdgrtg6ajtaawbu262qfj) {
+  utterance ([g:Inquiry] 고객문의 조회해줘)
+  plan (Y2BiUCtKLcvPTE7VK07NyQkDszzzCksziyqDUotLc0qc8/OSUwtKGCRxqmNgBEIGKAaSAA==)
+  last-modified (1572244664883)
+}
+train (t-wusbxru0dgjdpkg7jwr170zue) {
+  utterance ([g:SoldOutProduct] 품절상품 보여줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGBSwqM7PSfEvLYEqZ2AEQgYoBpIA)
+  last-modified (1572244445138)
+}

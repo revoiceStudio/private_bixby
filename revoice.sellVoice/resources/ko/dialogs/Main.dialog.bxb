@@ -1,0 +1,6 @@
+dialog (Result) {
+  match: MainResultConcept
+  template("아래의 카드를 선택해 기능을 실행해보세요."){
+    speech ("<speak>아래의 카드를 선택해, 기능을 실행해보세요.</speak>")
+  }
+}

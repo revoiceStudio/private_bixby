@@ -10,7 +10,7 @@ module.exports.function = function checkAPIkey (apikey, $vivContext) {
     console.log("PERMISSION GRANTED");    
   } else {
     console.log("PERMISSION DENIED");
-    throw fail.checkedError("개인 정보 활용에 동의를 해주세요.", "userIdAccessPermissonDenied");
+    throw fail.checkedError("개인 정보 활용 동의가 필요합니다. 빅스비 설정의 개인정보 탭에서 개인정보권한을 허용해주세요.", "userIdAccessPermissonDenied");
   }
   let options = {
     'format': 'json',

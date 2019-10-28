@@ -32,7 +32,8 @@ module.exports.function = function inquiryAnswer (inquiryResult,inquiryAnswer,$v
   }
 
   return{
-    InquiryAnswerMessage : inquiryAnswerResult['message'][0],
-    inquiryAnswer : inquiryAnswer
+    inquiryAnswerMessage : inquiryAnswerResult['message'][0],
+    inquiryAnswer : inquiryAnswer,
+    inquiryResult : inquiryResult
   }
 }

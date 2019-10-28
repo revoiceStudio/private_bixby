@@ -91,5 +91,9 @@ endpoints {
     action-endpoint (Help){
       local-endpoint ("help/Help.js")
     }
+    // 메인
+    action-endpoint (Main){
+      local-endpoint ("main/Main.js")
+    }
   }
 }

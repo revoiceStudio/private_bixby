@@ -1,4 +1,6 @@
 dialog (Result) {
   match: InquiryResultConcept
-  template("고객 문의 조회 목록입니다.")
+  template("고객문의 목록입니다."){
+        speech ("<speak>고객문의 목록입니다. 답변을 원하시면 문의를 선택해주세요</speak>")
+      }
 }

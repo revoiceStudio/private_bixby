@@ -2,6 +2,11 @@ result-view {
   match {
     WaybillResultConcept(this)
   }
+  conversation-drivers {   
+      conversation-driver {
+        template ("배송준비중 조회")       
+      }
+   }
   message {
     template ("택배사 : #{value(this.courier)} 운송장 번호 : #{value(this.waybillNumber)}로 운송장을 등록했습니다.")
   }

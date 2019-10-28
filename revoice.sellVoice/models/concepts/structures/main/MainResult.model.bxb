@@ -1,0 +1,3 @@
+structure (MainResultConcept) {
+  description ("메인화면")
+}

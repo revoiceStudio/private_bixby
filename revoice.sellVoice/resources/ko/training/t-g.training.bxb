@@ -1,3 +1,18 @@
+train (t-g6l7wfb6oje4380g5vu5fv7re) {
+  utterance ([g:Inquiry] 고객 문의 조회할게)
+  plan (Y2BiUCtKLcvPTE7VK07NyQkDszzzCksziyqDUotLc0qc8/OSUwtKGCRxqmNgBEIGKAaSAA==)
+  last-modified (1572244663589)
+}
+train (t-g8wzhlhsu67ad6j0h0qw7naw1) {
+  utterance ([g:Inquiry] 고객 문의 알려줘)
+  plan (Y2BiUCtKLcvPTE7VK07NyQkDszzzCksziyqDUotLc0qc8/OSUwtKGCRxqmNgBEIGKAaSAA==)
+  last-modified (1572244664236)
+}
+train (t-gf5sjm7cu9yfmgkuktml2s968) {
+  utterance ([g:OrderCheck] 신규 주문)
+  plan (Y2Bi0CxKLcvPTE7VK07NyQkDs/yLUlKLnDNSk7ODUotLc0qc8/OSUwtKGGTwKWVgBEIGKAaSAA==)
+  last-modified (1572244771271)
+}
 train (t-goz7n843wg96cc7aiy7kw8ucr) {
   utterance ([g:StopDisplayProduct] 판매중지 상품 조회)
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGFSwqC7JL3DJLC7ISayEamFgBEIGKAaSAA==)

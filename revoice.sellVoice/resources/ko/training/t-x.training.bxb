@@ -1,5 +1,10 @@
+train (t-xal744pif5y9qi8fnx53ncmzi) {
+  utterance ([g:StopProduct] 판매중지)
+  plan (Y2Bm0CpKLcvPTE7VK07NyQkDs4JL8gsCivJTSpNLglKLS3NKnPPzklMLShhk8apl0MEinZpYlJyB1TAmBkYgZgCSjAwMMBoA)
+  last-modified (1572238149536)
+}
 train (t-xd8e6jjai6vjtl8ntli3muuxt) {
   utterance ([g:UpdatePrice:continue:SearchProductDetailResultConcept] 가격 변경)
   plan (Y2Bh0CpKLcvPTE7VK07NyQkDs0ILUhJLUgOKgOyg1OLSnBLn/Lzk1IISBlm8ahl0MKWDUxOLkjMCivJTSpNLUA1TwWsYTBUzAyMDE5BkANIgCAFgFgA=)
-  last-modified (1572237445226)
+  last-modified (1571983907887)
 }

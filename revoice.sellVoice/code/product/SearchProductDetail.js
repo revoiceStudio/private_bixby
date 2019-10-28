@@ -30,6 +30,7 @@ module.exports.function = function searchProductDetail (productNumber,productIma
   product['productNumber'] = productNumber
   product['productImage'] = productImage
   product['sellState'] = sellState
+  
   // 재고
   for(let i=0; i<detailResult['ns2:ProductStock'].length; i++){
     let stock = {}

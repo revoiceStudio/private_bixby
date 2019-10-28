@@ -20,18 +20,21 @@ result-view{
      layout{
        section{
          content{
-           paragraph{
-             value{
-               template("변경 상품명 : #{value(this.searchProductResult.productName)}")
-             }
-             style(Detail_M)
+           image{
+             aspect-ratio(1:1)
+             url("#{value(this.searchProductResult.productImage)}")
            }
-           single-line{
-             text{
-               value("#{value(this.searchProductResult.productName)} 상품을 판매 중지처리 했습니다.")
-             }
-           }
-         }
+           title-area {
+              halign (Start)
+              slot1 {
+                  text {
+                    value ("#{value(this.searchProductResult.productName)}")
+                    style (Title_M)
+                  }
+              }
+            }   
+           
+          }
        }
      }
    }

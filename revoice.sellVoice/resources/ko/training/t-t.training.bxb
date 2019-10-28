@@ -1,0 +1,15 @@
+train (t-tb7n7tfuivu0wobovvqbuf5gm) {
+  utterance ([g:InputAPIkeyResultConcept] API 등록해줘)
+  plan (Y2Bk0CpKLcvPTE7VK07NyQkDszzzCkpLHAM8s1Mrg1KLS3NKnPPzklMLShhAgBFEAAA=)
+  last-modified (1572244508571)
+}
+train (t-tg3qf72wvpkb3i85pxjcchnv3) {
+  utterance ([g:InputAPIkeyResultConcept] API 설정해줘)
+  plan (Y2Bk0CpKLcvPTE7VK07NyQkDszzzCkpLHAM8s1Mrg1KLS3NKnPPzklMLShhAgBFEAAA=)
+  last-modified (1572244546343)
+}
+train (t-to74o78174ah7c3vehflk374j) {
+  utterance ([g:OrderCheck] 신규주문 알려줘)
+  plan (Y2Bi0CxKLcvPTE7VK07NyQkDs/yLUlKLnDNSk7ODUotLc0qc8/OSUwtKGGTwKWVgBEIGKAaSAA==)
+  last-modified (1572244771768)
+}

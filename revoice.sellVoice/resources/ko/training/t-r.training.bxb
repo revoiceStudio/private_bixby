@@ -1,3 +1,13 @@
+train (t-r29zjfv28pc282ow3uqs4ffs4) {
+  utterance ("[g:RestartProduct:continue:SearchProductDetailResultConcept] 판매 중지 해제 ")
+  plan (Y2Bm0C1KLcvPTE7VK07NyQkDs4JSi0sSi0oCivJTSpNLgLzSnBLn/Lzk1IISBgVCyhl0MFUEpyYWJWdgNY+JgRGIGYAkIwMDjAYA)
+  last-modified (1572244315078)
+}
+train (t-r51zr38f5pgjvhh14ldot21l9) {
+  utterance ([g:Inquiry] 고객 문의 보여줘)
+  plan (Y2BiUCtKLcvPTE7VK07NyQkDszzzCksziyqDUotLc0qc8/OSUwtKGCRxqmNgBEIGKAaSAA==)
+  last-modified (1572244662850)
+}
 train (t-r7pimol3v8ht3uqwnfvyrriwd) {
   utterance ("[g:DeliveryDetailResultConcept:continue] (1)[v:RootIndexConcept]번 주문")
   plan (Y2Bl0C1KLcvPTE7VK07NyQkDs1xSczLLUosqXVJLEjNzglKLS3NKnPPzklMLShgUCClnUMdU4VSal5KTClMHM0oHt1HOGanJ2agWK2GqDsrPL/HMS0mtgKlhYWBkYGJgBtIMQBYEwgATEAPFAQ==)

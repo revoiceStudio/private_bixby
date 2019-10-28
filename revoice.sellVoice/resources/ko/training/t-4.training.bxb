@@ -1,3 +1,8 @@
+train (t-450h3is7soxb7qnh2c72xevlz) {
+  utterance ([g:DeliveryCheck] 배송해야할 것 알려줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)
+  last-modified (1572244945934)
+}
 train (t-46wascw6yr5ostm9kc47ss308) {
   utterance ([g:SoldOutProduct] 품절상품 조회)
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGBSwqM7PSfEvLYEqZ2AEQgYoBpIA)
@@ -6,5 +11,5 @@ train (t-46wascw6yr5ostm9kc47ss308) {
 train (t-4am3rggnzmuino780xqrseo7v) {
   utterance ([g:StopProduct:continue:SearchProductDetailResultConcept] 판매 중지)
   plan (Y2Bm0CpKLcvPTE7VK07NyQkDs4JL8gsCivJTSpNLglKLS3NKnPPzklMLShhk8apl0MEinZpYlJyB1TAmBkYgZgCSjAwMMBoA)
-  last-modified (1571978746231)
+  last-modified (1572238138625)
 }

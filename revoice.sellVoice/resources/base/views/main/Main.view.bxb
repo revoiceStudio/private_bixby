@@ -1,0 +1,10 @@
+result-view{
+  match {
+     MainResultConcept
+  }
+  render{
+    layout{
+      layout-macro (main-list)
+    }
+  }
+  }

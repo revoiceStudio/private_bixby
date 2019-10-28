@@ -1,0 +1,5 @@
+train (t-bfu0la1lc3pywht8r91i60opm) {
+  utterance ([g:UpdatePrice:continue:SearchProductDetailResultConcept] 가격 변경)
+  plan (Y2Bh0CpKLcvPTE7VK07NyQkDs0ILUhJLUgOKgOyg1OLSnBLn/Lzk1IISBlm8ahl0MKWDUxOLkjMCivJTSpNLUA1TwWsYTBUzAyMDE5BkANIgCAFgFgA=)
+  last-modified (1572244711951)
+}

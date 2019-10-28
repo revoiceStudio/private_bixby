@@ -1,0 +1,15 @@
+train (t-j5v8yijn9tapby0zb23ot5p1p) {
+  utterance ([g:OnsaleProduct] 상품목록)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGOQxVfvnFSfmpEJVMzACIQMUA0kA)
+  last-modified (1572244851305)
+}
+train (t-jdtxtzgm0vml3y0inmur63uvn) {
+  utterance ([g:DeliveryCheck] 배송준비중)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)
+  last-modified (1572244945402)
+}
+train (t-jv5b1iwf31b58pk1e7zhfvjvn) {
+  utterance ([g:RestartProduct:continue:SearchProductDetailResultConcept] 판매중지 해제 해줘)
+  plan (Y2Bm0C1KLcvPTE7VK07NyQkDs4JSi0sSi0oCivJTSpNLgLzSnBLn/Lzk1IISBgVCyhl0MFUEpyYWJWdgNY+JgRGIGYAkIwMDjAYA)
+  last-modified (1572244344111)
+}

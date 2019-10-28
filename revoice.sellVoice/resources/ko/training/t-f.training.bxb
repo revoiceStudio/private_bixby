@@ -1,10 +1,25 @@
 train (t-f6nidy88nu7hai4z04s30zxf9) {
   utterance ([g:SoldOutProduct] 품절 상품 조회)
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGBSwqM7PSfEvLYEqZ2AEQgYoBpIA)
-  last-modified (1572156612344)
+  last-modified (1572245034781)
+}
+train (t-f92cqrcsyp4c4wdx2u298qmcn) {
+  utterance ([g:Main] 사용방법알려줘)
+  plan (Y2BiUC5KLcvPTE7VK07NyQkDs3wTM/OCUotLc0qc8/OSUwtKGMSwK2JgBEIGKAaSAA==)
+  last-modified (1572248091720)
+}
+train (t-f9kzi2lbiymyw0qk486d3ilil) {
+  utterance ([g:OnsaleProduct] 상품목록 조회해줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGOQxVfvnFSfmpEJVMzACIQMUA0kA)
+  last-modified (1572244853211)
 }
 train (t-fewpta3lqflhmxzcuyr8i68ph) {
   utterance ([g:InputAPIkeyResultConcept] API 등록)
   plan (Y2Bk0CpKLcvPTE7VK07NyQkDszzzCkpLHAM8s1Mrg1KLS3NKnPPzklMLShhAgBFEAAA=)
   last-modified (1572156620366)
+}
+train (t-fs5dvesi9k2249iu7c49jnp5v) {
+  utterance ([g:OrderCheck] 신규주문)
+  plan (Y2Bi0CxKLcvPTE7VK07NyQkDs/yLUlKLnDNSk7ODUotLc0qc8/OSUwtKGGTwKWVgBEIGKAaSAA==)
+  last-modified (1572244770711)
 }
