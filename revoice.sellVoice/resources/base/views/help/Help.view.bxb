@@ -25,7 +25,7 @@ result-view{
             single-line {
               text {
                 value {
-                  template ("1. 우선 11번가 OPEN API센터에 로그인 합니다.")
+                  template ("1. 11번가 OPEN API센터에세 판매자 로그인")
                 }
                 style (Detail_L_Soft)
               }

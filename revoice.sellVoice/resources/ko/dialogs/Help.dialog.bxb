@@ -1,6 +1,6 @@
 dialog (Result) {
   match: HelpResultConcept
   template("아래의 도움말을 확인해보세요."){
-    speech ("<speak>쇼핑몰을 연동하는 방법을 알려드릴게요.</speak>")
+    speech ("<speak>셀퍼에서 쇼핑몰을 연동하는 방법을 알려드릴게요.</speak>")
   }
 }
