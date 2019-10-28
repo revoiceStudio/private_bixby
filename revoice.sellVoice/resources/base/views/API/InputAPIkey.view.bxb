@@ -3,7 +3,7 @@ input-view {
     InputAPIkeyResultConcept
   }
   message {
-    template ("운영중인 쇼핑몰의 API key를 입력해주세요. (현재는 11번가만 가능합니다.)")
+    template ("운영중인 쇼핑몰의 API key를 입력해주세요. (현재는 11번가를 지원합니다.)")
   }
   render {
     form {
