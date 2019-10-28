@@ -1,0 +1,9 @@
+enum (OrderState) {
+  description (주문상태)
+
+ 
+  symbol ("결제완료")
+  symbol ("발주확인")
+  symbol ("발송처리")
+  symbol ("배송완료")
+}
