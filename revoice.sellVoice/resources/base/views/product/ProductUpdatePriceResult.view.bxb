@@ -3,7 +3,7 @@ result-view{
      UpdatePriceResultConcept(this)
    }
    message{
-     template ("상품의 가격을 #{value(this.updatePrice)}원으로 변경했습니다.")
+     template ("해당 상품의 판매금액을 #{value(this.updatePrice)}원으로 변경했습니다.")
    }
     render{
      layout{
@@ -11,13 +11,13 @@ result-view{
          content{
            paragraph{
              value{
-               template("변경 상품명 : #{value(this.searchProductResult.productName)}")
+               template("상품명 : #{value(this.searchProductResult.productName)}")
              }
              style(Detail_M)
            }
            single-line{
              text{
-               value("이전 가격 : #{value(this.searchProductResult.productPrice)} ->  변경 가격 : #{value(this.updatePrice)}")
+               value("판매금액 : #{value(this.searchProductResult.productPrice)}원 ->  #{value(this.updatePrice)}원")
              }
            }
          }

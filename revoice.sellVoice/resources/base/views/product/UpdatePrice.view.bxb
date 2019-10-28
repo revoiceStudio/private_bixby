@@ -1,14 +1,14 @@
 input-view {
   match : UpdatePriceConcept(this)
   message {
-    template ("변경할 가격을 입력해주세요.")
+    template ("상품의 새로운 판매금액을 입력해주세요.")
   }
   render {
     form {
       elements {
         number-input {
           id (updatePrice)
-          label (변경할 가격)
+          label (새로운 판매금액(원))
           type (UpdatePriceConcept)
           integer-limit(20)
         }

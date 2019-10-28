@@ -14,7 +14,7 @@ result-view{
       }
    }
    message{
-     template ("상품 판매중지가 해제되어, 판매중으로 변경했습니다.")
+     template ("해당 상품을 다시 전시합니다.")
    }
    render{
      layout{
@@ -28,7 +28,7 @@ result-view{
            }
            single-line{
              text{
-               value("(판매중지 -> 판매중)")
+               value("#{value(this.searchProductResult.productName)} 상품 다시 판매합니다.")
              }
            }
          }
