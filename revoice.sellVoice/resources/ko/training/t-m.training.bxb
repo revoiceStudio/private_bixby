@@ -1,0 +1,5 @@
+train (t-mshue3xen99gvqfe4nd567vcs) {
+  utterance ([g:revoice.sellVoice.DeliveryCheck] 배송목록 알려줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)
+  last-modified (1572235282359)
+}

@@ -87,16 +87,6 @@ endpoints {
       accepted-inputs (searchProductResult,updatePrice, $vivContext)
       local-endpoint ("product/UpdatePrice.js")
     }
-    // 상품 검색
-     action-endpoint (FindProduct){
-      accepted-inputs (query, $vivContext)
-      local-endpoint ("product/FindProduct.js")
-    }
-    // 상품 검색 (Default)
-    action-endpoint (FindDefault){
-      accepted-inputs ($vivContext)
-      local-endpoint ("product/FindDefault.js")
-    }
     // 도움말
     action-endpoint (Help){
       local-endpoint ("help/Help.js")

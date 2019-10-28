@@ -1,3 +1,8 @@
+train (t-46wascw6yr5ostm9kc47ss308) {
+  utterance ([g:SoldOutProduct] 품절상품 조회)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGBSwqM7PSfEvLYEqZ2AEQgYoBpIA)
+  last-modified (1572235392651)
+}
 train (t-4am3rggnzmuino780xqrseo7v) {
   utterance ([g:StopProduct:continue:SearchProductDetailResultConcept] 판매 중지)
   plan (Y2Bm0CpKLcvPTE7VK07NyQkDs4JL8gsCivJTSpNLglKLS3NKnPPzklMLShhk8apl0MEinZpYlJyB1TAmBkYgZgCSjAwMMBoA)

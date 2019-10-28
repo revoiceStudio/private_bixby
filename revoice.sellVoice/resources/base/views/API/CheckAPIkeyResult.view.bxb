@@ -90,7 +90,7 @@ result-view {
                 }
                 on-click{
                   intent {
-                        goal: revoice.sellVoice.Help
+                        goal: revoice.sellVoice.Inquiry
                     }
                 }
             } 

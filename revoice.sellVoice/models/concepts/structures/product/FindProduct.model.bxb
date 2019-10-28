@@ -1,7 +1,0 @@
-structure (FindProductConcept) {
-  description ("상품 이름 검색")
- property (productName){
-    type(ProductNameConcept)
-    min (Required) max (One)
-  }
-}

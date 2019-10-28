@@ -1,0 +1,5 @@
+train (t-yb86bvmcq7tkshw3829cpz13j) {
+  utterance ([g:revoice.sellVoice.OrderCheck] 신규 주문 알려줘)
+  plan (Y2Bi0CxKLcvPTE7VK07NyQkDs/yLUlKLnDNSk7ODUotLc0qc8/OSUwtKGGTwKWVgBEIGKAaSAA==)
+  last-modified (1572235246038)
+}

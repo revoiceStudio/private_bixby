@@ -1,5 +1,0 @@
-action (FindDefault) {
-  description ("default")
-  type (Search)
-  output (FindProductConcept)
-}

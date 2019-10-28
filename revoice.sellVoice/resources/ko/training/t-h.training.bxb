@@ -1,0 +1,5 @@
+train (t-h2sdiowoyx3zhb3mdut07d39u) {
+  utterance ([g:Help] 사용방법 알려줘)
+  plan (Y2BiUC5KLcvPTE7VK07NyQkDszxScwqCUotLc0qc8/OSUwtKGMSwK2JgBEIGKAaSAA==)
+  last-modified (1572235420191)
+}

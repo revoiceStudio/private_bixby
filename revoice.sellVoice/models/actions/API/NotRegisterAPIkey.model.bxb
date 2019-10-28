@@ -1,0 +1,5 @@
+action (NotRegisterAPIkey) {
+  description (__DESCRIPTION__)
+  type(Search)
+  output (NotRegisterAPIkeyResultConcept)
+}

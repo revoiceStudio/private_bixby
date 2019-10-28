@@ -1,0 +1,13 @@
+result-view {
+  match {
+    NotRegisterAPIkeyConcept
+  }
+  conversation-drivers {
+    conversation-driver {
+        template ("API 설정")
+    }
+  }
+  message {
+    template ("이런, 쇼핑몰의 API키가 등록되지 않았어요. API 설정을 먼저 해주세요.")
+  }
+}

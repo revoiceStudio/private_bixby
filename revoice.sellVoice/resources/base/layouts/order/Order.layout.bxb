@@ -7,34 +7,7 @@ layout-macro-def (order-list) {
   }
   content{
     section{
-      content{
-          hbox {
-            content {
-              vbox{
-                halign (Start)
-                content{
-                  text{value("　") style(Detail_M)}
-                }
-              }          
-              vbox {
-                halign (End)
-                content {                  
-                  single-line{                    
-                    image {
-                      url("/images/icons/order/payment_complete.jpg")
-                      style(Detail_M)
-                    } 
-                  }                  
-                  single-line{
-                    image {
-                      url("/images/icons/delivery/delivery.jpg")
-                      style(Detail_M)
-                    } 
-                  }
-                }
-              }             
-            }
-          }
+      content{        
 
           for-each (orderList) {
             as(item){

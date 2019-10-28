@@ -9,6 +9,15 @@ action (OnsaleProduct) {
   }
   output (SearchProductResultConcept){
     throws {
+      error (notRegisteredAPIkey) {      
+        on-catch {
+          halt { 
+            dialog { 
+              template-macro (notRegisteredAPIkey)
+            } 
+          }
+        }
+      }
       error (userIdAccessPermissonDenied) {      
         on-catch {
           halt {

@@ -1,5 +1,5 @@
 template-macro-def (notRegisteredAPIkey){
   content: template("셀퍼를 이용하려면 API key를 먼저 등록해주세요."){
-        speech ("<speak>사용방법 알려줘.라고 말씀해주세요.</speak>")
+        speech ("<speak>API 등록이 필요해요. 먼저 API 설정이라고 말씀해주세요.</speak>")
       }
 }
