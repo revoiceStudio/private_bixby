@@ -3,7 +3,7 @@ result-view{
      UpdatePriceResultConcept(this)
    }
    message{
-     template ("상품 가격이 변경되었습니다.")
+     template ("상품의 가격을 #{value(this.updatePrice)}원으로 변경했습니다.")
    }
     render{
      layout{

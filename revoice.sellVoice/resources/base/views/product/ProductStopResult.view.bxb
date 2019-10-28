@@ -10,11 +10,11 @@ result-view{
         template ("품절 상품 조회")       
       }
       conversation-driver {
-        template ("판매 중지 상품 조회")       
+        template ("판매중지 상품 조회")       
       }
    }
    message{
-     template ("상품이 판매 중지 처리되었습니다.")
+     template ("상품이 판매중지 처리했습니다.")
    }
     render{
      layout{

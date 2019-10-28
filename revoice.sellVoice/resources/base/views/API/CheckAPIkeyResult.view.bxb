@@ -40,7 +40,7 @@ result-view {
             cell-card {
                 slot1 {
                     image {
-                        url ("/images/main/deliverycheck.png")
+                        url ("/images/main/ordercheck.png")
                         shape (Circle)
                     }
                 }
@@ -75,6 +75,25 @@ result-view {
                     }
                 }
             }
+            cell-card {
+                slot1 {
+                    image {
+                        url ("/images/main/FAQ.png")
+                        shape (Circle)
+                    }
+                }
+                slot2 {
+                    content {
+                        order (PrimarySecondary)
+                        primary ("고객문의 조회") // Fields of America for Fall
+                    }
+                }
+                on-click{
+                  intent {
+                        goal: revoice.sellVoice.Help
+                    }
+                }
+            } 
             cell-card {
                 slot1 {
                     image {

@@ -4,7 +4,7 @@ result-view {
   }
   conversation-drivers {   
       conversation-driver {
-        template ("배송 준비 목록") 
+        template ("배송준비 목록") 
       }   
   }
  render {

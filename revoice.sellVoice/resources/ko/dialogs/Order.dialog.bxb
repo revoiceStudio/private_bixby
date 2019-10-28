@@ -1,7 +1,11 @@
 dialog (Result) {
   match: OrderCheckResultConcept(orderCheckResult)
   choose (Random) {
-      template("신규 주문 #{size(orderCheckResult)}개가 있습니다.")
-      template ("신규 주문 항목 #{size(orderCheckResult)}개에 대한 검색 결과입니다.")
+      template("신규 주문 #{size(orderCheckResult)}건이 있습니다."){
+        speech ("<speak>신규 주문 #{size(orderCheckResult)}개가 있어요.</speak>")
+      }
+      template ("신규 주문 항목 #{size(orderCheckResult)}건에 대한 검색 결과입니다."){
+        speech ("<speak>신규 주문 #{size(orderCheckResult)}건이 있습니다.</speak>")
+      }
   }
 }

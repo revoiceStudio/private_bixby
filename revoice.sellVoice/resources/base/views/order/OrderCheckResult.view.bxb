@@ -5,7 +5,7 @@ result-view {
   followup {
     if(size(orderCheckResult)>0){
       prompt {
-        dialog (전체 발주 처리를 하시겠어요?)
+        dialog (모든 신규주문의 발주처리를 진행할까요?)
         on-confirm {
           intent {
             goal: revoice.sellVoice.DeliveryConfirmResultConcept

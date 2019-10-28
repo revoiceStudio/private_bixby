@@ -2,7 +2,9 @@ dialog (Result) {
   match: SearchProductResultConcept(searchResult)
   choose (Random) {
       if(size(searchResult)==50){
-        template("상품 목록입니다.")
+        template("판매중인 상품 목록입니다."){
+        speech ("<speak>자세하게 보시려면 상품을 선택해주세요.</speak>")
+      }
       }else{
         template("마지막 상품 목록입니다.")
       }      
