@@ -1,0 +1,23 @@
+input-view {
+  match : InquiryAnswerConcept
+  message {
+    template ("문의 답변 내용을 입력해주세요.")
+  }
+  render {
+    form {
+      elements {
+        textarea {
+          id (inquiryAnswer)
+          label (문의 답변 내용)
+          type (InquiryAnswerConcept)
+          max-length (1000)
+        }
+      }
+      on-submit {
+        goal: InquiryAnswerConcept
+        value: viv.core.FormElement(inquiryAnswer)
+      }
+    }
+  }
+
+}

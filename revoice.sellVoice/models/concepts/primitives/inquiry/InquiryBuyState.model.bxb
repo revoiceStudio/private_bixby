@@ -1,0 +1,3 @@
+name (InquiryBuyStateConcept) {
+  description ("구매상태여부 Y or N") //Y or N
+}

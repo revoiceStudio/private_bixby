@@ -1,0 +1,3 @@
+name (InquiryAnswerMessageConcept) {
+  description ("문의 답변 메시지")
+}

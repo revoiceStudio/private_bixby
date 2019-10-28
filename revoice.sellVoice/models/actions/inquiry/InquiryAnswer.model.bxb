@@ -1,0 +1,40 @@
+action (InquiryAnswer) {
+  description ("문의글 조회답변") 
+  type(Search) 
+  collect{
+    input (inquiryResult){
+      type(InquiryResultConcept)
+      min (Required) max (One)
+    }
+    input(inquiryAnswer){
+      type(InquiryAnswerConcept)
+      min (Required) max (One)
+    }
+  }
+  output (InquiryAnswerResultConcept){
+    throws {
+      error (userIdAccessPermissonDenied) {      
+        on-catch {
+          halt {
+            dialog { 
+              template-macro (userIdPermisson)
+            } 
+          }
+        }
+      }
+      error (inquiryAnswerResultCode){   
+        property (dialog) {
+          type (ResultCodeDialog)
+          min (Required) max (One)
+        }   
+        on-catch {
+          halt {
+            dialog { 
+              template ("#{value(dialog)}")
+            } 
+          }          
+        }
+      }
+    }
+  }
+}

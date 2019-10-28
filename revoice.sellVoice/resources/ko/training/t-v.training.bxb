@@ -1,3 +1,8 @@
+train (t-vp7fqambk7qjflwfjgjnw6sw2) {
+  utterance ([g:Inquiry] 문의 사항 조회)
+  plan (Y2BiUCtKLcvPTE7VK07NyQkDszzzCksziyqDUotLc0qc8/OSUwtKGCRxqmNgBEIGKAaSAA==)
+  last-modified (1572162093840)
+}
 train (t-vtfo8d56suvzst96886awfe9n) {
   utterance ([g:RestartProduct:continue:SearchProductDetailResultConcept] 판매  중지 해제)
   plan (Y2Bm0C1KLcvPTE7VK07NyQkDs4JSi0sSi0oCivJTSpNLgLzSnBLn/Lzk1IISBgVCyhl0MFUEpyYWJWdgNY+JgRGIGYAkIwMDjAYA)

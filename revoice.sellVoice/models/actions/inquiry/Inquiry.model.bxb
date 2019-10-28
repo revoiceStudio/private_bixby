@@ -1,0 +1,30 @@
+action (Inquiry) {
+  description ("문의글 조회") 
+  type(Search) 
+  output (InquiryResultConcept){
+    throws {
+      error (userIdAccessPermissonDenied) {      
+        on-catch {
+          halt {
+            dialog { 
+              template-macro (userIdPermisson)
+            } 
+          }
+        }
+      }
+      error (inquiryResultCode){   
+        property (dialog) {
+          type (ResultCodeDialog)
+          min (Required) max (One)
+        }   
+        on-catch {
+          halt {
+            dialog { 
+              template ("#{value(dialog)}")
+            } 
+          }          
+        }
+      }
+    }
+  }
+}

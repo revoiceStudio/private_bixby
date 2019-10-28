@@ -1,0 +1,39 @@
+structure (InquiryResultConcept) {
+  description ("문의조회결과")
+  property (inquiryContent) {
+    type (InquiryContentConcept)
+    min (Optional) max (Many)
+  }
+  property (inquirySubject) {
+    type (InquirySubjectConcept)
+    min (Optional) max (Many)
+  }
+  property (inquiryBuyState) {
+    type (InquiryBuyStateConcept)
+    min (Optional) max (Many)
+  }
+  property (inquiryDate) {
+    type (InquiryDateConcept)
+    min (Optional) max (Many)
+  }
+  property (inquiryConsumerName) {
+    type (ConsumerNameConcept)
+    min (Optional) max (Many)
+  }
+  property (inquiryNumber) {
+    type (InquiryNumberConcept)
+    min (Optional) max (Many)
+  }
+  property (inquiryProductName) {
+    type (ProductNameConcept)
+    min (Optional) max (Many)
+  }
+  property (inquiryCategory) {
+    type (InquiryCategoryConcept)
+    min (Optional) max (Many)
+  }
+  property (inquiryProductNumber) {
+    type (ProductNumberConcept)
+    min (Optional) max (Many)
+  }
+}

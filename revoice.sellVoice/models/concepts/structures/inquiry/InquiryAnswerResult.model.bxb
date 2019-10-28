@@ -1,0 +1,15 @@
+structure (InquiryAnswerResultConcept) {
+  description ("문의글 답변 결과")
+  property (inquiryResult) {
+    type (InquiryResultConcept)
+    min (Required) max (One)
+  }
+  property (inquiryAnswer) {
+    type (InquiryAnswerConcept)
+    min (Required) max (One)
+  }
+  property (inquiryAnswerMessage) {
+    type (InquiryAnswerMessageConcept)
+    min (Required) max (One)
+  }
+}

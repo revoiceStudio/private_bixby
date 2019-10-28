@@ -62,6 +62,16 @@ endpoints {
       accepted-inputs (productNumber, productImage,productPrice,sellState, $vivContext)
       local-endpoint ("product/SearchProductDetail.js")
     }
+    // 문의 사항 조회
+    action-endpoint (Inquiry){
+      accepted-inputs ($vivContext)
+      local-endpoint ("inquiry/Inquiry.js")
+    }
+    // 문의 사항 답변
+    action-endpoint (InquiryAnswer){
+      accepted-inputs (inquiryResult,inquiryAnswer,$vivContext)
+      local-endpoint ("inquiry/InquiryAnswer.js")
+    }
     // 판매 중지
     action-endpoint (StopProduct){
       accepted-inputs (searchProductResult, $vivContext)

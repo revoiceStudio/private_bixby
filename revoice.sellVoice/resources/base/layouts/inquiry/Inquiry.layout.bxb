@@ -1,0 +1,79 @@
+layout-macro-def (inquiry-list) {
+  params {
+    param (inquiryList) {
+      type (InquiryResultConcept)
+      min (Required) max (Many)
+    }
+  }
+  content{
+    section{
+      content{
+        for-each(inquiryList){
+          as(item){
+            compound-card{
+              content{
+                paragraph {
+                  value{
+                    template ("카테고리 : #{value(item.inquiryCategory)}") 
+                  } 
+                  style (Detail_M)
+                }
+                paragraph{
+                   value {
+                    template ("문의제목 : #{value(item.inquirySubject)}") 
+                  }
+                  style (Detail_M)
+                }
+                paragraph{
+                   value{
+                    template ("문의내용 : #{value(item.inquiryContent)}") 
+                  }
+                  style (Detail_M)
+                }
+                paragraph{
+                  value {
+                    template ("구매상태여부 : #{value(item.inquiryBuyState)}") 
+                  }
+                  style (Detail_M)
+                }
+                paragraph{
+                   value{
+                    template ("문의일자 : #{value(item.inquiryDate)}") 
+                  }
+                  style (Detail_M)
+                }
+                paragraph{
+                   value {
+                    template ("고객명 : #{value(item.inquiryConsumerName)}") 
+                  }
+                  style (Detail_M)
+                }
+                paragraph{
+                  value{
+                    template ("글 번호 : #{value(item.inquiryNumber)}") 
+                  }
+                  style (Detail_M)
+                }
+                paragraph{
+                  value {
+                    template ("상품명 : #{value(item.inquiryProductName)}") 
+                  }
+                  style (Detail_M)
+                }
+              }         
+              on-click{
+                intent{
+                   goal: revoice.sellVoice.InquiryAnswer
+                  value-set: revoice.sellVoice.InquiryResultConcept{
+                    $expr(item)
+                  }
+                }
+              }     
+            }
+          }
+        }
+      }
+    }
+  }  
+
+}

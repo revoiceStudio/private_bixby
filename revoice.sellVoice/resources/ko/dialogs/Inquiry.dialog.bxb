@@ -1,0 +1,4 @@
+dialog (Result) {
+  match: InquiryResultConcept
+  template("고객 문의 조회 목록입니다.")
+}

@@ -1,0 +1,14 @@
+result-view {
+  match {
+     InquiryAnswerResultConcept (inquiryAnswerResult)
+  }
+  render{
+    layout{      
+        section{
+          title{        
+            template ("#{value(inquiryAnswerResult.inquiryAnswerMessage)}")
+          }
+        }      
+      }
+  }
+}
