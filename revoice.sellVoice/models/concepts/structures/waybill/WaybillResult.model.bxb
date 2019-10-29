@@ -1,5 +1,9 @@
 structure (WaybillResultConcept) {
-  description ("운송장번호 등록 결과 스트럭쳐")
+  description ("운송장번호 등록 결과")
+  property (deliveryCheckResult){
+    type(DeliveryCheckResultConcept)
+    min (Optional) max (Many)
+  }  
   property (deliveryDetailResult){
     type(DeliveryDetailResultConcept)
     min (Required) max (Many)
@@ -11,5 +15,9 @@ structure (WaybillResultConcept) {
   property (waybillNumber){
     type(WaybillNumberConcept)
     min (Required) max (One)
+  }
+  property (rootIndex) {
+    type (RootIndexConcept)
+    min (Optional) max (One)
   }
 }

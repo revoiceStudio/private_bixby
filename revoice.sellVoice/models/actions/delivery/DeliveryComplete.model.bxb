@@ -1,0 +1,39 @@
+action (DeliveryComplete) {
+  description ("배송완료 조회")
+  type(Search)
+  output (DeliveryCompleteResultConcept){
+    throws {
+      error (notRegisteredAPIkey) {      
+        on-catch {
+          halt { 
+            dialog { 
+              template-macro (notRegisteredAPIkey)
+            } 
+          }
+        }
+      }
+      error (userIdAccessPermissonDenied) {      
+        on-catch {
+          halt {
+            dialog { 
+              template-macro (userIdPermisson)
+            } 
+          }
+        }
+      }
+      error (deliveryResultCode){   
+        property (dialog) {
+          type (ResultCodeDialog)
+          min (Required) max (One)
+        }   
+        on-catch {
+          halt {
+            dialog { 
+              template ("#{value(dialog)}")
+            } 
+          }
+        }
+      }
+    }
+  }
+}

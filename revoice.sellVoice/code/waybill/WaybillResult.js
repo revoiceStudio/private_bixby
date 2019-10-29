@@ -6,7 +6,7 @@ var sendURL = config.get('order.send')
 var findKey = require('API/FindAPIkey')
 var fail = require('fail')
 
-module.exports.function = function waybill (deliveryDetailResult,courier,waybillNumber,$vivContext) {
+module.exports.function = function waybill (deliveryCheckResult, deliveryDetailResult,courier,waybillNumber,rootIndex,$vivContext) {
   console.log(deliveryDetailResult,courier,waybillNumber)
 
   const findResult = findKey.findAPIkey($vivContext) 
@@ -28,9 +28,9 @@ module.exports.function = function waybill (deliveryDetailResult,courier,waybill
     }
   }
 
-  const sendResult = http.getUrl(sendURL, options) 
-  console.log(sendResult)
-
+  //const sendResult = http.getUrl(sendURL, options) 
+  //console.log(sendResult)
+  const sendResult = {result_code:[200]}
   if(sendResult.result_code[0] == '-1'){
     throw fail.checkedError("운송장등록 오류", "waybillResultCode",{dialog:sendResult.result_text[0]});
   }
@@ -61,8 +61,17 @@ module.exports.function = function waybill (deliveryDetailResult,courier,waybill
   if(sendResult.result_code[0] == '-1000'){
     throw fail.checkedError("운송장등록 오류", "waybillResultCode",{dialog:sendResult.result_text[0]});
   }
-
+  
+  // 운송장 등록이 완료된 상품은 리스트에서 제거한다.
+  for(let i=0; i<deliveryCheckResult.length; i++){
+    if(deliveryCheckResult[i].rootIndex == rootIndex.trim()){
+      deliveryCheckResult.splice(i,1)
+      i--
+    }
+  }
+  console.log(deliveryCheckResult)
   return {
+    deliveryCheckResult:deliveryCheckResult,
     deliveryDetailResult:deliveryDetailResult,
     courier:courier,
     waybillNumber:waybillNumber

@@ -1,8 +1,16 @@
 layout-macro-def (courier-list) {
   params {
+    param (checkList) {
+      type (DeliveryCheckResultConcept)
+      min (Required) max (Many)
+    }
     param (detailList) {
       type (DeliveryDetailResultConcept)
       min (Required) max (Many)
+    }
+    param (rootIndex) {
+      type (RootIndexConcept)
+      min (Required) max (One)
     }
   }    
   content{
@@ -51,10 +59,14 @@ layout-macro-def (courier-list) {
             on-click {
                 intent {
                   goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryCheckResultConcept{
+                    $expr(checkList)
+                  }
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("한진택배")
+                  value: revoice.sellVoice.RootIndexConcept$expr(rootIndex)
                 }
             }              
           }
@@ -74,10 +86,14 @@ layout-macro-def (courier-list) {
             on-click {
                 intent {
                   goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryCheckResultConcept{
+                    $expr(checkList)
+                  }
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("CJ대한통운")
+                  value: revoice.sellVoice.RootIndexConcept$expr(rootIndex)
                 }
             }              
           }
@@ -97,10 +113,14 @@ layout-macro-def (courier-list) {
             on-click {
                 intent {
                   goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryCheckResultConcept{
+                    $expr(checkList)
+                  }
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("롯데(현대)택배")
+                  value: revoice.sellVoice.RootIndexConcept$expr(rootIndex)
                 }
             }              
           }
@@ -120,10 +140,14 @@ layout-macro-def (courier-list) {
             on-click {
                 intent {
                   goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryCheckResultConcept{
+                    $expr(checkList)
+                  }
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("KGB택배")
+                  value: revoice.sellVoice.RootIndexConcept$expr(rootIndex)
                 }
             }              
           }
@@ -143,10 +167,14 @@ layout-macro-def (courier-list) {
             on-click {
                 intent {
                   goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryCheckResultConcept{
+                    $expr(checkList)
+                  }
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("우체국택배")
+                  value: revoice.sellVoice.RootIndexConcept$expr(rootIndex)
                 }
             }              
           }
@@ -166,10 +194,14 @@ layout-macro-def (courier-list) {
             on-click {
                 intent {
                   goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryCheckResultConcept{
+                    $expr(checkList)
+                  }
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("CU편의점택배")
+                  value: revoice.sellVoice.RootIndexConcept$expr(rootIndex)
                 }
             }              
           }
@@ -189,10 +221,14 @@ layout-macro-def (courier-list) {
             on-click {
                 intent {
                   goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryCheckResultConcept{
+                    $expr(checkList)
+                  }
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("로젠택배")
+                  value: revoice.sellVoice.RootIndexConcept$expr(rootIndex)
                 }
             }              
           }
@@ -212,10 +248,14 @@ layout-macro-def (courier-list) {
             on-click {
                 intent {
                   goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryCheckResultConcept{
+                    $expr(checkList)
+                  }
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("대신택배")
+                  value: revoice.sellVoice.RootIndexConcept$expr(rootIndex)
                 }
             }              
           }
@@ -235,10 +275,14 @@ layout-macro-def (courier-list) {
             on-click {
                 intent {
                   goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryCheckResultConcept{
+                    $expr(checkList)
+                  }
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("경동택배")
+                  value: revoice.sellVoice.RootIndexConcept$expr(rootIndex)
                 }
             }              
           }
@@ -258,10 +302,14 @@ layout-macro-def (courier-list) {
             on-click {
                 intent {
                   goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryCheckResultConcept{
+                    $expr(checkList)
+                  }
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("합동택배")
+                  value: revoice.sellVoice.RootIndexConcept$expr(rootIndex)
                 }
             }              
           }
@@ -281,10 +329,14 @@ layout-macro-def (courier-list) {
             on-click {
                 intent {
                   goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryCheckResultConcept{
+                    $expr(checkList)
+                  }
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("DHL")
+                  value: revoice.sellVoice.RootIndexConcept$expr(rootIndex)
                 }
             }              
           }
@@ -304,10 +356,14 @@ layout-macro-def (courier-list) {
             on-click {
                 intent {
                   goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryCheckResultConcept{
+                    $expr(checkList)
+                  }
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("일양로지스")
+                  value: revoice.sellVoice.RootIndexConcept$expr(rootIndex)
                 }
             }              
           }
@@ -327,10 +383,14 @@ layout-macro-def (courier-list) {
             on-click {
                 intent {
                   goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryCheckResultConcept{
+                    $expr(checkList)
+                  }
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("SLX택배")
+                  value: revoice.sellVoice.RootIndexConcept$expr(rootIndex)
                 }
             }              
           }
@@ -350,10 +410,14 @@ layout-macro-def (courier-list) {
             on-click {
                 intent {
                   goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryCheckResultConcept{
+                    $expr(checkList)
+                  }
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("용마로지스")
+                  value: revoice.sellVoice.RootIndexConcept$expr(rootIndex)
                 }
             }              
           }
@@ -373,10 +437,14 @@ layout-macro-def (courier-list) {
             on-click {
                 intent {
                   goal: revoice.sellVoice.WaybillResult
+                  value-set: revoice.sellVoice.DeliveryCheckResultConcept{
+                    $expr(checkList)
+                  }
                   value-set: revoice.sellVoice.DeliveryDetailResultConcept{
                     $expr(detailList)
                   }
                   value: revoice.sellVoice.CourierConcept("기타")
+                  value: revoice.sellVoice.RootIndexConcept$expr(rootIndex)
                 }
             }              
           }

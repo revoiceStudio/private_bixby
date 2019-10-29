@@ -2,6 +2,10 @@ action (WaybillResult) {
   description ("운송장 등록 결과")
   type (Search) 
   collect {
+    input (deliveryCheckResult) {
+      type (DeliveryCheckResultConcept)
+      min (Required) max (Many)
+    }  
     input (deliveryDetailResult) {
       type (DeliveryDetailResultConcept)
       min (Required) max (Many)
@@ -12,6 +16,10 @@ action (WaybillResult) {
     }
     input(waybillNumber){
       type (WaybillNumberConcept)
+      min (Required) max (One)
+    }
+     input (rootIndex) {
+      type (RootIndexConcept)
       min (Required) max (One)
     }
   }

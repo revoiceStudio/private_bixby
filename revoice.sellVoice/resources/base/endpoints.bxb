@@ -1,21 +1,32 @@
 endpoints {
   action-endpoints {
-    // ** 조회  ** //
-    // 결제완료건 조회
+    // ** 배송 프로세스  ** //
+    // step1. 결제완료건 조회
     action-endpoint (OrderCheck) {
       accepted-inputs ($vivContext)
       local-endpoint ("order/OrderCheck.js")
     }
-    //  배송 준비중 조회
-    action-endpoint (DeliveryCheck) {
-      accepted-inputs ($vivContext)
-      local-endpoint ("delivery/DeliveryCheck.js")
-    }
-    // 전체 발주 확인
+    // step2. 전체 발주
     action-endpoint (DeliveryConfirm) {
       accepted-inputs (orderCheckResult,$vivContext)
       local-endpoint ("delivery/DeliveryConfirm.js")
     }
+    // step3. 배송 준비중 조회
+    action-endpoint (DeliveryCheck) {
+      accepted-inputs ($vivContext)
+      local-endpoint ("delivery/DeliveryCheck.js")
+    }
+    // step4. 운송장 등록
+    action-endpoint (WaybillResult){
+      accepted-inputs (deliveryCheckResult,deliveryDetailResult,courier,waybillNumber,rootIndex,$vivContext)
+      local-endpoint ("waybill/WaybillResult.js")
+    }
+    // step4. 배송완료 조회
+    action-endpoint (DeliveryComplete){
+      accepted-inputs ($vivContext)
+      local-endpoint ("delivery/DeliveryComplete.js")
+    }
+
     // ** 세부사항 ** //
     // 결제 완료건 세부사항
     action-endpoint (OrderDetail) {
@@ -37,11 +48,6 @@ endpoints {
       accepted-inputs (deliveryCheckResult, rootIndex)
       local-endpoint ("waybill/InputCourier.js")
     } 
-   // 운송장 등록 결과
-    action-endpoint (WaybillResult){
-      accepted-inputs (deliveryDetailResult,courier,waybillNumber,$vivContext)
-      local-endpoint ("waybill/WaybillResult.js")
-    }
     // 상품 조회 (판매중)
     action-endpoint (OnsaleProduct){
       accepted-inputs (startIndex, $vivContext)

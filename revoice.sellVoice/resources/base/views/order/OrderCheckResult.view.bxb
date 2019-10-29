@@ -13,7 +13,7 @@ result-view {
           }
         }
         on-deny {
-          message (Okay.)
+          message (신규주문 목록입니다.)
         }
       }
     }    

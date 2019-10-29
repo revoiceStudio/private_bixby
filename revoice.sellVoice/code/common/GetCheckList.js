@@ -19,7 +19,8 @@ getCheckList = function(URL, apikey) {
 
   let checkResultList = new Array() 
   let orderNumberObj = {}
-  if(checkResult=='0' || checkResult=='-1' || checkResult=='-3103' || checkResult=='-3104' || checkResult=='-3105' || checkResult=='-1000'){
+  if(checkResult=='0' || checkResult=='-1' || checkResult=='-3103' || checkResult=='-3104' || checkResult=='-3105' || checkResult=='-1000'
+    || checkResult=='-3303' || checkResult=='-3304' || checkResult=='-3305'){
      return checkResult
   }
   else{

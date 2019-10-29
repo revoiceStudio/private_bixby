@@ -1,0 +1,4 @@
+dialog (Result) {
+  match: DeliveryCompleteResultConcept(this)
+  template("배송완료 #{size(this)}건이 있습니다.")
+}

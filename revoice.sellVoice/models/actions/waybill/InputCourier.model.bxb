@@ -4,11 +4,20 @@ action (InputCourier) {
   collect {
     input (deliveryCheckResult) {
       type (DeliveryCheckResultConcept)
-      min (Required) max (Many)
+      min (Optional) max (Many)
+      validate {
+        if (!exists(deliveryCheckResult)) {
+          replan{
+            intent{
+              goal : DeliveryCheck
+            }
+          }
+        }
+      }      
     }
     input (rootIndex) {
       type (RootIndexConcept)
-      min (Required) max (One)
+      min (Optional) max (One)
     }
   }
   output (InputCourierResultConcept)

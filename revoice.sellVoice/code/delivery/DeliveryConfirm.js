@@ -3,6 +3,7 @@ var http = require('http')
 var config = require('config')
 var orderConfirmURL = config.get('order.confirm')
 var findKey = require('API/FindAPIkey')
+
 module.exports.function = function deliveryConfirm (orderCheckResult,$vivContext) {
   //orderNumber, index, additionalProductStatus,additionalProduct,deliveryNumber
   const findResult = findKey.findAPIkey($vivContext)

@@ -1,0 +1,43 @@
+structure (DeliveryCompleteResultConcept) {
+  description ("배송완료 조회결과")
+  property (productName) {
+    type (ProductNameConcept)
+    min (Optional) max (One)
+  }
+  property (productPrice) {
+    type (ProductPriceConcept)
+    min (Optional) max (One)
+  }
+  property (address) {
+    type (AddressConcept)
+    min (Optional) max (One)
+  }
+  property (consumerName) {
+    type (ConsumerNameConcept)
+    min (Optional) max (One)
+  }
+  property (productImage) {
+    type (ProductImageConcept)
+    min (Optional) max (One)
+  }
+  property (option){
+    type(OptionConcept)
+    min (Optional) max (One)
+  }  
+  property (deliveryCompleteDate){
+    type(DeliveryCompleteDateConcept)
+    min (Optional) max (One)
+  }  
+  property (consumerMessage){
+    type(ConsumerMessageConcept)
+    min (Optional) max (One)
+  }
+  property (deliveryNumber){
+    type(DeliveryNumberConcept)
+    min (Optional) max (One)
+  }
+  property (consumerPhoneNumber){
+    type(ConsumerPhoneNumberConcept)
+    min (Optional) max(One)
+  }
+}

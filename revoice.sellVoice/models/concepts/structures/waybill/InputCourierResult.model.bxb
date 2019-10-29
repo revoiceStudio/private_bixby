@@ -1,7 +1,15 @@
 structure (InputCourierResultConcept) {
   description ("택배사 선택")
+  property (deliveryCheckResult){
+    type(DeliveryCheckResultConcept)
+    min (Optional) max (Many)
+  }
   property (deliveryDetailResult){
     type(DeliveryDetailResultConcept)
-    min (Required) max (Many)
+    min (Optional) max (Many)
+  }
+  property (rootIndex){
+    type(RootIndexConcept)
+    min (Optional) max(One)
   }
 }

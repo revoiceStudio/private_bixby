@@ -1,14 +1,33 @@
 result-view {
   match {
     WaybillResultConcept(this)
-  }
-  conversation-drivers {   
-      conversation-driver {
-        template ("배송준비중 조회")       
-      }
-   }
+  }  
   message {
     template ("택배사 : #{value(this.courier)} 운송장 번호 : #{value(this.waybillNumber)}로 운송장을 등록했습니다.")
+  }
+  conversation-drivers {
+    conversation-driver {
+      template ("배송완료 조회") 
+    }   
+  }
+  render{
+    if(exists(this.deliveryCheckResult)){
+      layout-macro (delivery-list) {
+        param (deliveryList) {
+          expression (this.deliveryCheckResult)
+        }
+      }
+    }
+    // 배송준비중인 상품이 없을 경우
+    else{
+      layout{      
+        section{
+          title{        
+            template ("조회된 배송준비 상품이 없습니다.")
+          }
+        }      
+      }
+    }
   }
 
 }

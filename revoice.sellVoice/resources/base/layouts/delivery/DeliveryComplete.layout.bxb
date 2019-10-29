@@ -1,0 +1,76 @@
+layout-macro-def (delivery-complete-list) {
+  params {
+    param (deliveryCompleteList) {
+      type (DeliveryCompleteResultConcept)
+      min (Required) max (Many)
+    }
+  }
+  content{
+    section{
+      content{    
+          for-each (deliveryCompleteList) {
+            as(item){ 
+              index-var (i)
+              divider              
+              single-line {
+                  image {
+                    url("/images/icons/11st.png")
+                    shape (Circle)
+                  } 
+                  spacer
+                  text {
+                      value {
+                          template ("#{i+1}.")
+                      }
+                      style (Title_XS)
+                  }
+                  text {
+                      value {
+                          template ("#{value(item.consumerName)}")
+                      }
+                      style (Title_XS)
+                      color (Blue)
+                  }
+                  text {
+                    
+                      value {
+                          template ("고객님")
+                      }
+                      style (Title_XS)
+                  }
+                  spacer
+                  image {
+                    url("/images/icons/delivery/delivery_complete.jpg")
+                    style(Detail_M)
+                  } 
+              }
+              single-line {                   
+                  text {
+                      value {
+                          template ("(배송완료일시 : #{value(item.deliveryCompleteDate)})")
+                      }
+                      style (Detail_M)
+                      color (Green)
+                  }                
+              }             
+              cell-card {
+                slot1{
+                  image{
+                    url("#{value(item.productImage)}")
+                    shape (Square)
+                  }
+                }
+                slot2{
+                    content{
+                      primary("#{value(item.productName)}")       
+                      secondary("#{value(item.option)}")               
+                    }
+                }             
+              }                  
+            }          
+          }  
+                   
+      }    
+    }
+  } 
+}

@@ -8,6 +8,11 @@ train (t-whi6kdgrtg6ajtaawbu262qfj) {
   plan (Y2BiUCtKLcvPTE7VK07NyQkDszzzCksziyqDUotLc0qc8/OSUwtKGCRxqmNgBEIGKAaSAA==)
   last-modified (1572244664883)
 }
+train (t-wly0c0owbfb3bn10gkjd4oke7) {
+  utterance ([g:DeliveryComplete] 배송완료)
+  plan (Y2Bi0C9KLcvPTE7VK07NyQkDs1xSczLLUosqnfNzC3JSS1KDUotLc0qc8/OSUwtKGJQIa2BgBEIGKAaSAA==)
+  last-modified (1572337906554)
+}
 train (t-wusbxru0dgjdpkg7jwr170zue) {
   utterance ([g:SoldOutProduct] 품절상품 보여줘)
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGBSwqM7PSfEvLYEqZ2AEQgYoBpIA)

@@ -3,14 +3,35 @@ result-view {
     InputCourierResultConcept(result)
   }
   message {
-    template ("택배사를 선택해주세요.")
+    if(!exists(result.rootIndex)){
+      template ("배송중인 상품 목록입니다. 운송장을 등록하실 상품을 선택해주세요.")
+    }else{
+      template ("택배사를 선택해주세요.")
+    }
   }
   render {
-    layout-macro (courier-list) {
-      param (detailList) {
-        expression (result.deliveryDetailResult)
-      }
-    }      
+    if(!exists(result.rootIndex)){
+      if(size(result.deliveryCheckResult)>0){     
+        layout-macro (delivery-list) {
+          param (deliveryList) {
+            expression (result.deliveryCheckResult)
+          }
+        }
+      }   
+    }
+    else{
+      layout-macro (courier-list) {
+        param (checkList) {
+          expression (result.deliveryCheckResult)
+        }
+        param (detailList) {
+          expression (result.deliveryDetailResult)
+        }
+         param (rootIndex) {
+          expression (result.rootIndex)
+        }
+      }     
+    } 
      
   }
 
