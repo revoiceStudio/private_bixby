@@ -13,7 +13,7 @@ result-view {
           }
         }
         on-deny {
-          message (신규주문 목록입니다.)
+          message (신규주문 목록입니다. 전체 발주처리 하시겠어요?)
         }
       }
     }    

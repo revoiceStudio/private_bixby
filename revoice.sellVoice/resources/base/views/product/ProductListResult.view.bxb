@@ -20,28 +20,28 @@ result-view{
      if(searchResult[0].sellState == '104')  {
         conversation-driver {
           if(size(searchResult)<=50 && searchResult[0].soldOutStartIndex>50){
-            template ("#{searchResult[0].soldOutStartIndex-50}번부터 상품 조회")       
+            template ("#{searchResult[0].soldOutStartIndex-50}번부터 품절 상품 조회")       
           }else if(size(searchResult)>0 && searchResult[0].soldOutStartIndex!=1){
             template ("1번부터 상품 조회")
           }          
         }
         conversation-driver {
           if(size(searchResult)==50){
-            template ("#{searchResult[0].soldOutStartIndex+50}번부터 상품 조회")       
+            template ("#{searchResult[0].soldOutStartIndex+50}번부터 품절 상품 조회")       
           }           
         }   
      }
      if(searchResult[0].sellState == '105')  {
         conversation-driver {
           if(size(searchResult)<=50 && searchResult[0].stopDisplayStartIndex>50){
-            template ("#{searchResult[0].stopDisplayStartIndex-50}번부터 상품 조회")       
+            template ("#{searchResult[0].stopDisplayStartIndex-50}번부터 판매 중지 상품 조회")       
           }else if(size(searchResult)>0 && searchResult[0].stopDisplayStartIndex!=1){
             template ("1번부터 상품 조회")
           }          
         }
         conversation-driver {
           if(size(searchResult)==50){
-            template ("#{searchResult[0].stopDisplayStartIndex+50}번부터 상품 조회")       
+            template ("#{searchResult[0].stopDisplayStartIndex+50}번부터 판매 중지 상품 조회")       
           }           
         }   
      }

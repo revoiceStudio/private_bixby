@@ -13,3 +13,8 @@ train (t-xd8e6jjai6vjtl8ntli3muuxt) {
   plan (Y2Bh0CpKLcvPTE7VK07NyQkDs0ILUhJLUgOKgOyg1OLSnBLn/Lzk1IISBlm8ahl0MKWDUxOLkjMCivJTSpNLUA1TwWsYTBUzAyMDE5BkANIgCAFgFgA=)
   last-modified (1571983907887)
 }
+train (t-xy0m7yvc313ulnjytls0x379l) {
+  utterance ("[g:SoldOutProduct] (50)[v:SoldOutStartIndexConcept]번부터 품절 상품 조회")
+  plan (Y2Bm0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGBSwqM7PSfEvLYEqZ9DCqSK4JLGoxDMvJbUCZhoTAyMQMwBJRgYQgPIB)
+  last-modified (1572341930711)
+}

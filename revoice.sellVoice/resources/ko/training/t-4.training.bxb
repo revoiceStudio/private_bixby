@@ -13,3 +13,8 @@ train (t-4am3rggnzmuino780xqrseo7v) {
   plan (Y2Bm0CpKLcvPTE7VK07NyQkDs4JL8gsCivJTSpNLglKLS3NKnPPzklMLShhk8apl0MEinZpYlJyB1TAmBkYgZgCSjAwMMBoA)
   last-modified (1572238138625)
 }
+train (t-4we8snmmhr81bvyotw0ejs88r) {
+  utterance ("[g:StopDisplayProduct] (50)[v:StopDisplayStartIndexConcept]번부터 판매 중지 상품 조회")
+  plan (Y2Bm0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGFSwqC7JL3DJLC7ISayEamHQw6squCSxqMQzLyW1AmYqEwMjEDMASUYGEIDyAQ==)
+  last-modified (1572341929974)
+}

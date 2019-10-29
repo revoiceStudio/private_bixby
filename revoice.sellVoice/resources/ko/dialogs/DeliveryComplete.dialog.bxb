@@ -1,4 +1,6 @@
 dialog (Result) {
   match: DeliveryCompleteResultConcept(this)
-  template("배송완료 #{size(this)}건이 있습니다.")
+  template("배송완료 #{size(this)}건이 있습니다."){
+    speech ("<speak>최근 일주일간 배송완료 목록이에요.</speak>")
+  }
 }
