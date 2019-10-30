@@ -1,0 +1,7 @@
+structure (ConfirmProductResultConcept) {
+  description ("사용자 확인")
+  property (searchProductResult){
+    type(SearchProductResultConcept)
+    min (Required) max (One)
+  }
+}

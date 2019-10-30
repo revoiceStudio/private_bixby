@@ -1,7 +1,7 @@
 train (t-r29zjfv28pc282ow3uqs4ffs4) {
-  utterance ("[g:RestartProduct:continue:SearchProductDetailResultConcept] 판매 중지 해제 ")
-  plan (Y2Bm0C1KLcvPTE7VK07NyQkDs4JSi0sSi0oCivJTSpNLgLzSnBLn/Lzk1IISBgVCyhl0MFUEpyYWJWdgNY+JgRGIGYAkIwMDjAYA)
-  last-modified (1572244315078)
+  utterance ("[g:ConfirmProduct:continue:SearchProductDetailResultConcept] 판매 중지 해제 ")
+  plan (Y2Bm0C1KLcvPTE7VK07NyQkDs5zz89Iyi3IDivJTSpNLglKLS3NKgGLJqQUlDAqElDPoYKoITk0sSs7Aah4TAyMQMwBJRgYGGA0A)
+  last-modified (1572424856501)
 }
 train (t-r51zr38f5pgjvhh14ldot21l9) {
   utterance ([g:Inquiry] 고객 문의 보여줘)

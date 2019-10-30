@@ -6,7 +6,7 @@ train (t-h2sdiowoyx3zhb3mdut07d39u) {
 train (t-h88zllthup6jjwtnp466194y1) {
   utterance ([g:OrderCall:continue:OrderDetailResultConcept] 전화걸기)
   plan (Y2Bi0ChKLcvPTE7VK07NyQkDs/yLUlKLnBNzcoJSi0tzSpzz85JTC0oYpPGoZGAEQgYoBpIA)
-  last-modified (1572402893519)
+  last-modified (1572422789344)
 }
 train (t-hq7b8osazsi1mewu4ltgqha0r) {
   utterance ([g:OnsaleProduct] 상품목록 보여줘)

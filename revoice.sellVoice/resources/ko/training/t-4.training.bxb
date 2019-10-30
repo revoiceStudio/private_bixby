@@ -1,12 +1,12 @@
 train (t-46wascw6yr5ostm9kc47ss308) {
   utterance ([g:SoldOutProduct] 품절상품 조회)
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGBSwqM7PSfEvLYEqZ2AEQgYoBpIA)
-  last-modified (1572235392651)
+  last-modified (1572424914430)
 }
 train (t-4am3rggnzmuino780xqrseo7v) {
-  utterance ([g:StopProduct:continue:SearchProductDetailResultConcept] 판매 중지)
-  plan (Y2Bm0CpKLcvPTE7VK07NyQkDs4JL8gsCivJTSpNLglKLS3NKnPPzklMLShhk8apl0MEinZpYlJyB1TAmBkYgZgCSjAwMMBoA)
-  last-modified (1572238138625)
+  utterance ([g:ConfirmProduct:continue:SearchProductDetailResultConcept] 판매 중지)
+  plan (Y2Bm0C1KLcvPTE7VK07NyQkDs5zz89Iyi3IDivJTSpNLglKLS3NKgGLJqQUlDAqElDPoYKoITk0sSs7Aah4TAyMQMwBJRgYGGA0A)
+  last-modified (1572424771253)
 }
 train (t-4we8snmmhr81bvyotw0ejs88r) {
   utterance ("[g:StopDisplayProduct] (50)[v:StopDisplayStartIndexConcept]번부터 판매 중지 상품 조회")

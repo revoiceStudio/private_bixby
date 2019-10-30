@@ -111,5 +111,10 @@ endpoints {
        accepted-inputs(checkResult, rootIndex)
       local-endpoint ("Call.js")
     }
+    // 상품 변경 확인
+    action-endpoint (ConfirmProduct){
+       accepted-inputs(searchProductResult)
+      local-endpoint ("product/ConfirmProduct.js")
+    }
   }
 }

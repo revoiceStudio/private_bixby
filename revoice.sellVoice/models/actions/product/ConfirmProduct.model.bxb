@@ -1,0 +1,11 @@
+action (ConfirmProduct) {
+  description ("사용자 확인")
+  type(Search)
+  collect {
+    input (searchProductResult) {
+      type (SearchProductResultConcept)
+      min (Required) max (One)
+    }
+  }
+  output (ConfirmProductResultConcept)
+}

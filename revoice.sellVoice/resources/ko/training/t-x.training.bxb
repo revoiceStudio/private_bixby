@@ -3,11 +3,6 @@ train (t-x3rxrte7s1ywso3272ttmi90h) {
   plan (Y2Bi0C5KLcvPTE7VK07NyQkDs1xSczLLUosqnRNzcoJSi0tzSpzz85JTC0oY5PArZmAEQgYoBpIA)
   last-modified (1572402884052)
 }
-train (t-xal744pif5y9qi8fnx53ncmzi) {
-  utterance ([g:StopProduct] 판매중지)
-  plan (Y2Bm0CpKLcvPTE7VK07NyQkDs4JL8gsCivJTSpNLglKLS3NKnPPzklMLShhk8apl0MEinZpYlJyB1TAmBkYgZgCSjAwMMBoA)
-  last-modified (1572238149536)
-}
 train (t-xbhbxhhd1wojyj4f864k0f693) {
   utterance ([g:DeliveryComplete] 배송완료 조회)
   plan (Y2Bi0C9KLcvPTE7VK07NyQkDs1xSczLLUosqnfNzC3JSS1KDUotLc0qc8/OSUwtKGJQIa2BgBEIGKAaSAA==)

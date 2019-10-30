@@ -1,0 +1,57 @@
+result-view {
+  match {
+     ConfirmProductResultConcept (this)
+  }
+  message{
+    if(this.searchProductResult.sellState==103){
+      template ("해당상품을 판매중지 합니다.")
+    }
+    if(this.searchProductResult.sellState==105){
+      template ("해당상품을 다시 전시합니다.")
+    }
+  }
+  followup {
+      if(this.searchProductResult.sellState==103){
+        prompt {
+          dialog (판매중지를 계속 진행할까요?)          
+          on-confirm {
+            intent {
+              goal: revoice.sellVoice.StopProduct
+              value: revoice.sellVoice.SearchProductResultConcept$expr(this.searchProductResult)
+            }
+          }
+          on-deny {
+            message (판매중지 되지 않았어요.)
+          }
+        }
+      }
+      if(this.searchProductResult.sellState==105){
+        prompt {
+          dialog (판매중으로 변경할까요?)          
+          on-confirm {
+            intent {
+              goal: revoice.sellVoice.RestartProduct
+              value: revoice.sellVoice.SearchProductResultConcept$expr(this.searchProductResult)
+            }
+          }
+          on-deny {
+            message (판매중으로 변경되지 않았어요.)
+          }
+        }
+      }
+      
+      
+  }
+  conversation-drivers {   
+      conversation-driver {
+        template ("응") 
+      }   
+  }
+  render{
+    layout-macro (product-list) {
+      param (productList) {
+        expression (this.searchProductResult)
+      }
+    }
+  }
+}

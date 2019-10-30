@@ -1,6 +1,6 @@
 capsule {
   id (revoice.sellVoice)
-  version (1.0.6)
+  version (1.0.7)
   format (3)
   targets {
     target (bixby-mobile-ko-KR)
