@@ -44,6 +44,25 @@ layout-macro-def (main-list) {
             cell-card {
                 slot1 {
                     image {
+                        url ("/images/main/ordercheck.png")
+                        shape (Circle)
+                    }
+                }
+                slot2 {
+                    content {
+                        order (PrimarySecondary)
+                        primary ("배송완료 조회") // Fields of America for Fall
+                    }
+                }
+                on-click{
+                  intent {
+                        goal: revoice.sellVoice.DeliveryComplete
+                    }
+                }
+            }
+            cell-card {
+                slot1 {
+                    image {
                         url ("/images/main/searchproduct.png")
                         shape (Circle)
                     }

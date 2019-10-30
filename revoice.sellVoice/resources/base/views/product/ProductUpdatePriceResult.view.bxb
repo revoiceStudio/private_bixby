@@ -2,6 +2,17 @@ result-view{
    match {
      UpdatePriceResultConcept(this)
    }
+   conversation-drivers {   
+      conversation-driver {
+        template ("판매중 상품 조회")       
+      }
+      conversation-driver {
+        template ("품절 상품 조회")       
+      }
+      conversation-driver {
+        template ("판매중지 상품 조회")       
+      }
+   }
    message{
      template ("해당 상품의 판매금액을 #{value(this.updatePrice)}원으로 변경했습니다.")
    }

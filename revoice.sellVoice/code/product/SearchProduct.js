@@ -7,11 +7,14 @@ var fail = require('fail')
 
 search = function(sellstate, start, $vivContext) {  
   const findResult = findKey.findAPIkey($vivContext)
-  if(start==undefined){start=0}
+  // 11번가 default 시작인덱스 1번부터
+  if(start==undefined || start==0){start=1}
+  // 특정 번호 부터 상품 조회
   else{
-    start = parseInt(start)-1
-    if(start<=0){
-      start = 0
+    start = parseInt(start)
+    // 음수 예외 처리
+    if(start <= -1){
+      start = 1
     }
   }
   console.log("sellstate, start, end :",sellstate, start, start+49)
@@ -44,13 +47,13 @@ search = function(sellstate, start, $vivContext) {
     tmp['productPrice'] = searchResult[i]['selPrc'][0]
     tmp['productNumber'] = searchResult[i]['prdNo'][0]
     tmp['sellState'] = sellstate
-    if(sellstate=='103'){
-      tmp['onSaleStartIndex'] = ++start
+    if(sellstate=='103'){ // 판매중
+      tmp['onSaleStartIndex'] = start++
     }
-    else if(sellstate=='104'){
-      tmp['soldOutStartIndex'] = ++start
-    }else if(sellstate=='105'){
-      tmp['stopDisplayStartIndex'] = ++start
+    else if(sellstate=='104'){  // 품절
+      tmp['soldOutStartIndex'] = start++
+    }else if(sellstate=='105'){ // 판매 중지
+      tmp['stopDisplayStartIndex'] = start++
     }    
     // 이미지 있는 경우
     if(searchResult[i].prdImage01 != undefined ){
