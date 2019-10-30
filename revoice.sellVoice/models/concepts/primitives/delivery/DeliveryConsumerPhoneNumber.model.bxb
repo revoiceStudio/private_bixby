@@ -1,3 +1,3 @@
-text (ConsumerPhoneNumberConcept) {
+text (DeliveryConsumerPhoneNumberConcept) {
   description ("구매자 휴대폰번호")
 }

@@ -1,15 +1,15 @@
-action (Call) {
-  description ("전화걸기")
+action (OrderCall) {
+  description ("신규주문 전화걸기")
   type(Constructor)
   collect {
-    input (deliveryCheckResult) {
-      type (DeliveryCheckResultConcept)
+    input (checkResult) {
+      type (OrderCheckResultConcept)
       min (Optional) max (Many)
       validate {
-        if (!exists(deliveryCheckResult)) {
+        if (!exists(checkResult)) {
           replan{
             intent{
-              goal : DeliveryCheck
+              goal : OrderCheck
             }
           }
         }
@@ -20,5 +20,5 @@ action (Call) {
       min (Optional) max (One)
     }  
   }
-  output (CallResultConcept)
+  output (OrderCallResultConcept)
 }

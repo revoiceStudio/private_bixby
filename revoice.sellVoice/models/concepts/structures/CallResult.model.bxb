@@ -1,7 +1,0 @@
-structure (CallResultConcept) {
-  description ("전화걸기 결과") 
-  property (consumerPhoneNumber){
-    type(ConsumerPhoneNumberConcept)
-    min (Required) max (One)
-  }
-}

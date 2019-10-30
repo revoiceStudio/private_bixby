@@ -37,7 +37,7 @@ structure (DeliveryCompleteResultConcept) {
     min (Optional) max (One)
   }
   property (consumerPhoneNumber){
-    type(ConsumerPhoneNumberConcept)
+    type(DeliveryConsumerPhoneNumberConcept)
     min (Optional) max(One)
   }
 }

@@ -77,7 +77,7 @@ structure (OrderCheckResultConcept) {
     min (Optional) max (One)
   }
   property (consumerPhoneNumber){
-    type(ConsumerPhoneNumberConcept)
+    type(OrderConsumerPhoneNumberConcept)
     min (Optional) max(One)
   }
 }

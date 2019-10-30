@@ -101,9 +101,14 @@ endpoints {
     action-endpoint (Main){
       local-endpoint ("main/Main.js")
     }
-    // 전화걸기
-    action-endpoint (Call){
-       accepted-inputs(deliveryCheckResult, rootIndex)
+    // 배송준비중에서 전화걸기
+    action-endpoint (DeliveryCall){
+       accepted-inputs(checkResult, rootIndex)
+      local-endpoint ("Call.js")
+    }
+    // 신규주문에서 전화걸기
+    action-endpoint (OrderCall){
+       accepted-inputs(checkResult, rootIndex)
       local-endpoint ("Call.js")
     }
   }

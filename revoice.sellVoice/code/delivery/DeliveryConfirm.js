@@ -74,6 +74,7 @@ module.exports.function = function deliveryConfirm (orderCheckResult,$vivContext
       tmp['payAmount'] = orderNumberObj[key][i]['payAmount']
       tmp['consumerMessage'] = orderNumberObj[key][i]['consumerMessage']
       tmp['orderRootIndex'] = orderNumberObj[key][i]['orderRootIndex']
+      tmp['consumerPhoneNumber'] = orderNumberObj[key][i]['consumerPhoneNumber']
       deliveryConfirmResult.push(tmp)       
     }
   }  

@@ -81,7 +81,7 @@ property (productName) {
     min (Required) max (One)
   }
   property (consumerPhoneNumber){
-    type(ConsumerPhoneNumberConcept)
+    type(DeliveryConsumerPhoneNumberConcept)
     min (Required) max(One)
   }
 }

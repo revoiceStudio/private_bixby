@@ -1,0 +1,24 @@
+action (DeliveryCall) {
+  description ("배송준비중 전화걸기")
+  type(Constructor)
+  collect {
+    input (checkResult) {
+      type (DeliveryCheckResultConcept)
+      min (Optional) max (Many)
+      validate {
+        if (!exists(checkResult)) {
+          replan{
+            intent{
+              goal : DeliveryCheck
+            }
+          }
+        }
+      }      
+    }
+    input (rootIndex) {
+      type (RootIndexConcept)
+      min (Optional) max (One)
+    }  
+  }
+  output (DeliveryCallResultConcept)
+}

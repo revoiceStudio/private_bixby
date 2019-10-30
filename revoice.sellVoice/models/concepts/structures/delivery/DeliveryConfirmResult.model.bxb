@@ -84,4 +84,8 @@ structure (DeliveryConfirmResultConcept) {
     type(DeliveryConfirmErrorCodeConcept)
     min (Optional) max(One)
   }
+  property (ConsumerPhoneNumber){
+    type(DeliveryConsumerPhoneNumberConcept)
+    min (Optional) max (One)
+  }
 }

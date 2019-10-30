@@ -2,6 +2,12 @@ result-view {
  match {
      OrderDetailResultConcept (detailResult)
    }
+conversation-drivers{
+  conversation-driver {
+    template ("전화걸기")
+  }
+}
+  
  render {  
      layout{
        if(exists(detailResult)){

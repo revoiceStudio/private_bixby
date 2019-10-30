@@ -4,6 +4,12 @@ result-view {
   }
   conversation-drivers {   
     conversation-driver {
+      template ("운송장 등록")
+    }
+    conversation-driver {
+      template ("전화걸기")
+    }
+    conversation-driver {
       if(detailResult[0].previousRootIndex!=0){
         template ("#{value(detailResult[0].previousRootIndex)}번 주문") 
       }
@@ -12,13 +18,7 @@ result-view {
       if(detailResult[0].nextRootIndex!=0){
          template ("#{value(detailResult[0].nextRootIndex)}번 주문")
       }     
-    }  
-    conversation-driver {
-      template ("운송장 등록")
-    }
-    conversation-driver {
-      template ("전화걸기")
-    }
+    }      
   }
  render {  
      layout{

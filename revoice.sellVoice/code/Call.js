@@ -1,10 +1,10 @@
 
-module.exports.function = function call (deliveryCheckResult, rootIndex) {
+module.exports.function = function call (checkResult, rootIndex) {
 
-for(let i=0; i<deliveryCheckResult.length; i++){
+for(let i=0; i<checkResult.length; i++){
   let consumerPhoneNumber = ""
-  if(deliveryCheckResult[i].rootIndex == rootIndex.trim()){
-    consumerPhoneNumber = deliveryCheckResult[i].consumerPhoneNumber.trim()
+  if(checkResult[i].rootIndex == rootIndex.trim()){
+    consumerPhoneNumber = checkResult[i].consumerPhoneNumber.trim()
     break
   }
 }
