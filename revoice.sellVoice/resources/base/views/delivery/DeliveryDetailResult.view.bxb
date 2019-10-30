@@ -16,6 +16,9 @@ result-view {
     conversation-driver {
       template ("운송장 등록")
     }
+    conversation-driver {
+      template ("전화걸기")
+    }
   }
  render {  
      layout{

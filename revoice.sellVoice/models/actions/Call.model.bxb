@@ -1,0 +1,24 @@
+action (Call) {
+  description ("전화걸기")
+  type(Constructor)
+  collect {
+    input (deliveryCheckResult) {
+      type (DeliveryCheckResultConcept)
+      min (Optional) max (Many)
+      validate {
+        if (!exists(deliveryCheckResult)) {
+          replan{
+            intent{
+              goal : DeliveryCheck
+            }
+          }
+        }
+      }      
+    }
+    input (rootIndex) {
+      type (RootIndexConcept)
+      min (Optional) max (One)
+    }  
+  }
+  output (CallResultConcept)
+}

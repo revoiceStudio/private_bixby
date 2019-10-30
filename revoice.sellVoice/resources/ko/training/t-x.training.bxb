@@ -1,3 +1,8 @@
+train (t-x3rxrte7s1ywso3272ttmi90h) {
+  utterance ([g:Call:continue:DeliveryDetailResultConcept] 전화걸기)
+  plan (Y2BmUC5KLcvPTE7VK07NyQkDs5wTc3KCUotLc0qc8/OSUwtKGMSwK2LQwSKen1dcmptaFJCRn5fqV5qblFoEM4WJgRGIGYAkIwMDjAYA)
+  last-modified (1572344349424)
+}
 train (t-xal744pif5y9qi8fnx53ncmzi) {
   utterance ([g:StopProduct] 판매중지)
   plan (Y2Bm0CpKLcvPTE7VK07NyQkDs4JL8gsCivJTSpNLglKLS3NKnPPzklMLShhk8apl0MEinZpYlJyB1TAmBkYgZgCSjAwMMBoA)

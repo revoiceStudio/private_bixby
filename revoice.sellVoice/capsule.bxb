@@ -1,6 +1,6 @@
 capsule {
   id (revoice.sellVoice)
-  version (1.0.0)
+  version (1.0.1)
   format (3)
   targets {
     target (bixby-mobile-ko-KR)
@@ -16,6 +16,11 @@ capsule {
     modern-prompt-rejection
     support-halt-effect-in-computed-inputs
     use-input-views-for-selection-list-detail
+  }
+  capsule-imports {
+    import (viv.time) {
+      as (time) version (3.0.3)
+    }
   }
   permissions{
     user-profile-access

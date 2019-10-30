@@ -10,7 +10,7 @@ layout-macro-def (order-detail-list) {
       content{
           paragraph  {
             value {
-              template ("고객명 :#{value(detailList[0].consumerName)}")
+              template ("고객명 :#{value(detailList[0].consumerName)} / #{value(detailList[0].consumerPhoneNumber)}")
             }
             style (Detail_M)            
           }
