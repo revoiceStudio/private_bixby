@@ -1,3 +1,8 @@
+train (t-q3p4qohg54y2basf74weoi5fz) {
+  utterance ([g:DeliveryCheck] 배송준비중 주문 알려줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)
+  last-modified (1572491956887)
+}
 train (t-qqdvwgz12zztjqqkjfzp0z4kp) {
   utterance ([g:OnsaleProduct] 상품 조회)
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGOQxVfvnFSfmpEJVMzACIQMUA0kA)

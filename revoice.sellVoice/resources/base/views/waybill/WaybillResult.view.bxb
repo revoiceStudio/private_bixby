@@ -3,7 +3,7 @@ result-view {
     WaybillResultConcept(this)
   }  
   message {
-    template ("택배사 : #{value(this.courier)} 운송장 번호 : #{value(this.waybillNumber)}로 운송장을 등록했습니다.")
+    template ("#{value(this.courier)} #{value(this.waybillNumber)}로 운송장을 등록했습니다.")
   }
   conversation-drivers {
     conversation-driver {
@@ -11,23 +11,68 @@ result-view {
     }   
   }
   render{
-    if(exists(this.deliveryCheckResult)){
-      layout-macro (delivery-list) {
-        param (deliveryList) {
-          expression (this.deliveryCheckResult)
+    layout{
+      section{
+        content{
+            input-cell {
+                label {
+                    template ("상품")
+                }
+                value {
+                    template ("#{value(this.deliveryDetailResult.productName)}")
+                }
+            }
+            split-input-cell {
+                left {
+                    input-cell {
+                        label {
+                            template ("택배사")
+                        }
+                        value {
+                            template ("#{value(this.courier)}")
+                        }
+                    }
+                }
+                right {
+                    input-cell {
+                      label {
+                          template ("운송장번호")
+                      }
+                      value {
+                          template ("#{value(this.waybillNumber)}")
+                      }
+                  }
+              }
+          }
+        }
+       
+      }
+      section{
+        content{
+          single-line{
+            text {
+              value("배송준비중인 상품 목록입니다.")
+              style(Title_XS)
+            }
+          }
+        }                
+      }
+      if(exists(this.deliveryCheckResult)){
+        layout-macro (delivery-list) {
+          param (deliveryList) {
+            expression (this.deliveryCheckResult)
+          }
         }
       }
-    }
-    // 배송준비중인 상품이 없을 경우
-    else{
-      layout{      
+      // 배송준비중인 상품이 없을 경우
+      else{
         section{
           title{        
             template ("조회된 배송준비 상품이 없습니다.")
           }
         }      
       }
+      
     }
   }
-
 }

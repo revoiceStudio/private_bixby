@@ -1,0 +1,5 @@
+train (t-6aevxyagoadytr1ift3xdu9y8) {
+  utterance ([g:StopDisplayProduct] 판매중지상품 보여줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGFSwqC7JL3DJLC7ISayEamFgBEIGKAaSAA==)
+  last-modified (1572492063314)
+}

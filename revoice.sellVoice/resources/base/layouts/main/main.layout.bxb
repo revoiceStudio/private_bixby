@@ -44,7 +44,7 @@ layout-macro-def (main-list) {
             cell-card {
                 slot1 {
                     image {
-                        url ("/images/main/ordercheck.png")
+                        url ("/images/main/delivery_complete_check.png")
                         shape (Circle)
                     }
                 }
