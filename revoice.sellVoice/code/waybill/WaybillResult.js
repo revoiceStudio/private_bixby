@@ -28,9 +28,9 @@ module.exports.function = function waybill (deliveryCheckResult, deliveryDetailR
     }
   }
 
-  //const sendResult = http.getUrl(sendURL, options) 
-  //console.log(sendResult)
-  const sendResult = {result_code:[200]}
+  const sendResult = http.getUrl(sendURL, options) 
+  console.log(sendResult)
+  //const sendResult = {result_code:[200]}
   if(sendResult.result_code[0] == '-1'){
     throw fail.checkedError("운송장등록 오류", "waybillResultCode",{dialog:sendResult.result_text[0]});
   }

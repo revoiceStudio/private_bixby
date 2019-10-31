@@ -18,6 +18,16 @@ train (t-fewpta3lqflhmxzcuyr8i68ph) {
   plan (Y2Bk0CpKLcvPTE7VK07NyQkDszzzCkpLHAM8s1Mrg1KLS3NKnPPzklMLShhAgBFEAAA=)
   last-modified (1572156620366)
 }
+train (t-fpqyewa0vz7qdw8o55f0k8pjh) {
+  utterance ([g:DeliveryCall:continue:DeliveryDetailResultConcept] 전화걸어줘)
+  plan (Y2Bi0C5KLcvPTE7VK07NyQkDs1xSczLLUosqnRNzcoJSi0tzSpzz85JTC0oY5PArZmAEQgYoBpIA)
+  last-modified (1572503197059)
+}
+train (t-fpvjqs2lshtwxepkhq6pu59hj) {
+  utterance ([g:OrderCall:continue:OrderDetailResultConcept] 전화 연결해줘)
+  plan (Y2Bi0ChKLcvPTE7VK07NyQkDs/yLUlKLnBNzcoJSi0tzSpzz85JTC0oYpPGoZGAEQgYoBpIA)
+  last-modified (1572503147183)
+}
 train (t-fs5dvesi9k2249iu7c49jnp5v) {
   utterance ([g:OrderCheck] 신규주문)
   plan (Y2Bi0CxKLcvPTE7VK07NyQkDs/yLUlKLnDNSk7ODUotLc0qc8/OSUwtKGGTwKWVgBEIGKAaSAA==)

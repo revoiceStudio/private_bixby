@@ -1,3 +1,8 @@
+train (t-uea83iqko6034yrvo227i16j3) {
+  utterance ([g:StopDisplayProduct] 판매중지 보여줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGFSwqC7JL3DJLC7ISayEamFgBEIGKAaSAA==)
+  last-modified (1572510875414)
+}
 train (t-ukg2230eo43sh8hkijb7aia8t) {
   utterance ("[g:SoldOutProduct] (50)[v:SoldOutStartIndexConcept]번 품절 상품 조회")
   plan (Y2Bm0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGBSwqM7PSfEvLYEqZ9DCqSK4JLGoxDMvJbUCZhoTAyMQMwBJRgYQgPIB)

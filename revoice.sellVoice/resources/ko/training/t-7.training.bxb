@@ -3,6 +3,11 @@ train (t-70j82jqr4i9c0rcjcwf0r7fwr) {
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGOQxVfvnFSfmpEJVMzACIQMUA0kA)
   last-modified (1572235352344)
 }
+train (t-71zl8yry4bij7i89rqgjc3vze) {
+  utterance ([g:DeliveryCall:continue:DeliveryDetailResultConcept] 전화 연결해줘)
+  plan (Y2Bi0C5KLcvPTE7VK07NyQkDs1xSczLLUosqnRNzcoJSi0tzSpzz85JTC0oY5PArZmAEQgYoBpIA)
+  last-modified (1572503180784)
+}
 train (t-7t2lg9gy8eix9s35p2ixz7ty5) {
   utterance ([g:StopDisplayProduct] 판매 중지 상품 조회)
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGFSwqC7JL3DJLC7ISayEamFgBEIGKAaSAA==)

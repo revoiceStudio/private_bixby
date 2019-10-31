@@ -14,7 +14,7 @@ action (DeliveryCall) {
           }
         }
       }      
-    }
+    }    
     input (rootIndex) {
       type (RootIndexConcept)
       min (Optional) max (One)

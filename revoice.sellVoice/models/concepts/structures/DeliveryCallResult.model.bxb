@@ -2,6 +2,6 @@ structure (DeliveryCallResultConcept) {
   description ("배송준비중 전화걸기 결과") 
   property (consumerPhoneNumber){
     type(DeliveryConsumerPhoneNumberConcept)
-    min (Required) max (One)
+    min (Optional) max (One)
   }
 }

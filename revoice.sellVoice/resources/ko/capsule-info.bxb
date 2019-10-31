@@ -5,7 +5,7 @@ capsule-info {
   icon-asset (images/icons/sellVoice.png)
   description ("판매자를 위한 쇼핑몰통합관리 서비스 셀퍼 입니다.")
   website-url (http://revoice.kr)
-  privacy-policy-url (http://revoice.kr/sellper)
+  privacy-policy-url (http://www.revoice.kr/policy/revoicePol.html)
   terms-url (http://revoice.kr/sellper/terms-of-use)
   search-keywords {
     keyword (쇼핑몰)

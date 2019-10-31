@@ -13,6 +13,11 @@ train (t-r7pimol3v8ht3uqwnfvyrriwd) {
   plan (Y2Bl0C1KLcvPTE7VK07NyQkDs1xSczLLUosqXVJLEjNzglKLS3NKnPPzklMLShgUCClnUMdU4VSal5KTClMHM0oHt1HOGanJ2agWK2GqDsrPL/HMS0mtgKlhYWBkYGJgBtIMQBYEwgATEAPFAQ==)
   last-modified (1571291647472)
 }
+train (t-rf6sqjnipmfnorc9deto3kbsu) {
+  utterance ([g:StopDisplayProduct] 판매중지상품)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGFSwqC7JL3DJLC7ISayEamFgBEIGKAaSAA==)
+  last-modified (1572508011609)
+}
 train (t-rkasul6n61kjwir8wy0jey6wc) {
   utterance ([g:Inquiry] 고객문의 조회)
   plan (Y2BiUCtKLcvPTE7VK07NyQkDszzzCksziyqDUotLc0qc8/OSUwtKGCRxqmNgBEIGKAaSAA==)
