@@ -1,9 +1,9 @@
 capsule-info {
-  display-name (셀퍼)
-  dispatch-name (셀퍼)
+  display-name (마이셀러)
+  dispatch-name (마이셀러)
   developer-name (리보이스)  
   icon-asset (images/icons/sellVoice.png)
-  description ("판매자를 위한 쇼핑몰통합관리 서비스 셀퍼 입니다.")
+  description ("판매자를 위한 쇼핑몰통합관리 서비스 마이셀러 입니다.")
   website-url (http://revoice.kr)
   privacy-policy-url (http://www.revoice.kr/policy/revoicePol.html)
   terms-url (http://revoice.kr/sellper/terms-of-use)

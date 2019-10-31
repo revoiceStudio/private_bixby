@@ -4,13 +4,12 @@ result-view{
   }
   conversation-drivers {
     conversation-driver {
-        template ("API 설정")
+      template ("API 설정")
     }
   }
   render{
     layout{
       section{
-
         content {
             image{
               url("/images/help/11st.png")
@@ -57,7 +56,7 @@ result-view{
             single-line {
               text {
                 value {
-                  template ("5. 15.164.93.96(셀퍼 서버)로 설정해주세요.")
+                  template ("5. 15.164.93.96(마이셀러 서버)로 설정해주세요.")
                 }
                 style (Detail_L_Soft)
               }
