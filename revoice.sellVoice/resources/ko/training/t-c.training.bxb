@@ -3,6 +3,11 @@ train (t-c0n0g32i0rj0m1cmgw24c1xqo) {
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)
   last-modified (1572244948518)
 }
+train (t-cc0smgaog5hflzhpvhzec5lyo) {
+  utterance ([g:StopDisplayProduct] 판매중지 상품 목록 보여줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGFSwqC7JL3DJLC7ISayEamFgBEIGKAaSAA==)
+  last-modified (1572945341365)
+}
 train (t-ciohrf2hmn31fn512n76gg8ul) {
   utterance ([g:Main] 사용 방법알려줘)
   plan (Y2BiUC5KLcvPTE7VK07NyQkDs3wTM/OCUotLc0qc8/OSUwtKGMSwK2JgBEIGKAaSAA==)

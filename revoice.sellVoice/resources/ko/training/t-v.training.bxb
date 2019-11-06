@@ -8,3 +8,8 @@ train (t-vtfo8d56suvzst96886awfe9n) {
   plan (Y2Bm0C1KLcvPTE7VK07NyQkDs5zz89Iyi3IDivJTSpNLglKLS3NKgGLJqQUlDAqElDPoYKoITk0sSs7Aah4TAyMQMwBJRgYGGA0A)
   last-modified (1572424830681)
 }
+train (t-vyb8uzmylie2kr9nhqen7d1z8) {
+  utterance ([g:OrderCheck] 새주문 알려줘)
+  plan (Y2Bi0CxKLcvPTE7VK07NyQkDs/yLUlKLnDNSk7ODUotLc0qc8/OSUwtKGGTwKWVgBEIGKAaSAA==)
+  last-modified (1572945132890)
+}

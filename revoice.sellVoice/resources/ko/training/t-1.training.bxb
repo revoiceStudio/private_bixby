@@ -1,3 +1,8 @@
+train (t-1othkpiu7gsp2wqi4xpyaphe9) {
+  utterance ([g:OrderCheck] 새로운 주문)
+  plan (Y2Bi0CxKLcvPTE7VK07NyQkDs/yLUlKLnDNSk7ODUotLc0qc8/OSUwtKGGTwKWVgBEIGKAaSAA==)
+  last-modified (1572945134176)
+}
 train (t-1v8ix40t7rc6iojepm8mtcogj) {
   utterance ([g:Inquiry] 고객 문의)
   plan (Y2BiUCtKLcvPTE7VK07NyQkDszzzCksziyqDUotLc0qc8/OSUwtKGCRxqmNgBEIGKAaSAA==)

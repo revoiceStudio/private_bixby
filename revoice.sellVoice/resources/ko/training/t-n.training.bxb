@@ -1,3 +1,8 @@
+train (t-n9tt3s59tioah877e0gju8g7u) {
+  utterance ([g:DeliveryComplete] 배송완료 상품 조회해줘)
+  plan (Y2Bi0C9KLcvPTE7VK07NyQkDs1xSczLLUosqnfNzC3JSS1KDUotLc0qc8/OSUwtKGJQIa2BgBEIGKAaSAA==)
+  last-modified (1572945569106)
+}
 train (t-nc6g6ivstyocbeiwr5o8q0568) {
   utterance ([g:DeliveryCheck] 배송목록 조회해줘)
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)

@@ -8,6 +8,11 @@ train (t-h88zllthup6jjwtnp466194y1) {
   plan (Y2Bi0ChKLcvPTE7VK07NyQkDs/yLUlKLnBNzcoJSi0tzSpzz85JTC0oYpPGoZGAEQgYoBpIA)
   last-modified (1572422789344)
 }
+train (t-hc8yxee8xtvnv6ncyvy2togjx) {
+  utterance ([g:DeliveryCheck] 발송해야하는 주문 알려줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)
+  last-modified (1572945232561)
+}
 train (t-hq7b8osazsi1mewu4ltgqha0r) {
   utterance ([g:OnsaleProduct] 상품목록 보여줘)
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGOQxVfvnFSfmpEJVMzACIQMUA0kA)

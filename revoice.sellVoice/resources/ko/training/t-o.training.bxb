@@ -1,0 +1,5 @@
+train (t-o533jjbbesi2bdx1xkjtxzmeh) {
+  utterance ([g:OnsaleProduct] 판매중인 상품 알려줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGOQxVfvnFSfmpEJVMzACIQMUA0kA)
+  last-modified (1572945314116)
+}

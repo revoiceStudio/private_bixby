@@ -1,5 +1,25 @@
+train (t-9477oojwadqjkz44ywsyeziuu) {
+  utterance ([g:DeliveryCheck] 배송준비 내역 보여줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)
+  last-modified (1572945247040)
+}
+train (t-96hn4rgjh47dtkerebmskq2kw) {
+  utterance ([g:StopDisplayProduct] 판매중지 상품)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGFSwqC7JL3DJLC7ISayEamFgBEIGKAaSAA==)
+  last-modified (1572945350200)
+}
 train (t-9fvmpch1nqzbjp329qoldhcyl) {
   utterance ([g:InputAPIkeyResultConcept] API 등록할게)
   plan (Y2Bk0CpKLcvPTE7VK07NyQkDszzzCkpLHAM8s1Mrg1KLS3NKnPPzklMLShhAgBFEAAA=)
   last-modified (1572244486687)
+}
+train (t-9h5yk9f0hvl81mrh3g4p62btj) {
+  utterance ([g:StopDisplayProduct] 판매중지 목록)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGFSwqC7JL3DJLC7ISayEamFgBEIGKAaSAA==)
+  last-modified (1572945373352)
+}
+train (t-9kzqyqdmbqpu2p5zaimrtiz1u) {
+  utterance ("[g:DeliveryCheck] 배송 해야하는 주문 ")
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs1xSczLLUosqnTNSk7ODUotLc0qc8/OSUwtKGOQJqGZgBEIGKAaSAA==)
+  last-modified (1572945218237)
 }

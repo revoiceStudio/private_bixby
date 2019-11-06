@@ -1,3 +1,8 @@
+train (t-5gxc9ibn7la2qp8scgxyfsmrj) {
+  utterance ([g:DeliveryComplete] 배송완료 상품 보여줘)
+  plan (Y2Bi0C9KLcvPTE7VK07NyQkDs1xSczLLUosqnfNzC3JSS1KDUotLc0qc8/OSUwtKGJQIa2BgBEIGKAaSAA==)
+  last-modified (1572945567904)
+}
 train (t-5us2a968cnzoi41hhro1t0abx) {
   utterance ([g:SoldOutProduct] 품절 상품 조회해줘)
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGBSwqM7PSfEvLYEqZ2AEQgYoBpIA)

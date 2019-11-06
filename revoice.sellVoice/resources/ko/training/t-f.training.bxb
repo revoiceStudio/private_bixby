@@ -13,6 +13,11 @@ train (t-f9kzi2lbiymyw0qk486d3ilil) {
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGOQxVfvnFSfmpEJVMzACIQMUA0kA)
   last-modified (1572244853211)
 }
+train (t-fc308zt353tkt1cppbe3zz5dq) {
+  utterance ([g:OrderCheck] 새로운 주문 조회해줘)
+  plan (Y2Bi0CxKLcvPTE7VK07NyQkDs/yLUlKLnDNSk7ODUotLc0qc8/OSUwtKGGTwKWVgBEIGKAaSAA==)
+  last-modified (1572941014408)
+}
 train (t-fewpta3lqflhmxzcuyr8i68ph) {
   utterance ([g:InputAPIkeyResultConcept] API 등록)
   plan (Y2Bk0CpKLcvPTE7VK07NyQkDszzzCkpLHAM8s1Mrg1KLS3NKnPPzklMLShhAgBFEAAA=)

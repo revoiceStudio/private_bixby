@@ -1,3 +1,8 @@
+train (t-u4v5co97fcmvtq1j1dtmj2o2l) {
+  utterance ([g:OnsaleProduct] 전시중인 상품 알려줘)
+  plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGOQxVfvnFSfmpEJVMzACIQMUA0kA)
+  last-modified (1572945313186)
+}
 train (t-uea83iqko6034yrvo227i16j3) {
   utterance ([g:StopDisplayProduct] 판매중지 보여줘)
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGFSwqC7JL3DJLC7ISayEamFgBEIGKAaSAA==)

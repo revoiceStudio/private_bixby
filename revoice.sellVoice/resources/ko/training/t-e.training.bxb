@@ -1,3 +1,8 @@
+train (t-e40g76w5t0dv6jjack6yst3ey) {
+  utterance ([g:OrderCheck] 새로운 주문 알려줘)
+  plan (Y2Bi0CxKLcvPTE7VK07NyQkDs/yLUlKLnDNSk7ODUotLc0qc8/OSUwtKGGTwKWVgBEIGKAaSAA==)
+  last-modified (1572941035413)
+}
 train (t-e9gchf6na62dzkr4gp62kryym) {
   utterance ("[g:revoice.sellVoice.OnsaleProduct] (50)[v:OnsaleStartIndexConcept]번부터 상품 조회")
   plan (Y2Bm0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGOQxVfvnFSfmpEJVM2jiUhBcklhU4pmXkloBM4uJgRGIGYAkIwMIQPkA)

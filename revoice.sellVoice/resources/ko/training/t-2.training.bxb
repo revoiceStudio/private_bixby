@@ -1,0 +1,5 @@
+train (t-253ot8rijzlr8t44gcdvncqqo) {
+  utterance ([g:DeliveryComplete] 배송완료 주문 보여줘)
+  plan (Y2Bi0C9KLcvPTE7VK07NyQkDs1xSczLLUosqnfNzC3JSS1KDUotLc0qc8/OSUwtKGJQIa2BgBEIGKAaSAA==)
+  last-modified (1572945570064)
+}

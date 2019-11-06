@@ -8,3 +8,8 @@ train (t-qqdvwgz12zztjqqkjfzp0z4kp) {
   plan (Y2Bi0ClKLcvPTE7VK07NyQkDs4JTE4uSMwKK8lNKk0uCUotLc0qc8/OSUwtKGOQxVfvnFSfmpEJVMzACIQMUA0kA)
   last-modified (1571924035900)
 }
+train (t-qtaty6u0uucr0ehbmfklcda5h) {
+  utterance ([g:DeliveryComplete] 배송완료 내역 알려줘)
+  plan (Y2Bi0C9KLcvPTE7VK07NyQkDs1xSczLLUosqnfNzC3JSS1KDUotLc0qc8/OSUwtKGJQIa2BgBEIGKAaSAA==)
+  last-modified (1572945584424)
+}
